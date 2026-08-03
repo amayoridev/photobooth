@@ -233,20 +233,44 @@ export async function analyzeFrame(frameUrl: string): Promise<{
   photoCount: number;
   width: number;
   height: number;
+  suggestedLayout: LayoutMode;
 }> {
   try {
     const img = await loadImage(frameUrl);
     const w = img.naturalWidth || 1200;
     const h = img.naturalHeight || 1800;
     const detected = detectTransparentCutouts(img, w, h);
+    const count = detected.length;
+
+    let suggestedLayout: LayoutMode = 'single';
+    if (count === 1) {
+      suggestedLayout = 'single';
+    } else if (count === 2) {
+      suggestedLayout = 'two_photo';
+    } else if (count === 3) {
+      suggestedLayout = 'three_photo';
+    } else if (count >= 4) {
+      if (h > w * 2.2) {
+        suggestedLayout = 'vertical_strip';
+      } else {
+        suggestedLayout = 'four_grid';
+      }
+    } else {
+      if (h > w * 2.8) suggestedLayout = 'vertical_strip';
+      else if (h > w * 2.2) suggestedLayout = 'three_photo';
+      else if (h > w * 1.6) suggestedLayout = 'two_photo';
+      else suggestedLayout = 'single';
+    }
+
     return {
       slots: detected,
-      photoCount: detected.length > 0 ? detected.length : 4,
+      photoCount: count > 0 ? count : 4,
       width: w,
       height: h,
+      suggestedLayout,
     };
   } catch {
-    return { slots: [], photoCount: 4, width: 1200, height: 1800 };
+    return { slots: [], photoCount: 4, width: 1200, height: 1800, suggestedLayout: 'single' };
   }
 }
 

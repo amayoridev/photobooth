@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 80",
     "build": "next build",
-    "start": "next start -p 80",
+    "start": "next start",
     "lint": "eslint",
     "seed": "npx tsx scripts/seed-admin.ts",
     "download-frames": "npx tsx scripts/download-freehihi-frames.ts",

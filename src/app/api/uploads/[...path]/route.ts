@@ -59,7 +59,7 @@ export async function GET(
     if (ext === '.webp') contentType = 'image/webp';
     if (ext === '.svg') contentType = 'image/svg+xml';
 
-    return new NextResponse(fileBuffer, {
+    return new NextResponse(new Uint8Array(fileBuffer), {
       headers: {
         'Content-Type': contentType,
         'Access-Control-Allow-Origin': '*',

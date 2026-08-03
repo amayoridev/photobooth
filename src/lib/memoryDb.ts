@@ -11,6 +11,7 @@ export interface MemoryDB {
   sessions: any[];
   photos: any[];
   settings: Record<string, any>;
+  branding?: any;
   auditLogs: any[];
   analyticsEvents: any[];
 }
