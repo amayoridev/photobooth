@@ -1,0 +1,352 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { IFrame, LayoutMode, LayoutSlot } from '@/types';
+import { getDefaultSlotsForLayout, analyzeFrame } from '@/lib/canvas';
+import { X, Upload, Check, RefreshCw, Wand2 } from 'lucide-react';
+
+interface FrameEditorModalProps {
+  frame?: IFrame | null;
+  onClose: () => void;
+  onSaveSuccess: () => void;
+}
+
+export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorModalProps) {
+  const [name, setName] = useState(frame?.name || '');
+  const [description, setDescription] = useState(frame?.description || '');
+  const [category, setCategory] = useState(frame?.category || 'General');
+  const [aspectRatio, setAspectRatio] = useState(frame?.aspectRatio || '4:6');
+  const [layoutMode, setLayoutMode] = useState<LayoutMode>(frame?.layoutMode || 'single');
+  const [width, setWidth] = useState<number>(frame?.resolution?.width || 1200);
+  const [height, setHeight] = useState<number>(frame?.resolution?.height || 1800);
+  const [enabled, setEnabled] = useState<boolean>(frame ? frame.enabled : true);
+
+  const [slots, setSlots] = useState<LayoutSlot[]>(
+    frame?.slots && frame.slots.length > 0
+      ? frame.slots
+      : getDefaultSlotsForLayout(frame?.layoutMode || 'single', 1200, 1800)
+  );
+
+  const [file, setFile] = useState<File | null>(null);
+  const [filePreview, setFilePreview] = useState<string>(frame?.frameUrl || '');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // Auto-detect slots & dimensions whenever file preview changes
+  const autoDetectFrameCutouts = async (previewUrl: string) => {
+    if (!previewUrl) return;
+    setIsAnalyzing(true);
+    try {
+      const res = await analyzeFrame(previewUrl);
+      if (res.width && res.height) {
+        setWidth(res.width);
+        setHeight(res.height);
+
+        // Auto-select aspect ratio & strip layout mode
+        if (res.height > res.width * 2.8) {
+          setLayoutMode('vertical_strip');
+          setAspectRatio('2:6');
+        } else if (res.height > res.width * 2.2) {
+          setLayoutMode('three_photo');
+          setAspectRatio('2:6');
+        } else if (res.height > res.width * 1.6) {
+          setLayoutMode('two_photo');
+          setAspectRatio('4:6');
+        } else if (res.width === res.height) {
+          setLayoutMode('single');
+          setAspectRatio('1:1');
+        }
+      }
+
+      if (res.slots && res.slots.length > 0) {
+        setSlots(res.slots);
+      } else {
+        setSlots(getDefaultSlotsForLayout(layoutMode, res.width, res.height));
+      }
+    } catch {
+      // fallback
+    } finally {
+      setIsAnalyzing(false);
+    }
+  };
+
+  const handleLayoutModeChange = (mode: LayoutMode) => {
+    setLayoutMode(mode);
+    setSlots(getDefaultSlotsForLayout(mode, width, height));
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selected = e.target.files?.[0];
+    if (selected) {
+      setFile(selected);
+      const previewUrl = URL.createObjectURL(selected);
+      setFilePreview(previewUrl);
+      autoDetectFrameCutouts(previewUrl);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name) {
+      setError('Frame name is required.');
+      return;
+    }
+    if (!frame && !file) {
+      setError('Transparent PNG frame image file is required.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('description', description);
+      formData.append('category', category);
+      formData.append('aspectRatio', aspectRatio);
+      formData.append('layoutMode', layoutMode);
+      formData.append('width', width.toString());
+      formData.append('height', height.toString());
+      formData.append('enabled', enabled.toString());
+      formData.append('slots', JSON.stringify(slots));
+      if (file) {
+        formData.append('frameFile', file);
+      }
+
+      const endpoint = frame ? `/api/admin/frames/${frame._id}` : '/api/admin/frames';
+      const method = frame ? 'PUT' : 'POST';
+
+      const res = await fetch(endpoint, {
+        method,
+        body: formData,
+      });
+
+      const data = await res.json();
+      if (!data.success) {
+        throw new Error(data.error || 'Operation failed');
+      }
+
+      onSaveSuccess();
+    } catch (err: any) {
+      setError(err.message || 'Failed to save frame.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl my-8">
+        {/* Header */}
+        <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+          <div>
+            <h3 className="text-xl font-bold text-white">
+              {frame ? 'Edit Frame Configuration' : 'Upload New Frame'}
+            </h3>
+            <p className="text-xs text-slate-400">Configure layout slots, dimensions, strip modes, and transparent PNG overlay.</p>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-2 rounded-full bg-slate-800 text-slate-400 hover:text-white transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        {error && (
+          <div className="p-3 mb-6 bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs rounded-xl">
+            {error}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left Column: Details */}
+          <div className="space-y-4">
+            <div>
+              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                Frame Name
+              </label>
+              <input
+                type="text"
+                required
+                placeholder="e.g. Vintage 4-Photo Strip Frame"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                  Category
+                </label>
+                <select
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-indigo-500"
+                >
+                  <option value="General">General</option>
+                  <option value="Wedding">Wedding</option>
+                  <option value="Birthday">Birthday</option>
+                  <option value="Party">Party</option>
+                  <option value="Vintage">Vintage</option>
+                  <option value="Minimal">Minimal</option>
+                  <option value="Imported">Imported</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                  Aspect Ratio
+                </label>
+                <select
+                  value={aspectRatio}
+                  onChange={(e) => setAspectRatio(e.target.value)}
+                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-indigo-500"
+                >
+                  <option value="4:6">4:6 Standard</option>
+                  <option value="2:6">2:6 Strip (Dải ảnh)</option>
+                  <option value="1:1">1:1 Square</option>
+                  <option value="3:4">3:4 Portrait</option>
+                  <option value="16:9">16:9 Landscape</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                Photo Layout & Strip Mode
+              </label>
+              <select
+                value={layoutMode}
+                onChange={(e) => handleLayoutModeChange(e.target.value as LayoutMode)}
+                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-indigo-500"
+              >
+                <option value="single">Single Photo (1 Ảnh Single)</option>
+                <option value="two_photo">Two Photos (2 Ảnh Stack/Strip)</option>
+                <option value="three_photo">Three Photos (3 Ảnh Strip Dọc)</option>
+                <option value="vertical_strip">Four Photos Strip (4 Ảnh Strip Dọc)</option>
+                <option value="four_grid">Four Photos Grid (4 Ảnh Lưới 2x2)</option>
+                <option value="film_strip">Film Strip Style (Cuộn Phim Classic)</option>
+                <option value="polaroid">Polaroid Style (Ảnh Khung Giấy)</option>
+                <option value="horizontal_strip">Horizontal Strip (Dải Ngang)</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                Transparent PNG Frame Image
+              </label>
+              <div className="relative border-2 border-dashed border-slate-800 hover:border-indigo-500/50 rounded-2xl p-4 text-center cursor-pointer transition-colors">
+                <input
+                  type="file"
+                  accept="image/png"
+                  onChange={handleFileChange}
+                  className="absolute inset-0 opacity-0 cursor-pointer z-20"
+                />
+                <Upload className="w-6 h-6 text-slate-400 mx-auto mb-2" />
+                <p className="text-xs text-slate-300 font-semibold">
+                  {file ? file.name : 'Click or drop transparent PNG image'}
+                </p>
+                <p className="text-[10px] text-slate-500 mt-1">
+                  Supports any dimensions (e.g. 880x2650 4-strip, 1200x1800 4:6)
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between pt-1">
+              <label className="flex items-center gap-2 text-xs font-semibold text-slate-300 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={enabled}
+                  onChange={(e) => setEnabled(e.target.checked)}
+                  className="w-4 h-4 rounded bg-slate-950 border-slate-800 text-indigo-600 focus:ring-0"
+                />
+                <span>Enable Frame Immediately</span>
+              </label>
+
+              {filePreview && (
+                <button
+                  type="button"
+                  onClick={() => autoDetectFrameCutouts(filePreview)}
+                  disabled={isAnalyzing}
+                  className="text-[11px] font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 bg-indigo-500/10 px-2.5 py-1 rounded-lg border border-indigo-500/20"
+                >
+                  <Wand2 className="w-3.5 h-3.5" />
+                  <span>{isAnalyzing ? 'Scanning...' : 'Auto-Detect Cutouts'}</span>
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Right Column: Visual Slots Preview & Controls */}
+          <div className="flex flex-col gap-4">
+            <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+              Frame Preview & Detected Cutout Slots ({slots.length} Photos)
+            </label>
+
+            <div className="relative w-full aspect-[4/6] max-h-[380px] bg-slate-950 border-2 border-slate-800 rounded-2xl p-2 overflow-hidden flex items-center justify-center mx-auto">
+              <div className="relative w-full h-full">
+                {slots.map((slot, idx) => {
+                  const scaleX = 100 / width;
+                  const scaleY = 100 / height;
+
+                  return (
+                    <div
+                      key={idx}
+                      style={{
+                        left: `${slot.x * scaleX}%`,
+                        top: `${slot.y * scaleY}%`,
+                        width: `${slot.width * scaleX}%`,
+                        height: `${slot.height * scaleY}%`,
+                      }}
+                      className="absolute border-2 border-indigo-500 bg-indigo-500/30 rounded-md flex items-center justify-center text-[10px] font-extrabold text-white shadow-lg"
+                    >
+                      Photo #{idx + 1}
+                    </div>
+                  );
+                })}
+
+                {filePreview && (
+                  <img
+                    src={filePreview}
+                    alt="Frame Overlay Preview"
+                    className="absolute inset-0 w-full h-full object-contain pointer-events-none z-10"
+                  />
+                )}
+              </div>
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex items-center gap-3 mt-auto pt-4 border-t border-slate-800">
+              <button
+                type="button"
+                onClick={onClose}
+                className="flex-1 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex-1 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-lg flex items-center justify-center gap-2"
+              >
+                {isSubmitting ? (
+                  <RefreshCw className="w-4 h-4 animate-spin text-white" />
+                ) : (
+                  <>
+                    <Check className="w-4 h-4" />
+                    <span>{frame ? 'Update Frame' : 'Save Frame'}</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}

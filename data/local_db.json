@@ -1,0 +1,6651 @@
+{
+  "admins": [
+    {
+      "_id": "admin_short_1",
+      "email": "admin",
+      "passwordHash": "$2a$10$YLrYzVZjJdUg2o7b98FH4u8DmzUAb1mf8ob2J3OhVgcMS.YrvKx7O",
+      "name": "Administrator",
+      "role": "superadmin",
+      "createdAt": "2026-08-03T10:33:00.000Z"
+    },
+    {
+      "_id": "admin_super_1",
+      "email": "admin@photobooth.com",
+      "passwordHash": "$2a$10$YLrYzVZjJdUg2o7b98FH4u8DmzUAb1mf8ob2J3OhVgcMS.YrvKx7O",
+      "name": "Super Administrator",
+      "role": "superadmin",
+      "createdAt": "2026-08-03T10:33:00.000Z"
+    }
+  ],
+  "frames": [
+    {
+      "_id": "frame_imported_1",
+      "name": "BearBare",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 589
+        },
+        {
+          "x": 81,
+          "y": 1296,
+          "width": 741,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 574
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/105_BearBare_6852d138ea7bf.png",
+      "previewUrl": "/uploads/frames/105_BearBare_6852d138ea7bf.png",
+      "frameUrl": "/uploads/frames/105_BearBare_6852d138ea7bf.png",
+      "r2Key": "frames/105_BearBare_6852d138ea7bf.png",
+      "enabled": true,
+      "displayOrder": 1
+    },
+    {
+      "_id": "frame_imported_2",
+      "name": "Loopy",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 574
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/108_Loopy_6852d238938b9.png",
+      "previewUrl": "/uploads/frames/108_Loopy_6852d238938b9.png",
+      "frameUrl": "/uploads/frames/108_Loopy_6852d238938b9.png",
+      "r2Key": "frames/108_Loopy_6852d238938b9.png",
+      "enabled": true,
+      "displayOrder": 2
+    },
+    {
+      "_id": "frame_imported_3",
+      "name": "Giấy Kết Hôn",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 755,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/118_Giấy Kết Hôn_6854e5408664d.png",
+      "previewUrl": "/uploads/frames/118_Giấy Kết Hôn_6854e5408664d.png",
+      "frameUrl": "/uploads/frames/118_Giấy Kết Hôn_6854e5408664d.png",
+      "r2Key": "frames/118_Giấy Kết Hôn_6854e5408664d.png",
+      "enabled": true,
+      "displayOrder": 3
+    },
+    {
+      "_id": "frame_imported_4",
+      "name": "EmXinhSayHi",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 755,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/123_EmXinhSayHi_6856bf7547184.png",
+      "previewUrl": "/uploads/frames/123_EmXinhSayHi_6856bf7547184.png",
+      "frameUrl": "/uploads/frames/123_EmXinhSayHi_6856bf7547184.png",
+      "r2Key": "frames/123_EmXinhSayHi_6856bf7547184.png",
+      "enabled": true,
+      "displayOrder": 4
+    },
+    {
+      "_id": "frame_imported_72",
+      "name": "Basic-5",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/482_Basic-5_692d7d65603ca.png",
+      "previewUrl": "/uploads/frames/482_Basic-5_692d7d65603ca.png",
+      "frameUrl": "/uploads/frames/482_Basic-5_692d7d65603ca.png",
+      "r2Key": "frames/482_Basic-5_692d7d65603ca.png",
+      "enabled": true,
+      "displayOrder": 72
+    },
+    {
+      "_id": "frame_imported_6",
+      "name": "Basic-6",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/133_Basic-6_685a41b84c9e3.png",
+      "previewUrl": "/uploads/frames/133_Basic-6_685a41b84c9e3.png",
+      "frameUrl": "/uploads/frames/133_Basic-6_685a41b84c9e3.png",
+      "r2Key": "frames/133_Basic-6_685a41b84c9e3.png",
+      "enabled": true,
+      "displayOrder": 6
+    },
+    {
+      "_id": "frame_imported_7",
+      "name": "Minion",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/138_Minion_6864a24e4b7e2.png",
+      "previewUrl": "/uploads/frames/138_Minion_6864a24e4b7e2.png",
+      "frameUrl": "/uploads/frames/138_Minion_6864a24e4b7e2.png",
+      "r2Key": "frames/138_Minion_6864a24e4b7e2.png",
+      "enabled": true,
+      "displayOrder": 7
+    },
+    {
+      "_id": "frame_imported_8",
+      "name": "GenG",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 692,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 755,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/150_GenG_686f38fecdb0d.png",
+      "previewUrl": "/uploads/frames/150_GenG_686f38fecdb0d.png",
+      "frameUrl": "/uploads/frames/150_GenG_686f38fecdb0d.png",
+      "r2Key": "frames/150_GenG_686f38fecdb0d.png",
+      "enabled": true,
+      "displayOrder": 8
+    },
+    {
+      "_id": "frame_imported_9",
+      "name": "Stitch",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1899,
+          "width": 755,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/152_Stitch_686f44ca41c86.png",
+      "previewUrl": "/uploads/frames/152_Stitch_686f44ca41c86.png",
+      "frameUrl": "/uploads/frames/152_Stitch_686f44ca41c86.png",
+      "r2Key": "frames/152_Stitch_686f44ca41c86.png",
+      "enabled": true,
+      "displayOrder": 9
+    },
+    {
+      "_id": "frame_imported_10",
+      "name": "Meme",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 88,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 755,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/155_Meme_686f84a47a36d.png",
+      "previewUrl": "/uploads/frames/155_Meme_686f84a47a36d.png",
+      "frameUrl": "/uploads/frames/155_Meme_686f84a47a36d.png",
+      "r2Key": "frames/155_Meme_686f84a47a36d.png",
+      "enabled": true,
+      "displayOrder": 10
+    },
+    {
+      "_id": "frame_imported_11",
+      "name": "MatchaLatte",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/167_MatchaLatte_686fe53db6dfc.png",
+      "previewUrl": "/uploads/frames/167_MatchaLatte_686fe53db6dfc.png",
+      "frameUrl": "/uploads/frames/167_MatchaLatte_686fe53db6dfc.png",
+      "r2Key": "frames/167_MatchaLatte_686fe53db6dfc.png",
+      "enabled": true,
+      "displayOrder": 11
+    },
+    {
+      "_id": "frame_imported_12",
+      "name": "Conan",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 692,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1310,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1929,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/170_Conan_68707f70636a1.png",
+      "previewUrl": "/uploads/frames/170_Conan_68707f70636a1.png",
+      "frameUrl": "/uploads/frames/170_Conan_68707f70636a1.png",
+      "r2Key": "frames/170_Conan_68707f70636a1.png",
+      "enabled": true,
+      "displayOrder": 12
+    },
+    {
+      "_id": "frame_imported_13",
+      "name": "Vintage1",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/175_Vintage1_6873abf8e3917.png",
+      "previewUrl": "/uploads/frames/175_Vintage1_6873abf8e3917.png",
+      "frameUrl": "/uploads/frames/175_Vintage1_6873abf8e3917.png",
+      "r2Key": "frames/175_Vintage1_6873abf8e3917.png",
+      "enabled": true,
+      "displayOrder": 13
+    },
+    {
+      "_id": "frame_imported_14",
+      "name": "Vintage2",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/176_Vintage2_6873ac02ab5a1.png",
+      "previewUrl": "/uploads/frames/176_Vintage2_6873ac02ab5a1.png",
+      "frameUrl": "/uploads/frames/176_Vintage2_6873ac02ab5a1.png",
+      "r2Key": "frames/176_Vintage2_6873ac02ab5a1.png",
+      "enabled": true,
+      "displayOrder": 14
+    },
+    {
+      "_id": "frame_imported_15",
+      "name": "BearPink",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 777,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 777,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/184_BearPink_68770830ddc58.png",
+      "previewUrl": "/uploads/frames/184_BearPink_68770830ddc58.png",
+      "frameUrl": "/uploads/frames/184_BearPink_68770830ddc58.png",
+      "r2Key": "frames/184_BearPink_68770830ddc58.png",
+      "enabled": true,
+      "displayOrder": 15
+    },
+    {
+      "_id": "frame_imported_16",
+      "name": "BunBoHue",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 755,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/185_BunBoHue_687779c79d107.png",
+      "previewUrl": "/uploads/frames/185_BunBoHue_687779c79d107.png",
+      "frameUrl": "/uploads/frames/185_BunBoHue_687779c79d107.png",
+      "r2Key": "frames/185_BunBoHue_687779c79d107.png",
+      "enabled": true,
+      "displayOrder": 16
+    },
+    {
+      "_id": "frame_imported_17",
+      "name": "ĐÙ MÁ",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 147,
+          "width": 777,
+          "height": 486
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 777,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/192_ĐÙ MÁ_687cc3f5c3958.png",
+      "previewUrl": "/uploads/frames/192_ĐÙ MÁ_687cc3f5c3958.png",
+      "frameUrl": "/uploads/frames/192_ĐÙ MÁ_687cc3f5c3958.png",
+      "r2Key": "frames/192_ĐÙ MÁ_687cc3f5c3958.png",
+      "enabled": true,
+      "displayOrder": 17
+    },
+    {
+      "_id": "frame_imported_18",
+      "name": "Chiikawa",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/195_Chiikawa_687cd152e026d.png",
+      "previewUrl": "/uploads/frames/195_Chiikawa_687cd152e026d.png",
+      "frameUrl": "/uploads/frames/195_Chiikawa_687cd152e026d.png",
+      "r2Key": "frames/195_Chiikawa_687cd152e026d.png",
+      "enabled": true,
+      "displayOrder": 18
+    },
+    {
+      "_id": "frame_imported_19",
+      "name": "Gumball",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/197_Gumball_687f0219ebe02.png",
+      "previewUrl": "/uploads/frames/197_Gumball_687f0219ebe02.png",
+      "frameUrl": "/uploads/frames/197_Gumball_687f0219ebe02.png",
+      "r2Key": "frames/197_Gumball_687f0219ebe02.png",
+      "enabled": true,
+      "displayOrder": 19
+    },
+    {
+      "_id": "frame_imported_20",
+      "name": "Amazing",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 755,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/206_Amazing_688a37a6b673c.png",
+      "previewUrl": "/uploads/frames/206_Amazing_688a37a6b673c.png",
+      "frameUrl": "/uploads/frames/206_Amazing_688a37a6b673c.png",
+      "r2Key": "frames/206_Amazing_688a37a6b673c.png",
+      "enabled": true,
+      "displayOrder": 20
+    },
+    {
+      "_id": "frame_imported_21",
+      "name": "Quốc Khánh 2",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 770,
+          "height": 574
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/223_Quốc Khánh 2_9_689801c6ac302.png",
+      "previewUrl": "/uploads/frames/223_Quốc Khánh 2_9_689801c6ac302.png",
+      "frameUrl": "/uploads/frames/223_Quốc Khánh 2_9_689801c6ac302.png",
+      "r2Key": "frames/223_Quốc Khánh 2_9_689801c6ac302.png",
+      "enabled": true,
+      "displayOrder": 21
+    },
+    {
+      "_id": "frame_imported_22",
+      "name": "WeAreOne",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 59,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1914,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/224_WeAreOne_689ab7bec5d76.png",
+      "previewUrl": "/uploads/frames/224_WeAreOne_689ab7bec5d76.png",
+      "frameUrl": "/uploads/frames/224_WeAreOne_689ab7bec5d76.png",
+      "r2Key": "frames/224_WeAreOne_689ab7bec5d76.png",
+      "enabled": true,
+      "displayOrder": 22
+    },
+    {
+      "_id": "frame_imported_23",
+      "name": "Cinnamoroll",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 777,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/231_Cinnamoroll_689b4afcb36f1.png",
+      "previewUrl": "/uploads/frames/231_Cinnamoroll_689b4afcb36f1.png",
+      "frameUrl": "/uploads/frames/231_Cinnamoroll_689b4afcb36f1.png",
+      "r2Key": "frames/231_Cinnamoroll_689b4afcb36f1.png",
+      "enabled": true,
+      "displayOrder": 23
+    },
+    {
+      "_id": "frame_imported_24",
+      "name": "Thư",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 59,
+          "width": 748,
+          "height": 530
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/237_Thư_689da03a3127c.png",
+      "previewUrl": "/uploads/frames/237_Thư_689da03a3127c.png",
+      "frameUrl": "/uploads/frames/237_Thư_689da03a3127c.png",
+      "r2Key": "frames/237_Thư_689da03a3127c.png",
+      "enabled": true,
+      "displayOrder": 24
+    },
+    {
+      "_id": "frame_imported_25",
+      "name": "IOS",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/248_IOS_68a3d8f16c61d.png",
+      "previewUrl": "/uploads/frames/248_IOS_68a3d8f16c61d.png",
+      "frameUrl": "/uploads/frames/248_IOS_68a3d8f16c61d.png",
+      "r2Key": "frames/248_IOS_68a3d8f16c61d.png",
+      "enabled": true,
+      "displayOrder": 25
+    },
+    {
+      "_id": "frame_imported_26",
+      "name": "QH MasterD",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 59,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1914,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/252_QH MasterD_68a463c666438.png",
+      "previewUrl": "/uploads/frames/252_QH MasterD_68a463c666438.png",
+      "frameUrl": "/uploads/frames/252_QH MasterD_68a463c666438.png",
+      "r2Key": "frames/252_QH MasterD_68a463c666438.png",
+      "enabled": true,
+      "displayOrder": 26
+    },
+    {
+      "_id": "frame_imported_27",
+      "name": "UEder",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 2750,
+        "height": 8281
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 183,
+          "y": 138,
+          "width": 2406,
+          "height": 1748
+        },
+        {
+          "x": 183,
+          "y": 2070,
+          "width": 2406,
+          "height": 1794
+        },
+        {
+          "x": 183,
+          "y": 4002,
+          "width": 2406,
+          "height": 1794
+        },
+        {
+          "x": 160,
+          "y": 5981,
+          "width": 573,
+          "height": 1748
+        },
+        {
+          "x": 252,
+          "y": 5981,
+          "width": 2315,
+          "height": 1748
+        },
+        {
+          "x": 2108,
+          "y": 5981,
+          "width": 458,
+          "height": 460
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/264_UEder_68a98cd549993.png",
+      "previewUrl": "/uploads/frames/264_UEder_68a98cd549993.png",
+      "frameUrl": "/uploads/frames/264_UEder_68a98cd549993.png",
+      "r2Key": "frames/264_UEder_68a98cd549993.png",
+      "enabled": true,
+      "displayOrder": 27
+    },
+    {
+      "_id": "frame_imported_28",
+      "name": "Juky San",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 74,
+          "width": 763,
+          "height": 545
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1325,
+          "width": 741,
+          "height": 515
+        },
+        {
+          "x": 73,
+          "y": 1914,
+          "width": 748,
+          "height": 530
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/265_Juky San_68a98d0834147.png",
+      "previewUrl": "/uploads/frames/265_Juky San_68a98d0834147.png",
+      "frameUrl": "/uploads/frames/265_Juky San_68a98d0834147.png",
+      "r2Key": "frames/265_Juky San_68a98d0834147.png",
+      "enabled": true,
+      "displayOrder": 28
+    },
+    {
+      "_id": "frame_imported_29",
+      "name": "Wxrdie",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1281,
+          "width": 770,
+          "height": 589
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 574
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/269_Wxrdie_68aa0dcb8dfa1.png",
+      "previewUrl": "/uploads/frames/269_Wxrdie_68aa0dcb8dfa1.png",
+      "frameUrl": "/uploads/frames/269_Wxrdie_68aa0dcb8dfa1.png",
+      "r2Key": "frames/269_Wxrdie_68aa0dcb8dfa1.png",
+      "enabled": true,
+      "displayOrder": 29
+    },
+    {
+      "_id": "frame_imported_30",
+      "name": "FanNCT",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1870,
+        "height": 5631
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 125,
+          "y": 125,
+          "width": 1621,
+          "height": 1157
+        },
+        {
+          "x": 125,
+          "y": 1439,
+          "width": 1621,
+          "height": 1189
+        },
+        {
+          "x": 125,
+          "y": 2753,
+          "width": 1621,
+          "height": 1189
+        },
+        {
+          "x": 125,
+          "y": 4067,
+          "width": 1621,
+          "height": 1157
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/270_FanNCT_DREAM_68ab39da93cd1.png",
+      "previewUrl": "/uploads/frames/270_FanNCT_DREAM_68ab39da93cd1.png",
+      "frameUrl": "/uploads/frames/270_FanNCT_DREAM_68ab39da93cd1.png",
+      "r2Key": "frames/270_FanNCT_DREAM_68ab39da93cd1.png",
+      "enabled": true,
+      "displayOrder": 30
+    },
+    {
+      "_id": "frame_imported_31",
+      "name": "DPR IAN",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/276_DPR IAN_68b0244e76e35.png",
+      "previewUrl": "/uploads/frames/276_DPR IAN_68b0244e76e35.png",
+      "frameUrl": "/uploads/frames/276_DPR IAN_68b0244e76e35.png",
+      "r2Key": "frames/276_DPR IAN_68b0244e76e35.png",
+      "enabled": true,
+      "displayOrder": 31
+    },
+    {
+      "_id": "frame_imported_32",
+      "name": "AnhTraiSayHi",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 44,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 545
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 545
+        },
+        {
+          "x": 59,
+          "y": 1914,
+          "width": 763,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/278_AnhTraiSayHi_68b0907158035.png",
+      "previewUrl": "/uploads/frames/278_AnhTraiSayHi_68b0907158035.png",
+      "frameUrl": "/uploads/frames/278_AnhTraiSayHi_68b0907158035.png",
+      "r2Key": "frames/278_AnhTraiSayHi_68b0907158035.png",
+      "enabled": true,
+      "displayOrder": 32
+    },
+    {
+      "_id": "frame_imported_33",
+      "name": "Cutie Pinkie",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 74,
+          "width": 763,
+          "height": 545
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 59,
+          "y": 1914,
+          "width": 763,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/311_Cutie Pinkie_68d0dd9bb3a08.png",
+      "previewUrl": "/uploads/frames/311_Cutie Pinkie_68d0dd9bb3a08.png",
+      "frameUrl": "/uploads/frames/311_Cutie Pinkie_68d0dd9bb3a08.png",
+      "r2Key": "frames/311_Cutie Pinkie_68d0dd9bb3a08.png",
+      "enabled": true,
+      "displayOrder": 33
+    },
+    {
+      "_id": "frame_imported_34",
+      "name": "Dâu Tây",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 88,
+          "width": 770,
+          "height": 545
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/312_Dâu Tây_68d50f3783378.png",
+      "previewUrl": "/uploads/frames/312_Dâu Tây_68d50f3783378.png",
+      "frameUrl": "/uploads/frames/312_Dâu Tây_68d50f3783378.png",
+      "r2Key": "frames/312_Dâu Tây_68d50f3783378.png",
+      "enabled": true,
+      "displayOrder": 34
+    },
+    {
+      "_id": "frame_imported_35",
+      "name": "Retro Windows",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 147,
+          "width": 748,
+          "height": 456
+        },
+        {
+          "x": 81,
+          "y": 721,
+          "width": 719,
+          "height": 471
+        },
+        {
+          "x": 66,
+          "y": 1369,
+          "width": 748,
+          "height": 471
+        },
+        {
+          "x": 59,
+          "y": 1914,
+          "width": 763,
+          "height": 456
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/314_Retro Windows_68d89ad14df35.png",
+      "previewUrl": "/uploads/frames/314_Retro Windows_68d89ad14df35.png",
+      "frameUrl": "/uploads/frames/314_Retro Windows_68d89ad14df35.png",
+      "r2Key": "frames/314_Retro Windows_68d89ad14df35.png",
+      "enabled": true,
+      "displayOrder": 35
+    },
+    {
+      "_id": "frame_imported_36",
+      "name": "ShinChanPink",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/316_ShinChanPink_68d8f10969679.png",
+      "previewUrl": "/uploads/frames/316_ShinChanPink_68d8f10969679.png",
+      "frameUrl": "/uploads/frames/316_ShinChanPink_68d8f10969679.png",
+      "r2Key": "frames/316_ShinChanPink_68d8f10969679.png",
+      "enabled": true,
+      "displayOrder": 36
+    },
+    {
+      "_id": "frame_imported_37",
+      "name": "School",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 110,
+          "y": 147,
+          "width": 543,
+          "height": 412
+        },
+        {
+          "x": 51,
+          "y": 663,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 95,
+          "y": 1296,
+          "width": 689,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/319_School_68dbb8968a7c0.png",
+      "previewUrl": "/uploads/frames/319_School_68dbb8968a7c0.png",
+      "frameUrl": "/uploads/frames/319_School_68dbb8968a7c0.png",
+      "r2Key": "frames/319_School_68dbb8968a7c0.png",
+      "enabled": true,
+      "displayOrder": 37
+    },
+    {
+      "_id": "frame_imported_38",
+      "name": "XinhhAirlines",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/327_XinhhAirlines_68dcc67d7e7ab.png",
+      "previewUrl": "/uploads/frames/327_XinhhAirlines_68dcc67d7e7ab.png",
+      "frameUrl": "/uploads/frames/327_XinhhAirlines_68dcc67d7e7ab.png",
+      "r2Key": "frames/327_XinhhAirlines_68dcc67d7e7ab.png",
+      "enabled": true,
+      "displayOrder": 38
+    },
+    {
+      "_id": "frame_imported_39",
+      "name": "ToyStory",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 755,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/333_ToyStory_68dd4388c0191.png",
+      "previewUrl": "/uploads/frames/333_ToyStory_68dd4388c0191.png",
+      "frameUrl": "/uploads/frames/333_ToyStory_68dd4388c0191.png",
+      "r2Key": "frames/333_ToyStory_68dd4388c0191.png",
+      "enabled": true,
+      "displayOrder": 39
+    },
+    {
+      "_id": "frame_imported_40",
+      "name": "TV",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 125,
+          "y": 692,
+          "width": 631,
+          "height": 501
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/334_TV_68dd4f8543881.png",
+      "previewUrl": "/uploads/frames/334_TV_68dd4f8543881.png",
+      "frameUrl": "/uploads/frames/334_TV_68dd4f8543881.png",
+      "r2Key": "frames/334_TV_68dd4f8543881.png",
+      "enabled": true,
+      "displayOrder": 40
+    },
+    {
+      "_id": "frame_imported_41",
+      "name": "Basic-1",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/340_Basic-1_68df4196da89b.png",
+      "previewUrl": "/uploads/frames/340_Basic-1_68df4196da89b.png",
+      "frameUrl": "/uploads/frames/340_Basic-1_68df4196da89b.png",
+      "r2Key": "frames/340_Basic-1_68df4196da89b.png",
+      "enabled": true,
+      "displayOrder": 41
+    },
+    {
+      "_id": "frame_imported_42",
+      "name": "Basic-2",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/341_Basic-2_68df41b70eb0e.png",
+      "previewUrl": "/uploads/frames/341_Basic-2_68df41b70eb0e.png",
+      "frameUrl": "/uploads/frames/341_Basic-2_68df41b70eb0e.png",
+      "r2Key": "frames/341_Basic-2_68df41b70eb0e.png",
+      "enabled": true,
+      "displayOrder": 42
+    },
+    {
+      "_id": "frame_imported_43",
+      "name": "Basic-7",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/342_Basic-7_68df41df4934f.png",
+      "previewUrl": "/uploads/frames/342_Basic-7_68df41df4934f.png",
+      "frameUrl": "/uploads/frames/342_Basic-7_68df41df4934f.png",
+      "r2Key": "frames/342_Basic-7_68df41df4934f.png",
+      "enabled": true,
+      "displayOrder": 43
+    },
+    {
+      "_id": "frame_imported_44",
+      "name": "Basic-8",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/343_Basic-8_68df420421b73.png",
+      "previewUrl": "/uploads/frames/343_Basic-8_68df420421b73.png",
+      "frameUrl": "/uploads/frames/343_Basic-8_68df420421b73.png",
+      "r2Key": "frames/343_Basic-8_68df420421b73.png",
+      "enabled": true,
+      "displayOrder": 44
+    },
+    {
+      "_id": "frame_imported_45",
+      "name": "Basic-11",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/345_Basic-11_68df4242dfa05.png",
+      "previewUrl": "/uploads/frames/345_Basic-11_68df4242dfa05.png",
+      "frameUrl": "/uploads/frames/345_Basic-11_68df4242dfa05.png",
+      "r2Key": "frames/345_Basic-11_68df4242dfa05.png",
+      "enabled": true,
+      "displayOrder": 45
+    },
+    {
+      "_id": "frame_imported_46",
+      "name": "Basic-10",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/346_Basic-10_68df42a174a8d.png",
+      "previewUrl": "/uploads/frames/346_Basic-10_68df42a174a8d.png",
+      "frameUrl": "/uploads/frames/346_Basic-10_68df42a174a8d.png",
+      "r2Key": "frames/346_Basic-10_68df42a174a8d.png",
+      "enabled": true,
+      "displayOrder": 46
+    },
+    {
+      "_id": "frame_imported_47",
+      "name": "Colorful",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 692,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 755,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/358_Colorful_68e471275df2c.png",
+      "previewUrl": "/uploads/frames/358_Colorful_68e471275df2c.png",
+      "frameUrl": "/uploads/frames/358_Colorful_68e471275df2c.png",
+      "r2Key": "frames/358_Colorful_68e471275df2c.png",
+      "enabled": true,
+      "displayOrder": 47
+    },
+    {
+      "_id": "frame_imported_48",
+      "name": "Jisoo",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 777,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 777,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 777,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/364_Jisoo_68e4dff09e6d5.png",
+      "previewUrl": "/uploads/frames/364_Jisoo_68e4dff09e6d5.png",
+      "frameUrl": "/uploads/frames/364_Jisoo_68e4dff09e6d5.png",
+      "r2Key": "frames/364_Jisoo_68e4dff09e6d5.png",
+      "enabled": true,
+      "displayOrder": 48
+    },
+    {
+      "_id": "frame_imported_123",
+      "name": "BlackPink",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 724,
+        "height": 2172
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 91,
+          "y": 217,
+          "width": 543,
+          "height": 374
+        },
+        {
+          "x": 91,
+          "y": 627,
+          "width": 543,
+          "height": 374
+        },
+        {
+          "x": 91,
+          "y": 1026,
+          "width": 543,
+          "height": 386
+        },
+        {
+          "x": 91,
+          "y": 1436,
+          "width": 543,
+          "height": 374
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/586_BlackPink_6a03104b67254.png",
+      "previewUrl": "/uploads/frames/586_BlackPink_6a03104b67254.png",
+      "frameUrl": "/uploads/frames/586_BlackPink_6a03104b67254.png",
+      "r2Key": "frames/586_BlackPink_6a03104b67254.png",
+      "enabled": true,
+      "displayOrder": 123
+    },
+    {
+      "_id": "frame_imported_50",
+      "name": "Jin(BTS)",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 777,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 777,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 777,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/375_Jin(BTS)_68e67ec98245f.png",
+      "previewUrl": "/uploads/frames/375_Jin(BTS)_68e67ec98245f.png",
+      "frameUrl": "/uploads/frames/375_Jin(BTS)_68e67ec98245f.png",
+      "r2Key": "frames/375_Jin(BTS)_68e67ec98245f.png",
+      "enabled": true,
+      "displayOrder": 50
+    },
+    {
+      "_id": "frame_imported_51",
+      "name": "Jimin(BTS)",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 777,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 777,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 777,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/377_Jimin(BTS)_68e73af797a67.png",
+      "previewUrl": "/uploads/frames/377_Jimin(BTS)_68e73af797a67.png",
+      "frameUrl": "/uploads/frames/377_Jimin(BTS)_68e73af797a67.png",
+      "r2Key": "frames/377_Jimin(BTS)_68e73af797a67.png",
+      "enabled": true,
+      "displayOrder": 51
+    },
+    {
+      "_id": "frame_imported_52",
+      "name": "Girly",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/379_Girly_68e8e901bae50.png",
+      "previewUrl": "/uploads/frames/379_Girly_68e8e901bae50.png",
+      "frameUrl": "/uploads/frames/379_Girly_68e8e901bae50.png",
+      "r2Key": "frames/379_Girly_68e8e901bae50.png",
+      "enabled": true,
+      "displayOrder": 52
+    },
+    {
+      "_id": "frame_imported_53",
+      "name": "Tinder",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 777,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 777,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 777,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/385_Tinder_68ecec87142ee.png",
+      "previewUrl": "/uploads/frames/385_Tinder_68ecec87142ee.png",
+      "frameUrl": "/uploads/frames/385_Tinder_68ecec87142ee.png",
+      "r2Key": "frames/385_Tinder_68ecec87142ee.png",
+      "enabled": true,
+      "displayOrder": 53
+    },
+    {
+      "_id": "frame_imported_54",
+      "name": "BAV",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/386_BAV_68f20a3689a97.png",
+      "previewUrl": "/uploads/frames/386_BAV_68f20a3689a97.png",
+      "frameUrl": "/uploads/frames/386_BAV_68f20a3689a97.png",
+      "r2Key": "frames/386_BAV_68f20a3689a97.png",
+      "enabled": true,
+      "displayOrder": 54
+    },
+    {
+      "_id": "frame_imported_55",
+      "name": "AOF",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/387_AOF_68f213652773c.png",
+      "previewUrl": "/uploads/frames/387_AOF_68f213652773c.png",
+      "frameUrl": "/uploads/frames/387_AOF_68f213652773c.png",
+      "r2Key": "frames/387_AOF_68f213652773c.png",
+      "enabled": true,
+      "displayOrder": 55
+    },
+    {
+      "_id": "frame_imported_56",
+      "name": "FTU",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/388_FTU_68f2143f188f8.png",
+      "previewUrl": "/uploads/frames/388_FTU_68f2143f188f8.png",
+      "frameUrl": "/uploads/frames/388_FTU_68f2143f188f8.png",
+      "r2Key": "frames/388_FTU_68f2143f188f8.png",
+      "enabled": true,
+      "displayOrder": 56
+    },
+    {
+      "_id": "frame_imported_57",
+      "name": "NEU",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/389_NEU_68f215d332a18.png",
+      "previewUrl": "/uploads/frames/389_NEU_68f215d332a18.png",
+      "frameUrl": "/uploads/frames/389_NEU_68f215d332a18.png",
+      "r2Key": "frames/389_NEU_68f215d332a18.png",
+      "enabled": true,
+      "displayOrder": 57
+    },
+    {
+      "_id": "frame_imported_58",
+      "name": "HNUE",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/390_HNUE_68f216916ea97.png",
+      "previewUrl": "/uploads/frames/390_HNUE_68f216916ea97.png",
+      "frameUrl": "/uploads/frames/390_HNUE_68f216916ea97.png",
+      "r2Key": "frames/390_HNUE_68f216916ea97.png",
+      "enabled": true,
+      "displayOrder": 58
+    },
+    {
+      "_id": "frame_imported_59",
+      "name": "Dear Phúc Nguyên",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 2750,
+        "height": 8281
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 160,
+          "y": 184,
+          "width": 2429,
+          "height": 1794
+        },
+        {
+          "x": 160,
+          "y": 2116,
+          "width": 2429,
+          "height": 1748
+        },
+        {
+          "x": 183,
+          "y": 4048,
+          "width": 2406,
+          "height": 1748
+        },
+        {
+          "x": 160,
+          "y": 5935,
+          "width": 2429,
+          "height": 1748
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/413_Dear Phúc Nguyên_68f762788685d.png",
+      "previewUrl": "/uploads/frames/413_Dear Phúc Nguyên_68f762788685d.png",
+      "frameUrl": "/uploads/frames/413_Dear Phúc Nguyên_68f762788685d.png",
+      "r2Key": "frames/413_Dear Phúc Nguyên_68f762788685d.png",
+      "enabled": true,
+      "displayOrder": 59
+    },
+    {
+      "_id": "frame_imported_60",
+      "name": "ZEUS TBTW",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 147,
+          "width": 755,
+          "height": 486
+        },
+        {
+          "x": 59,
+          "y": 721,
+          "width": 755,
+          "height": 501
+        },
+        {
+          "x": 59,
+          "y": 1310,
+          "width": 755,
+          "height": 501
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 755,
+          "height": 501
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/427_ZEUS TBTW_68fdab4e38d77.png",
+      "previewUrl": "/uploads/frames/427_ZEUS TBTW_68fdab4e38d77.png",
+      "frameUrl": "/uploads/frames/427_ZEUS TBTW_68fdab4e38d77.png",
+      "r2Key": "frames/427_ZEUS TBTW_68fdab4e38d77.png",
+      "enabled": true,
+      "displayOrder": 60
+    },
+    {
+      "_id": "frame_imported_61",
+      "name": "HAU",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/431_HAU_69020f0f64a7c.png",
+      "previewUrl": "/uploads/frames/431_HAU_69020f0f64a7c.png",
+      "frameUrl": "/uploads/frames/431_HAU_69020f0f64a7c.png",
+      "r2Key": "frames/431_HAU_69020f0f64a7c.png",
+      "enabled": true,
+      "displayOrder": 61
+    },
+    {
+      "_id": "frame_imported_62",
+      "name": "V(BTS)",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/441_V(BTS)_69024313f210d.png",
+      "previewUrl": "/uploads/frames/441_V(BTS)_69024313f210d.png",
+      "frameUrl": "/uploads/frames/441_V(BTS)_69024313f210d.png",
+      "r2Key": "frames/441_V(BTS)_69024313f210d.png",
+      "enabled": true,
+      "displayOrder": 62
+    },
+    {
+      "_id": "frame_imported_63",
+      "name": "TMU",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/461_TMU_690dcf7ed31b6.png",
+      "previewUrl": "/uploads/frames/461_TMU_690dcf7ed31b6.png",
+      "frameUrl": "/uploads/frames/461_TMU_690dcf7ed31b6.png",
+      "r2Key": "frames/461_TMU_690dcf7ed31b6.png",
+      "enabled": true,
+      "displayOrder": 63
+    },
+    {
+      "_id": "frame_imported_64",
+      "name": "HMU",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/462_HMU_690dd37aca67e.png",
+      "previewUrl": "/uploads/frames/462_HMU_690dd37aca67e.png",
+      "frameUrl": "/uploads/frames/462_HMU_690dd37aca67e.png",
+      "r2Key": "frames/462_HMU_690dd37aca67e.png",
+      "enabled": true,
+      "displayOrder": 64
+    },
+    {
+      "_id": "frame_imported_65",
+      "name": "ParkBoGum",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 777,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 777,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 777,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/465_ParkBoGum_6910bc26e14da.png",
+      "previewUrl": "/uploads/frames/465_ParkBoGum_6910bc26e14da.png",
+      "frameUrl": "/uploads/frames/465_ParkBoGum_6910bc26e14da.png",
+      "r2Key": "frames/465_ParkBoGum_6910bc26e14da.png",
+      "enabled": true,
+      "displayOrder": 65
+    },
+    {
+      "_id": "frame_imported_66",
+      "name": "Steven Universe",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/470_Steven Universe_6921c4526b985.png",
+      "previewUrl": "/uploads/frames/470_Steven Universe_6921c4526b985.png",
+      "frameUrl": "/uploads/frames/470_Steven Universe_6921c4526b985.png",
+      "r2Key": "frames/470_Steven Universe_6921c4526b985.png",
+      "enabled": true,
+      "displayOrder": 66
+    },
+    {
+      "_id": "frame_imported_67",
+      "name": "matcha",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/471_matcha_6921c4677562b.png",
+      "previewUrl": "/uploads/frames/471_matcha_6921c4677562b.png",
+      "frameUrl": "/uploads/frames/471_matcha_6921c4677562b.png",
+      "r2Key": "frames/471_matcha_6921c4677562b.png",
+      "enabled": true,
+      "displayOrder": 67
+    },
+    {
+      "_id": "frame_imported_68",
+      "name": "cream-soda",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/472_cream-soda_6928ddb90cc97.png",
+      "previewUrl": "/uploads/frames/472_cream-soda_6928ddb90cc97.png",
+      "frameUrl": "/uploads/frames/472_cream-soda_6928ddb90cc97.png",
+      "r2Key": "frames/472_cream-soda_6928ddb90cc97.png",
+      "enabled": true,
+      "displayOrder": 68
+    },
+    {
+      "_id": "frame_imported_69",
+      "name": "glorious.blue.eyed.king",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/474_glorious.blue.eyed.king_6929d01fd3d8c.png",
+      "previewUrl": "/uploads/frames/474_glorious.blue.eyed.king_6929d01fd3d8c.png",
+      "frameUrl": "/uploads/frames/474_glorious.blue.eyed.king_6929d01fd3d8c.png",
+      "r2Key": "frames/474_glorious.blue.eyed.king_6929d01fd3d8c.png",
+      "enabled": true,
+      "displayOrder": 69
+    },
+    {
+      "_id": "frame_imported_70",
+      "name": "Martin",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 227,
+          "y": 59,
+          "width": 594,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 574
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/478_Martin_692c31d942db2.png",
+      "previewUrl": "/uploads/frames/478_Martin_692c31d942db2.png",
+      "frameUrl": "/uploads/frames/478_Martin_692c31d942db2.png",
+      "r2Key": "frames/478_Martin_692c31d942db2.png",
+      "enabled": true,
+      "displayOrder": 70
+    },
+    {
+      "_id": "frame_imported_71",
+      "name": "Keonho",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 574
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/479_Keonho_692c32375296f.png",
+      "previewUrl": "/uploads/frames/479_Keonho_692c32375296f.png",
+      "frameUrl": "/uploads/frames/479_Keonho_692c32375296f.png",
+      "r2Key": "frames/479_Keonho_692c32375296f.png",
+      "enabled": true,
+      "displayOrder": 71
+    },
+    {
+      "_id": "frame_imported_73",
+      "name": "Theater Ticket",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/483_Theater Ticket_692d81cfb1e9f.png",
+      "previewUrl": "/uploads/frames/483_Theater Ticket_692d81cfb1e9f.png",
+      "frameUrl": "/uploads/frames/483_Theater Ticket_692d81cfb1e9f.png",
+      "r2Key": "frames/483_Theater Ticket_692d81cfb1e9f.png",
+      "enabled": true,
+      "displayOrder": 73
+    },
+    {
+      "_id": "frame_imported_74",
+      "name": "Zootopia",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/484_Zootopia_692d8418563a1.png",
+      "previewUrl": "/uploads/frames/484_Zootopia_692d8418563a1.png",
+      "frameUrl": "/uploads/frames/484_Zootopia_692d8418563a1.png",
+      "r2Key": "frames/484_Zootopia_692d8418563a1.png",
+      "enabled": true,
+      "displayOrder": 74
+    },
+    {
+      "_id": "frame_imported_75",
+      "name": "BMKTCR x ",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 59,
+          "width": 763,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 719,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/486_BMKTCR x _BÁO_ THỨC IN ĐẬM INDIE_692e9bec9d990.png",
+      "previewUrl": "/uploads/frames/486_BMKTCR x _BÁO_ THỨC IN ĐẬM INDIE_692e9bec9d990.png",
+      "frameUrl": "/uploads/frames/486_BMKTCR x _BÁO_ THỨC IN ĐẬM INDIE_692e9bec9d990.png",
+      "r2Key": "frames/486_BMKTCR x _BÁO_ THỨC IN ĐẬM INDIE_692e9bec9d990.png",
+      "enabled": true,
+      "displayOrder": 75
+    },
+    {
+      "_id": "frame_imported_76",
+      "name": "Locket",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/491_Locket_692ed2cc19d03.png",
+      "previewUrl": "/uploads/frames/491_Locket_692ed2cc19d03.png",
+      "frameUrl": "/uploads/frames/491_Locket_692ed2cc19d03.png",
+      "r2Key": "frames/491_Locket_692ed2cc19d03.png",
+      "enabled": true,
+      "displayOrder": 76
+    },
+    {
+      "_id": "frame_imported_77",
+      "name": "seonghyeon",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 574
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/492_seonghyeon_692edb205f3f0.png",
+      "previewUrl": "/uploads/frames/492_seonghyeon_692edb205f3f0.png",
+      "frameUrl": "/uploads/frames/492_seonghyeon_692edb205f3f0.png",
+      "r2Key": "frames/492_seonghyeon_692edb205f3f0.png",
+      "enabled": true,
+      "displayOrder": 77
+    },
+    {
+      "_id": "frame_imported_78",
+      "name": "Merry Chirstmas 🎅🏻",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 777,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/495_Merry Chirstmas 🎅🏻_69310e3a32eac.png",
+      "previewUrl": "/uploads/frames/495_Merry Chirstmas 🎅🏻_69310e3a32eac.png",
+      "frameUrl": "/uploads/frames/495_Merry Chirstmas 🎅🏻_69310e3a32eac.png",
+      "r2Key": "frames/495_Merry Chirstmas 🎅🏻_69310e3a32eac.png",
+      "enabled": true,
+      "displayOrder": 78
+    },
+    {
+      "_id": "frame_imported_79",
+      "name": "DẤU VÂN TAY x ",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 59,
+          "width": 763,
+          "height": 545
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/496_DẤU VÂN TAY x _BÁO_ THỨC IN ĐẬM INDIE_6933cabb1dd7d.png",
+      "previewUrl": "/uploads/frames/496_DẤU VÂN TAY x _BÁO_ THỨC IN ĐẬM INDIE_6933cabb1dd7d.png",
+      "frameUrl": "/uploads/frames/496_DẤU VÂN TAY x _BÁO_ THỨC IN ĐẬM INDIE_6933cabb1dd7d.png",
+      "r2Key": "frames/496_DẤU VÂN TAY x _BÁO_ THỨC IN ĐẬM INDIE_6933cabb1dd7d.png",
+      "enabled": true,
+      "displayOrder": 79
+    },
+    {
+      "_id": "frame_imported_80",
+      "name": "CHIPANDCOD x ",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 59,
+          "width": 763,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 763,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 763,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/500_CHIPANDCOD x _BÁO_ THỨC IN ĐẬM INDIE_69403bba702c9.png",
+      "previewUrl": "/uploads/frames/500_CHIPANDCOD x _BÁO_ THỨC IN ĐẬM INDIE_69403bba702c9.png",
+      "frameUrl": "/uploads/frames/500_CHIPANDCOD x _BÁO_ THỨC IN ĐẬM INDIE_69403bba702c9.png",
+      "r2Key": "frames/500_CHIPANDCOD x _BÁO_ THỨC IN ĐẬM INDIE_69403bba702c9.png",
+      "enabled": true,
+      "displayOrder": 80
+    },
+    {
+      "_id": "frame_imported_81",
+      "name": "Magazine",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 777,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 777,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 777,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/506_Magazine_69567d1275bf7.png",
+      "previewUrl": "/uploads/frames/506_Magazine_69567d1275bf7.png",
+      "frameUrl": "/uploads/frames/506_Magazine_69567d1275bf7.png",
+      "r2Key": "frames/506_Magazine_69567d1275bf7.png",
+      "enabled": true,
+      "displayOrder": 81
+    },
+    {
+      "_id": "frame_imported_82",
+      "name": "2026",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/507_2026_69567d8355fe2.png",
+      "previewUrl": "/uploads/frames/507_2026_69567d8355fe2.png",
+      "frameUrl": "/uploads/frames/507_2026_69567d8355fe2.png",
+      "r2Key": "frames/507_2026_69567d8355fe2.png",
+      "enabled": true,
+      "displayOrder": 82
+    },
+    {
+      "_id": "frame_imported_83",
+      "name": "Jang Wonyoung",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 777,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 777,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 777,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/508_Jang Wonyoung_69567e9b50731.png",
+      "previewUrl": "/uploads/frames/508_Jang Wonyoung_69567e9b50731.png",
+      "frameUrl": "/uploads/frames/508_Jang Wonyoung_69567e9b50731.png",
+      "r2Key": "frames/508_Jang Wonyoung_69567e9b50731.png",
+      "enabled": true,
+      "displayOrder": 83
+    },
+    {
+      "_id": "frame_imported_84",
+      "name": "Doggo's Day",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 950,
+        "height": 2880
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 79,
+          "y": 128,
+          "width": 792,
+          "height": 560
+        },
+        {
+          "x": 87,
+          "y": 768,
+          "width": 784,
+          "height": 576
+        },
+        {
+          "x": 79,
+          "y": 1424,
+          "width": 784,
+          "height": 592
+        },
+        {
+          "x": 135,
+          "y": 2144,
+          "width": 713,
+          "height": 544
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/511_Doggo's Day_695b91d10ae9f.png",
+      "previewUrl": "/uploads/frames/511_Doggo's Day_695b91d10ae9f.png",
+      "frameUrl": "/uploads/frames/511_Doggo's Day_695b91d10ae9f.png",
+      "r2Key": "frames/511_Doggo's Day_695b91d10ae9f.png",
+      "enabled": true,
+      "displayOrder": 84
+    },
+    {
+      "_id": "frame_imported_85",
+      "name": "tripleS 3rd anniversary",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 2000,
+        "height": 5962
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 150,
+          "y": 166,
+          "width": 1700,
+          "height": 1259
+        },
+        {
+          "x": 150,
+          "y": 1557,
+          "width": 1700,
+          "height": 1259
+        },
+        {
+          "x": 150,
+          "y": 2948,
+          "width": 1683,
+          "height": 1259
+        },
+        {
+          "x": 150,
+          "y": 4339,
+          "width": 1700,
+          "height": 1259
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/522_tripleS 3rd anniversary_698eb32be5f3e.png",
+      "previewUrl": "/uploads/frames/522_tripleS 3rd anniversary_698eb32be5f3e.png",
+      "frameUrl": "/uploads/frames/522_tripleS 3rd anniversary_698eb32be5f3e.png",
+      "r2Key": "frames/522_tripleS 3rd anniversary_698eb32be5f3e.png",
+      "enabled": true,
+      "displayOrder": 85
+    },
+    {
+      "_id": "frame_imported_86",
+      "name": "digitalcam cartoon",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 177,
+          "width": 609,
+          "height": 383
+        },
+        {
+          "x": 59,
+          "y": 751,
+          "width": 535,
+          "height": 442
+        },
+        {
+          "x": 51,
+          "y": 1413,
+          "width": 528,
+          "height": 398
+        },
+        {
+          "x": 110,
+          "y": 1988,
+          "width": 557,
+          "height": 427
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/524_digitalcam cartoon_6992b4f935784.png",
+      "previewUrl": "/uploads/frames/524_digitalcam cartoon_6992b4f935784.png",
+      "frameUrl": "/uploads/frames/524_digitalcam cartoon_6992b4f935784.png",
+      "r2Key": "frames/524_digitalcam cartoon_6992b4f935784.png",
+      "enabled": true,
+      "displayOrder": 86
+    },
+    {
+      "_id": "frame_imported_87",
+      "name": "⪩. .⪨ 𝐂𝐞𝐥𝐞𝐛𝐫𝐚𝐭𝐞 “𝓟𝓮𝓪𝓷𝓾𝓽” 𝟏𝟏𝐭𝐡 𝐝𝐞𝐛𝐮𝐭",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 680,
+        "height": 2048
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 57,
+          "y": 57,
+          "width": 561,
+          "height": 330
+        },
+        {
+          "x": 102,
+          "y": 512,
+          "width": 476,
+          "height": 444
+        },
+        {
+          "x": 62,
+          "y": 1013,
+          "width": 555,
+          "height": 387
+        },
+        {
+          "x": 62,
+          "y": 1490,
+          "width": 555,
+          "height": 364
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/525_⪩. .⪨ 𝐂𝐞𝐥𝐞𝐛𝐫𝐚𝐭𝐞 “𝓟𝓮𝓪𝓷𝓾𝓽” 𝟏𝟏𝐭𝐡 𝐝𝐞𝐛𝐮𝐭_ 🥜_6999b129e6732.png",
+      "previewUrl": "/uploads/frames/525_⪩. .⪨ 𝐂𝐞𝐥𝐞𝐛𝐫𝐚𝐭𝐞 “𝓟𝓮𝓪𝓷𝓾𝓽” 𝟏𝟏𝐭𝐡 𝐝𝐞𝐛𝐮𝐭_ 🥜_6999b129e6732.png",
+      "frameUrl": "/uploads/frames/525_⪩. .⪨ 𝐂𝐞𝐥𝐞𝐛𝐫𝐚𝐭𝐞 “𝓟𝓮𝓪𝓷𝓾𝓽” 𝟏𝟏𝐭𝐡 𝐝𝐞𝐛𝐮𝐭_ 🥜_6999b129e6732.png",
+      "r2Key": "frames/525_⪩. .⪨ 𝐂𝐞𝐥𝐞𝐛𝐫𝐚𝐭𝐞 “𝓟𝓮𝓪𝓷𝓾𝓽” 𝟏𝟏𝐭𝐡 𝐝𝐞𝐛𝐮𝐭_ 🥜_6999b129e6732.png",
+      "enabled": true,
+      "displayOrder": 87
+    },
+    {
+      "_id": "frame_imported_88",
+      "name": "Shane Hollander",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 73,
+          "y": 88,
+          "width": 733,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 692,
+          "width": 653,
+          "height": 545
+        },
+        {
+          "x": 81,
+          "y": 1310,
+          "width": 726,
+          "height": 545
+        },
+        {
+          "x": 88,
+          "y": 1929,
+          "width": 704,
+          "height": 471
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/526_Shane Hollander_699c22078a038.png",
+      "previewUrl": "/uploads/frames/526_Shane Hollander_699c22078a038.png",
+      "frameUrl": "/uploads/frames/526_Shane Hollander_699c22078a038.png",
+      "r2Key": "frames/526_Shane Hollander_699c22078a038.png",
+      "enabled": true,
+      "displayOrder": 88
+    },
+    {
+      "_id": "frame_imported_89",
+      "name": "LLYA Rozanov",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 73,
+          "y": 88,
+          "width": 733,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 692,
+          "width": 653,
+          "height": 545
+        },
+        {
+          "x": 81,
+          "y": 1310,
+          "width": 726,
+          "height": 545
+        },
+        {
+          "x": 88,
+          "y": 1929,
+          "width": 704,
+          "height": 471
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/529_LLYA Rozanov_699e172e8caa3.png",
+      "previewUrl": "/uploads/frames/529_LLYA Rozanov_699e172e8caa3.png",
+      "frameUrl": "/uploads/frames/529_LLYA Rozanov_699e172e8caa3.png",
+      "r2Key": "frames/529_LLYA Rozanov_699e172e8caa3.png",
+      "enabled": true,
+      "displayOrder": 89
+    },
+    {
+      "_id": "frame_imported_90",
+      "name": "Dương Domic",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 451,
+        "height": 1278
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 30,
+          "y": 50,
+          "width": 391,
+          "height": 220
+        },
+        {
+          "x": 30,
+          "y": 298,
+          "width": 391,
+          "height": 220
+        },
+        {
+          "x": 30,
+          "y": 554,
+          "width": 391,
+          "height": 220
+        },
+        {
+          "x": 30,
+          "y": 809,
+          "width": 391,
+          "height": 213
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/531_Dương Domic_699e18607041b.png",
+      "previewUrl": "/uploads/frames/531_Dương Domic_699e18607041b.png",
+      "frameUrl": "/uploads/frames/531_Dương Domic_699e18607041b.png",
+      "r2Key": "frames/531_Dương Domic_699e18607041b.png",
+      "enabled": true,
+      "displayOrder": 90
+    },
+    {
+      "_id": "frame_imported_91",
+      "name": "아가공'𝑠 𝑂𝑑𝑦𝑠𝑠𝑒𝑦 — ZEKA",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 833,
+        "height": 2500
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 62,
+          "y": 292,
+          "width": 715,
+          "height": 472
+        },
+        {
+          "x": 56,
+          "y": 847,
+          "width": 715,
+          "height": 458
+        },
+        {
+          "x": 56,
+          "y": 1403,
+          "width": 722,
+          "height": 472
+        },
+        {
+          "x": 56,
+          "y": 2028,
+          "width": 715,
+          "height": 403
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/532_아가공'𝑠 𝑂𝑑𝑦𝑠𝑠𝑒𝑦 — ZEKA_69ac4f1c3282f.png",
+      "previewUrl": "/uploads/frames/532_아가공'𝑠 𝑂𝑑𝑦𝑠𝑠𝑒𝑦 — ZEKA_69ac4f1c3282f.png",
+      "frameUrl": "/uploads/frames/532_아가공'𝑠 𝑂𝑑𝑦𝑠𝑠𝑒𝑦 — ZEKA_69ac4f1c3282f.png",
+      "r2Key": "frames/532_아가공'𝑠 𝑂𝑑𝑦𝑠𝑠𝑒𝑦 — ZEKA_69ac4f1c3282f.png",
+      "enabled": true,
+      "displayOrder": 91
+    },
+    {
+      "_id": "frame_imported_92",
+      "name": "thomeo",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 707,
+        "height": 2000
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 41,
+          "y": 67,
+          "width": 625,
+          "height": 378
+        },
+        {
+          "x": 41,
+          "y": 467,
+          "width": 625,
+          "height": 378
+        },
+        {
+          "x": 41,
+          "y": 867,
+          "width": 625,
+          "height": 378
+        },
+        {
+          "x": 41,
+          "y": 1267,
+          "width": 625,
+          "height": 367
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/534_thomeo_69ae27bd104bf.png",
+      "previewUrl": "/uploads/frames/534_thomeo_69ae27bd104bf.png",
+      "frameUrl": "/uploads/frames/534_thomeo_69ae27bd104bf.png",
+      "r2Key": "frames/534_thomeo_69ae27bd104bf.png",
+      "enabled": true,
+      "displayOrder": 92
+    },
+    {
+      "_id": "frame_imported_93",
+      "name": "Save the date",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1000,
+        "height": 3000
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 150,
+          "y": 100,
+          "width": 675,
+          "height": 600
+        },
+        {
+          "x": 142,
+          "y": 783,
+          "width": 675,
+          "height": 600
+        },
+        {
+          "x": 150,
+          "y": 1467,
+          "width": 658,
+          "height": 617
+        },
+        {
+          "x": 150,
+          "y": 2167,
+          "width": 675,
+          "height": 600
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/538_Save the date_69ae28ab885ab.png",
+      "previewUrl": "/uploads/frames/538_Save the date_69ae28ab885ab.png",
+      "frameUrl": "/uploads/frames/538_Save the date_69ae28ab885ab.png",
+      "r2Key": "frames/538_Save the date_69ae28ab885ab.png",
+      "enabled": true,
+      "displayOrder": 93
+    },
+    {
+      "_id": "frame_imported_94",
+      "name": "star1",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1000,
+        "height": 3000
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 67,
+          "y": 83,
+          "width": 867,
+          "height": 650
+        },
+        {
+          "x": 67,
+          "y": 767,
+          "width": 867,
+          "height": 650
+        },
+        {
+          "x": 67,
+          "y": 1467,
+          "width": 867,
+          "height": 633
+        },
+        {
+          "x": 67,
+          "y": 2150,
+          "width": 867,
+          "height": 650
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/539_star1_69ae28bd7352b.png",
+      "previewUrl": "/uploads/frames/539_star1_69ae28bd7352b.png",
+      "frameUrl": "/uploads/frames/539_star1_69ae28bd7352b.png",
+      "r2Key": "frames/539_star1_69ae28bd7352b.png",
+      "enabled": true,
+      "displayOrder": 94
+    },
+    {
+      "_id": "frame_imported_95",
+      "name": "star3",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1000,
+        "height": 3000
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 42,
+          "y": 67,
+          "width": 917,
+          "height": 683
+        },
+        {
+          "x": 42,
+          "y": 783,
+          "width": 917,
+          "height": 683
+        },
+        {
+          "x": 42,
+          "y": 1483,
+          "width": 917,
+          "height": 683
+        },
+        {
+          "x": 42,
+          "y": 2200,
+          "width": 917,
+          "height": 683
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/541_star3_69ae2913e9287.png",
+      "previewUrl": "/uploads/frames/541_star3_69ae2913e9287.png",
+      "frameUrl": "/uploads/frames/541_star3_69ae2913e9287.png",
+      "r2Key": "frames/541_star3_69ae2913e9287.png",
+      "enabled": true,
+      "displayOrder": 95
+    },
+    {
+      "_id": "frame_imported_96",
+      "name": "Film1",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 591,
+        "height": 1772
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 0,
+          "width": 473,
+          "height": 571
+        },
+        {
+          "x": 59,
+          "y": 601,
+          "width": 473,
+          "height": 571
+        },
+        {
+          "x": 59,
+          "y": 1201,
+          "width": 473,
+          "height": 571
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/548_Film1_69d37be83c0b5.png",
+      "previewUrl": "/uploads/frames/548_Film1_69d37be83c0b5.png",
+      "frameUrl": "/uploads/frames/548_Film1_69d37be83c0b5.png",
+      "r2Key": "frames/548_Film1_69d37be83c0b5.png",
+      "enabled": true,
+      "displayOrder": 96
+    },
+    {
+      "_id": "frame_imported_145",
+      "name": "Film2",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 591,
+        "height": 1772
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 34,
+          "y": 20,
+          "width": 517,
+          "height": 404
+        },
+        {
+          "x": 34,
+          "y": 463,
+          "width": 517,
+          "height": 404
+        },
+        {
+          "x": 34,
+          "y": 906,
+          "width": 517,
+          "height": 404
+        },
+        {
+          "x": 34,
+          "y": 1349,
+          "width": 517,
+          "height": 413
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/632_Film2_6a6cd95d455b0.png",
+      "previewUrl": "/uploads/frames/632_Film2_6a6cd95d455b0.png",
+      "frameUrl": "/uploads/frames/632_Film2_6a6cd95d455b0.png",
+      "r2Key": "frames/632_Film2_6a6cd95d455b0.png",
+      "enabled": true,
+      "displayOrder": 145
+    },
+    {
+      "_id": "frame_imported_98",
+      "name": "Basic12",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 70,
+          "y": 80,
+          "width": 1050,
+          "height": 760
+        },
+        {
+          "x": 70,
+          "y": 920,
+          "width": 1050,
+          "height": 760
+        },
+        {
+          "x": 70,
+          "y": 1760,
+          "width": 1040,
+          "height": 760
+        },
+        {
+          "x": 780,
+          "y": 1760,
+          "width": 340,
+          "height": 260
+        },
+        {
+          "x": 70,
+          "y": 2260,
+          "width": 380,
+          "height": 280
+        },
+        {
+          "x": 730,
+          "y": 2280,
+          "width": 390,
+          "height": 260
+        },
+        {
+          "x": 70,
+          "y": 2600,
+          "width": 1050,
+          "height": 780
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/550_Basic12_69d37f1a81d08.png",
+      "previewUrl": "/uploads/frames/550_Basic12_69d37f1a81d08.png",
+      "frameUrl": "/uploads/frames/550_Basic12_69d37f1a81d08.png",
+      "r2Key": "frames/550_Basic12_69d37f1a81d08.png",
+      "enabled": true,
+      "displayOrder": 98
+    },
+    {
+      "_id": "frame_imported_99",
+      "name": "HLU-card",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 103,
+          "y": 147,
+          "width": 249,
+          "height": 280
+        },
+        {
+          "x": 66,
+          "y": 692,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/551_HLU-card_69d9c7ac90c0b.png",
+      "previewUrl": "/uploads/frames/551_HLU-card_69d9c7ac90c0b.png",
+      "frameUrl": "/uploads/frames/551_HLU-card_69d9c7ac90c0b.png",
+      "r2Key": "frames/551_HLU-card_69d9c7ac90c0b.png",
+      "enabled": true,
+      "displayOrder": 99
+    },
+    {
+      "_id": "frame_imported_100",
+      "name": "AOF-card",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 103,
+          "y": 147,
+          "width": 249,
+          "height": 280
+        },
+        {
+          "x": 66,
+          "y": 692,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/552_AOF-card_69d9c7bcb7dc6.png",
+      "previewUrl": "/uploads/frames/552_AOF-card_69d9c7bcb7dc6.png",
+      "frameUrl": "/uploads/frames/552_AOF-card_69d9c7bcb7dc6.png",
+      "r2Key": "frames/552_AOF-card_69d9c7bcb7dc6.png",
+      "enabled": true,
+      "displayOrder": 100
+    },
+    {
+      "_id": "frame_imported_101",
+      "name": "NEU-card",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 103,
+          "y": 147,
+          "width": 249,
+          "height": 280
+        },
+        {
+          "x": 66,
+          "y": 692,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/553_NEU-card_69d9c7cdc6fa9.png",
+      "previewUrl": "/uploads/frames/553_NEU-card_69d9c7cdc6fa9.png",
+      "frameUrl": "/uploads/frames/553_NEU-card_69d9c7cdc6fa9.png",
+      "r2Key": "frames/553_NEU-card_69d9c7cdc6fa9.png",
+      "enabled": true,
+      "displayOrder": 101
+    },
+    {
+      "_id": "frame_imported_102",
+      "name": "TMU-card",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 103,
+          "y": 147,
+          "width": 249,
+          "height": 280
+        },
+        {
+          "x": 66,
+          "y": 692,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/554_TMU-card_69d9c7de5f74a.png",
+      "previewUrl": "/uploads/frames/554_TMU-card_69d9c7de5f74a.png",
+      "frameUrl": "/uploads/frames/554_TMU-card_69d9c7de5f74a.png",
+      "r2Key": "frames/554_TMU-card_69d9c7de5f74a.png",
+      "enabled": true,
+      "displayOrder": 102
+    },
+    {
+      "_id": "frame_imported_103",
+      "name": "HUCE-card",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 103,
+          "y": 147,
+          "width": 249,
+          "height": 280
+        },
+        {
+          "x": 66,
+          "y": 692,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/555_HUCE-card_69d9c7f141687.png",
+      "previewUrl": "/uploads/frames/555_HUCE-card_69d9c7f141687.png",
+      "frameUrl": "/uploads/frames/555_HUCE-card_69d9c7f141687.png",
+      "r2Key": "frames/555_HUCE-card_69d9c7f141687.png",
+      "enabled": true,
+      "displayOrder": 103
+    },
+    {
+      "_id": "frame_imported_104",
+      "name": "HNUE-card",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 103,
+          "y": 147,
+          "width": 249,
+          "height": 280
+        },
+        {
+          "x": 66,
+          "y": 692,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/556_HNUE-card_69d9c80096719.png",
+      "previewUrl": "/uploads/frames/556_HNUE-card_69d9c80096719.png",
+      "frameUrl": "/uploads/frames/556_HNUE-card_69d9c80096719.png",
+      "r2Key": "frames/556_HNUE-card_69d9c80096719.png",
+      "enabled": true,
+      "displayOrder": 104
+    },
+    {
+      "_id": "frame_imported_105",
+      "name": "ULIS-card",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 103,
+          "y": 147,
+          "width": 249,
+          "height": 280
+        },
+        {
+          "x": 66,
+          "y": 692,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/557_ULIS-card_69d9c812f05e6.png",
+      "previewUrl": "/uploads/frames/557_ULIS-card_69d9c812f05e6.png",
+      "frameUrl": "/uploads/frames/557_ULIS-card_69d9c812f05e6.png",
+      "r2Key": "frames/557_ULIS-card_69d9c812f05e6.png",
+      "enabled": false,
+      "displayOrder": 105
+    },
+    {
+      "_id": "frame_imported_106",
+      "name": "Basic-15",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 120,
+          "y": 140,
+          "width": 940,
+          "height": 940
+        },
+        {
+          "x": 120,
+          "y": 1160,
+          "width": 940,
+          "height": 920
+        },
+        {
+          "x": 120,
+          "y": 2160,
+          "width": 940,
+          "height": 940
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/558_Basic-15_69ef60c9a3d12.png",
+      "previewUrl": "/uploads/frames/558_Basic-15_69ef60c9a3d12.png",
+      "frameUrl": "/uploads/frames/558_Basic-15_69ef60c9a3d12.png",
+      "r2Key": "frames/558_Basic-15_69ef60c9a3d12.png",
+      "enabled": true,
+      "displayOrder": 106
+    },
+    {
+      "_id": "frame_imported_107",
+      "name": "Basic-16",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 740
+        },
+        {
+          "x": 60,
+          "y": 860,
+          "width": 1080,
+          "height": 740
+        },
+        {
+          "x": 60,
+          "y": 1660,
+          "width": 1080,
+          "height": 720
+        },
+        {
+          "x": 50,
+          "y": 2440,
+          "width": 1090,
+          "height": 800
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/561_Basic-16_69ef61273725c.png",
+      "previewUrl": "/uploads/frames/561_Basic-16_69ef61273725c.png",
+      "frameUrl": "/uploads/frames/561_Basic-16_69ef61273725c.png",
+      "r2Key": "frames/561_Basic-16_69ef61273725c.png",
+      "enabled": true,
+      "displayOrder": 107
+    },
+    {
+      "_id": "frame_imported_108",
+      "name": "Basic-17",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 160,
+          "y": 260,
+          "width": 870,
+          "height": 840
+        },
+        {
+          "x": 160,
+          "y": 1340,
+          "width": 890,
+          "height": 860
+        },
+        {
+          "x": 170,
+          "y": 2440,
+          "width": 870,
+          "height": 840
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/562_Basic-17_69ef613158c9e.png",
+      "previewUrl": "/uploads/frames/562_Basic-17_69ef613158c9e.png",
+      "frameUrl": "/uploads/frames/562_Basic-17_69ef613158c9e.png",
+      "r2Key": "frames/562_Basic-17_69ef613158c9e.png",
+      "enabled": true,
+      "displayOrder": 108
+    },
+    {
+      "_id": "frame_imported_109",
+      "name": "30",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 591,
+        "height": 1772
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 79,
+          "y": 59,
+          "width": 468,
+          "height": 335
+        },
+        {
+          "x": 39,
+          "y": 433,
+          "width": 502,
+          "height": 335
+        },
+        {
+          "x": 44,
+          "y": 797,
+          "width": 502,
+          "height": 335
+        },
+        {
+          "x": 49,
+          "y": 1171,
+          "width": 502,
+          "height": 335
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/563_30_4 GPMN_69f734c41cab0.png",
+      "previewUrl": "/uploads/frames/563_30_4 GPMN_69f734c41cab0.png",
+      "frameUrl": "/uploads/frames/563_30_4 GPMN_69f734c41cab0.png",
+      "r2Key": "frames/563_30_4 GPMN_69f734c41cab0.png",
+      "enabled": true,
+      "displayOrder": 109
+    },
+    {
+      "_id": "frame_imported_111",
+      "name": "UPRIZE DYLAN",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1652,
+        "height": 4920
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 207,
+          "y": 191,
+          "width": 1225,
+          "height": 793
+        },
+        {
+          "x": 220,
+          "y": 1230,
+          "width": 1211,
+          "height": 847
+        },
+        {
+          "x": 207,
+          "y": 2296,
+          "width": 1225,
+          "height": 875
+        },
+        {
+          "x": 220,
+          "y": 3389,
+          "width": 1198,
+          "height": 820
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/567_UPRIZE DYLAN_DUY LÂN_69f9c442b0534.png",
+      "previewUrl": "/uploads/frames/567_UPRIZE DYLAN_DUY LÂN_69f9c442b0534.png",
+      "frameUrl": "/uploads/frames/567_UPRIZE DYLAN_DUY LÂN_69f9c442b0534.png",
+      "r2Key": "frames/567_UPRIZE DYLAN_DUY LÂN_69f9c442b0534.png",
+      "enabled": true,
+      "displayOrder": 111
+    },
+    {
+      "_id": "frame_imported_112",
+      "name": "Coca",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 428,
+        "height": 1252
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 75,
+          "y": 341,
+          "width": 264,
+          "height": 257
+        },
+        {
+          "x": 75,
+          "y": 640,
+          "width": 264,
+          "height": 264
+        },
+        {
+          "x": 68,
+          "y": 939,
+          "width": 271,
+          "height": 264
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/568_Coca_69ff1b1af1890.png",
+      "previewUrl": "/uploads/frames/568_Coca_69ff1b1af1890.png",
+      "frameUrl": "/uploads/frames/568_Coca_69ff1b1af1890.png",
+      "r2Key": "frames/568_Coca_69ff1b1af1890.png",
+      "enabled": true,
+      "displayOrder": 112
+    },
+    {
+      "_id": "frame_imported_113",
+      "name": "Red Digicam",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 428,
+        "height": 1252
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 25,
+          "y": 320,
+          "width": 257,
+          "height": 209
+        },
+        {
+          "x": 46,
+          "y": 640,
+          "width": 253,
+          "height": 195
+        },
+        {
+          "x": 39,
+          "y": 946,
+          "width": 282,
+          "height": 236
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/569_Red Digicam_69ff1bb477e7e.png",
+      "previewUrl": "/uploads/frames/569_Red Digicam_69ff1bb477e7e.png",
+      "frameUrl": "/uploads/frames/569_Red Digicam_69ff1bb477e7e.png",
+      "r2Key": "frames/569_Red Digicam_69ff1bb477e7e.png",
+      "enabled": true,
+      "displayOrder": 113
+    },
+    {
+      "_id": "frame_imported_114",
+      "name": "Capturing Moment",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 428,
+        "height": 1252
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 50,
+          "y": 348,
+          "width": 332,
+          "height": 271
+        },
+        {
+          "x": 54,
+          "y": 647,
+          "width": 332,
+          "height": 264
+        },
+        {
+          "x": 61,
+          "y": 946,
+          "width": 321,
+          "height": 257
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/570_Capturing Moment_69ff1be3e00e2.png",
+      "previewUrl": "/uploads/frames/570_Capturing Moment_69ff1be3e00e2.png",
+      "frameUrl": "/uploads/frames/570_Capturing Moment_69ff1be3e00e2.png",
+      "r2Key": "frames/570_Capturing Moment_69ff1be3e00e2.png",
+      "enabled": true,
+      "displayOrder": 114
+    },
+    {
+      "_id": "frame_imported_115",
+      "name": "Biển hè",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 592,
+        "height": 1776
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 257,
+          "width": 474,
+          "height": 424
+        },
+        {
+          "x": 59,
+          "y": 701,
+          "width": 474,
+          "height": 424
+        },
+        {
+          "x": 59,
+          "y": 1154,
+          "width": 474,
+          "height": 424
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/573_Biển hè_69ff69b13221a.png",
+      "previewUrl": "/uploads/frames/573_Biển hè_69ff69b13221a.png",
+      "frameUrl": "/uploads/frames/573_Biển hè_69ff69b13221a.png",
+      "r2Key": "frames/573_Biển hè_69ff69b13221a.png",
+      "enabled": true,
+      "displayOrder": 115
+    },
+    {
+      "_id": "frame_imported_116",
+      "name": "Happy Moments",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 724,
+        "height": 2172
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 97,
+          "y": 181,
+          "width": 561,
+          "height": 459
+        },
+        {
+          "x": 97,
+          "y": 688,
+          "width": 531,
+          "height": 398
+        },
+        {
+          "x": 97,
+          "y": 1122,
+          "width": 531,
+          "height": 410
+        },
+        {
+          "x": 97,
+          "y": 1569,
+          "width": 531,
+          "height": 410
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/575_Happy Moments_6a018cc859932.png",
+      "previewUrl": "/uploads/frames/575_Happy Moments_6a018cc859932.png",
+      "frameUrl": "/uploads/frames/575_Happy Moments_6a018cc859932.png",
+      "r2Key": "frames/575_Happy Moments_6a018cc859932.png",
+      "enabled": true,
+      "displayOrder": 116
+    },
+    {
+      "_id": "frame_imported_117",
+      "name": "Sweet Memories",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 724,
+        "height": 2172
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 78,
+          "y": 205,
+          "width": 567,
+          "height": 386
+        },
+        {
+          "x": 78,
+          "y": 640,
+          "width": 567,
+          "height": 386
+        },
+        {
+          "x": 78,
+          "y": 1074,
+          "width": 567,
+          "height": 398
+        },
+        {
+          "x": 78,
+          "y": 1520,
+          "width": 567,
+          "height": 483
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/576_Sweet Memories_6a018cfeb3cc9.png",
+      "previewUrl": "/uploads/frames/576_Sweet Memories_6a018cfeb3cc9.png",
+      "frameUrl": "/uploads/frames/576_Sweet Memories_6a018cfeb3cc9.png",
+      "r2Key": "frames/576_Sweet Memories_6a018cfeb3cc9.png",
+      "enabled": true,
+      "displayOrder": 117
+    },
+    {
+      "_id": "frame_imported_118",
+      "name": "Tem Du Ký",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 600,
+        "height": 1800
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 40,
+          "y": 50,
+          "width": 520,
+          "height": 380
+        },
+        {
+          "x": 40,
+          "y": 450,
+          "width": 520,
+          "height": 380
+        },
+        {
+          "x": 40,
+          "y": 850,
+          "width": 520,
+          "height": 380
+        },
+        {
+          "x": 40,
+          "y": 1250,
+          "width": 520,
+          "height": 380
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/578_Tem Du Ký_6a01aacc0defd.png",
+      "previewUrl": "/uploads/frames/578_Tem Du Ký_6a01aacc0defd.png",
+      "frameUrl": "/uploads/frames/578_Tem Du Ký_6a01aacc0defd.png",
+      "r2Key": "frames/578_Tem Du Ký_6a01aacc0defd.png",
+      "enabled": true,
+      "displayOrder": 118
+    },
+    {
+      "_id": "frame_imported_119",
+      "name": "Valorant",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 724,
+        "height": 2172
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 72,
+          "y": 229,
+          "width": 579,
+          "height": 362
+        },
+        {
+          "x": 72,
+          "y": 615,
+          "width": 579,
+          "height": 362
+        },
+        {
+          "x": 72,
+          "y": 1014,
+          "width": 579,
+          "height": 362
+        },
+        {
+          "x": 72,
+          "y": 1400,
+          "width": 579,
+          "height": 362
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/582_Valorant_6a01b1a4d96d2.png",
+      "previewUrl": "/uploads/frames/582_Valorant_6a01b1a4d96d2.png",
+      "frameUrl": "/uploads/frames/582_Valorant_6a01b1a4d96d2.png",
+      "r2Key": "frames/582_Valorant_6a01b1a4d96d2.png",
+      "enabled": true,
+      "displayOrder": 119
+    },
+    {
+      "_id": "frame_imported_120",
+      "name": "Liên Quân",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 724,
+        "height": 2172
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 78,
+          "y": 205,
+          "width": 567,
+          "height": 362
+        },
+        {
+          "x": 78,
+          "y": 603,
+          "width": 567,
+          "height": 374
+        },
+        {
+          "x": 78,
+          "y": 1014,
+          "width": 567,
+          "height": 362
+        },
+        {
+          "x": 78,
+          "y": 1412,
+          "width": 567,
+          "height": 362
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/583_Liên Quân_6a01b21a7950f.png",
+      "previewUrl": "/uploads/frames/583_Liên Quân_6a01b21a7950f.png",
+      "frameUrl": "/uploads/frames/583_Liên Quân_6a01b21a7950f.png",
+      "r2Key": "frames/583_Liên Quân_6a01b21a7950f.png",
+      "enabled": true,
+      "displayOrder": 120
+    },
+    {
+      "_id": "frame_imported_122",
+      "name": "BTS",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 724,
+        "height": 2172
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 72,
+          "y": 265,
+          "width": 579,
+          "height": 374
+        },
+        {
+          "x": 72,
+          "y": 652,
+          "width": 579,
+          "height": 362
+        },
+        {
+          "x": 72,
+          "y": 1026,
+          "width": 579,
+          "height": 362
+        },
+        {
+          "x": 72,
+          "y": 1400,
+          "width": 579,
+          "height": 362
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/585_BTS_2_6a01b5a37c981.png",
+      "previewUrl": "/uploads/frames/585_BTS_2_6a01b5a37c981.png",
+      "frameUrl": "/uploads/frames/585_BTS_2_6a01b5a37c981.png",
+      "r2Key": "frames/585_BTS_2_6a01b5a37c981.png",
+      "enabled": true,
+      "displayOrder": 122
+    },
+    {
+      "_id": "frame_imported_124",
+      "name": "G-Dragon",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 724,
+        "height": 2172
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 60,
+          "y": 229,
+          "width": 585,
+          "height": 374
+        },
+        {
+          "x": 42,
+          "y": 615,
+          "width": 609,
+          "height": 350
+        },
+        {
+          "x": 24,
+          "y": 977,
+          "width": 688,
+          "height": 917
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/587_G-Dragon_6a03106a69035.png",
+      "previewUrl": "/uploads/frames/587_G-Dragon_6a03106a69035.png",
+      "frameUrl": "/uploads/frames/587_G-Dragon_6a03106a69035.png",
+      "r2Key": "frames/587_G-Dragon_6a03106a69035.png",
+      "enabled": true,
+      "displayOrder": 124
+    },
+    {
+      "_id": "frame_imported_125",
+      "name": "LOL",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 724,
+        "height": 2172
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 97,
+          "y": 265,
+          "width": 525,
+          "height": 374
+        },
+        {
+          "x": 97,
+          "y": 676,
+          "width": 525,
+          "height": 374
+        },
+        {
+          "x": 97,
+          "y": 1086,
+          "width": 525,
+          "height": 374
+        },
+        {
+          "x": 97,
+          "y": 1496,
+          "width": 525,
+          "height": 374
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/590_LOL_6a03118a5260d.png",
+      "previewUrl": "/uploads/frames/590_LOL_6a03118a5260d.png",
+      "frameUrl": "/uploads/frames/590_LOL_6a03118a5260d.png",
+      "r2Key": "frames/590_LOL_6a03118a5260d.png",
+      "enabled": true,
+      "displayOrder": 125
+    },
+    {
+      "_id": "frame_imported_126",
+      "name": "NewsPaper",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 724,
+        "height": 2172
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 193,
+          "y": 265,
+          "width": 489,
+          "height": 326
+        },
+        {
+          "x": 193,
+          "y": 615,
+          "width": 489,
+          "height": 314
+        },
+        {
+          "x": 193,
+          "y": 953,
+          "width": 489,
+          "height": 326
+        },
+        {
+          "x": 193,
+          "y": 1303,
+          "width": 489,
+          "height": 314
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/591_NewsPaper_6a031344ec500.png",
+      "previewUrl": "/uploads/frames/591_NewsPaper_6a031344ec500.png",
+      "frameUrl": "/uploads/frames/591_NewsPaper_6a031344ec500.png",
+      "r2Key": "frames/591_NewsPaper_6a031344ec500.png",
+      "enabled": true,
+      "displayOrder": 126
+    },
+    {
+      "_id": "frame_imported_127",
+      "name": "Bùi Duy Ngọc CODCD",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 70,
+          "y": 380,
+          "width": 1060,
+          "height": 620
+        },
+        {
+          "x": 50,
+          "y": 1060,
+          "width": 1080,
+          "height": 580
+        },
+        {
+          "x": 80,
+          "y": 1760,
+          "width": 1040,
+          "height": 700
+        },
+        {
+          "x": 80,
+          "y": 2540,
+          "width": 1050,
+          "height": 560
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/592_Bùi Duy Ngọc CODCD_6a059a81d6d23.png",
+      "previewUrl": "/uploads/frames/592_Bùi Duy Ngọc CODCD_6a059a81d6d23.png",
+      "frameUrl": "/uploads/frames/592_Bùi Duy Ngọc CODCD_6a059a81d6d23.png",
+      "r2Key": "frames/592_Bùi Duy Ngọc CODCD_6a059a81d6d23.png",
+      "enabled": true,
+      "displayOrder": 127
+    },
+    {
+      "_id": "frame_imported_128",
+      "name": "Dương Hoàng Yến's birthday",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 671,
+        "height": 2012
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 34,
+          "y": 34,
+          "width": 609,
+          "height": 402
+        },
+        {
+          "x": 28,
+          "y": 481,
+          "width": 615,
+          "height": 414
+        },
+        {
+          "x": 28,
+          "y": 972,
+          "width": 615,
+          "height": 335
+        },
+        {
+          "x": 34,
+          "y": 1386,
+          "width": 604,
+          "height": 414
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/594_Dương Hoàng Yến's birthday_6a1c0fcaa44bf.png",
+      "previewUrl": "/uploads/frames/594_Dương Hoàng Yến's birthday_6a1c0fcaa44bf.png",
+      "frameUrl": "/uploads/frames/594_Dương Hoàng Yến's birthday_6a1c0fcaa44bf.png",
+      "r2Key": "frames/594_Dương Hoàng Yến's birthday_6a1c0fcaa44bf.png",
+      "enabled": true,
+      "displayOrder": 128
+    },
+    {
+      "_id": "frame_imported_129",
+      "name": "Eom chíp đi học",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3213
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 60,
+          "y": 129,
+          "width": 1080,
+          "height": 691
+        },
+        {
+          "x": 60,
+          "y": 884,
+          "width": 1080,
+          "height": 691
+        },
+        {
+          "x": 60,
+          "y": 1639,
+          "width": 1080,
+          "height": 691
+        },
+        {
+          "x": 60,
+          "y": 2394,
+          "width": 1080,
+          "height": 691
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/595_Eom chíp đi học_6a1c82c6a453d.png",
+      "previewUrl": "/uploads/frames/595_Eom chíp đi học_6a1c82c6a453d.png",
+      "frameUrl": "/uploads/frames/595_Eom chíp đi học_6a1c82c6a453d.png",
+      "r2Key": "frames/595_Eom chíp đi học_6a1c82c6a453d.png",
+      "enabled": true,
+      "displayOrder": 129
+    },
+    {
+      "_id": "frame_imported_130",
+      "name": "James(cortis)",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 90,
+          "y": 100,
+          "width": 1020,
+          "height": 760
+        },
+        {
+          "x": 90,
+          "y": 940,
+          "width": 1020,
+          "height": 760
+        },
+        {
+          "x": 90,
+          "y": 1760,
+          "width": 1020,
+          "height": 760
+        },
+        {
+          "x": 90,
+          "y": 2600,
+          "width": 1020,
+          "height": 760
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/597_James(cortis)_6a1d27c86e757.png",
+      "previewUrl": "/uploads/frames/597_James(cortis)_6a1d27c86e757.png",
+      "frameUrl": "/uploads/frames/597_James(cortis)_6a1d27c86e757.png",
+      "r2Key": "frames/597_James(cortis)_6a1d27c86e757.png",
+      "enabled": true,
+      "displayOrder": 130
+    },
+    {
+      "_id": "frame_imported_131",
+      "name": "Juhoon(cortis)",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 90,
+          "y": 100,
+          "width": 1020,
+          "height": 760
+        },
+        {
+          "x": 90,
+          "y": 940,
+          "width": 1020,
+          "height": 760
+        },
+        {
+          "x": 90,
+          "y": 1760,
+          "width": 1020,
+          "height": 760
+        },
+        {
+          "x": 90,
+          "y": 2600,
+          "width": 1020,
+          "height": 760
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/598_Juhoon(cortis)_6a1d27f0e8447.png",
+      "previewUrl": "/uploads/frames/598_Juhoon(cortis)_6a1d27f0e8447.png",
+      "frameUrl": "/uploads/frames/598_Juhoon(cortis)_6a1d27f0e8447.png",
+      "r2Key": "frames/598_Juhoon(cortis)_6a1d27f0e8447.png",
+      "enabled": true,
+      "displayOrder": 131
+    },
+    {
+      "_id": "frame_imported_132",
+      "name": "Tinh Hoa Rối Nước 1",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 591,
+        "height": 1772
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 39,
+          "y": 138,
+          "width": 507,
+          "height": 335
+        },
+        {
+          "x": 39,
+          "y": 502,
+          "width": 507,
+          "height": 335
+        },
+        {
+          "x": 39,
+          "y": 866,
+          "width": 507,
+          "height": 325
+        },
+        {
+          "x": 39,
+          "y": 1221,
+          "width": 507,
+          "height": 335
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/601_Tinh Hoa Rối Nước 1_6a3917dca3beb.png",
+      "previewUrl": "/uploads/frames/601_Tinh Hoa Rối Nước 1_6a3917dca3beb.png",
+      "frameUrl": "/uploads/frames/601_Tinh Hoa Rối Nước 1_6a3917dca3beb.png",
+      "r2Key": "frames/601_Tinh Hoa Rối Nước 1_6a3917dca3beb.png",
+      "enabled": true,
+      "displayOrder": 132
+    },
+    {
+      "_id": "frame_imported_133",
+      "name": "Tinh Hoa Rối Nước 2",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 591,
+        "height": 1772
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 197,
+          "width": 473,
+          "height": 335
+        },
+        {
+          "x": 59,
+          "y": 581,
+          "width": 473,
+          "height": 335
+        },
+        {
+          "x": 59,
+          "y": 965,
+          "width": 473,
+          "height": 335
+        },
+        {
+          "x": 59,
+          "y": 1349,
+          "width": 473,
+          "height": 335
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/602_Tinh Hoa Rối Nước 2_6a3917ea09d52.png",
+      "previewUrl": "/uploads/frames/602_Tinh Hoa Rối Nước 2_6a3917ea09d52.png",
+      "frameUrl": "/uploads/frames/602_Tinh Hoa Rối Nước 2_6a3917ea09d52.png",
+      "r2Key": "frames/602_Tinh Hoa Rối Nước 2_6a3917ea09d52.png",
+      "enabled": true,
+      "displayOrder": 133
+    },
+    {
+      "_id": "frame_imported_134",
+      "name": "ADP 1ST ANNIVERSARY",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 800,
+        "height": 2400
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 107,
+          "y": 120,
+          "width": 587,
+          "height": 400
+        },
+        {
+          "x": 100,
+          "y": 587,
+          "width": 587,
+          "height": 413
+        },
+        {
+          "x": 100,
+          "y": 1067,
+          "width": 573,
+          "height": 387
+        },
+        {
+          "x": 113,
+          "y": 1533,
+          "width": 573,
+          "height": 400
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/612_ADP 1ST ANNIVERSARY_6a395d5bec1ec.png",
+      "previewUrl": "/uploads/frames/612_ADP 1ST ANNIVERSARY_6a395d5bec1ec.png",
+      "frameUrl": "/uploads/frames/612_ADP 1ST ANNIVERSARY_6a395d5bec1ec.png",
+      "r2Key": "frames/612_ADP 1ST ANNIVERSARY_6a395d5bec1ec.png",
+      "enabled": true,
+      "displayOrder": 134
+    },
+    {
+      "_id": "frame_imported_135",
+      "name": "ADP 1ST ANNIVERSARY - ANNIE",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 800,
+        "height": 2400
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 107,
+          "y": 120,
+          "width": 587,
+          "height": 400
+        },
+        {
+          "x": 100,
+          "y": 587,
+          "width": 587,
+          "height": 413
+        },
+        {
+          "x": 100,
+          "y": 1067,
+          "width": 573,
+          "height": 387
+        },
+        {
+          "x": 113,
+          "y": 1533,
+          "width": 573,
+          "height": 400
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/613_ADP 1ST ANNIVERSARY - ANNIE_6a395d658c2e1.png",
+      "previewUrl": "/uploads/frames/613_ADP 1ST ANNIVERSARY - ANNIE_6a395d658c2e1.png",
+      "frameUrl": "/uploads/frames/613_ADP 1ST ANNIVERSARY - ANNIE_6a395d658c2e1.png",
+      "r2Key": "frames/613_ADP 1ST ANNIVERSARY - ANNIE_6a395d658c2e1.png",
+      "enabled": true,
+      "displayOrder": 135
+    },
+    {
+      "_id": "frame_imported_136",
+      "name": "ADP 1ST ANNIVERSARY - TARZZAN",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 800,
+        "height": 2400
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 107,
+          "y": 120,
+          "width": 587,
+          "height": 400
+        },
+        {
+          "x": 100,
+          "y": 587,
+          "width": 587,
+          "height": 413
+        },
+        {
+          "x": 100,
+          "y": 1067,
+          "width": 573,
+          "height": 387
+        },
+        {
+          "x": 113,
+          "y": 1533,
+          "width": 573,
+          "height": 400
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/614_ADP 1ST ANNIVERSARY - TARZZAN_6a395d6f9eb60.png",
+      "previewUrl": "/uploads/frames/614_ADP 1ST ANNIVERSARY - TARZZAN_6a395d6f9eb60.png",
+      "frameUrl": "/uploads/frames/614_ADP 1ST ANNIVERSARY - TARZZAN_6a395d6f9eb60.png",
+      "r2Key": "frames/614_ADP 1ST ANNIVERSARY - TARZZAN_6a395d6f9eb60.png",
+      "enabled": true,
+      "displayOrder": 136
+    },
+    {
+      "_id": "frame_imported_137",
+      "name": "ADP 1ST ANNIVERSARY - BAILEY",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 800,
+        "height": 2400
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 107,
+          "y": 120,
+          "width": 587,
+          "height": 400
+        },
+        {
+          "x": 100,
+          "y": 587,
+          "width": 587,
+          "height": 413
+        },
+        {
+          "x": 100,
+          "y": 1067,
+          "width": 573,
+          "height": 387
+        },
+        {
+          "x": 113,
+          "y": 1533,
+          "width": 573,
+          "height": 400
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/615_ADP 1ST ANNIVERSARY - BAILEY_6a395d776443d.png",
+      "previewUrl": "/uploads/frames/615_ADP 1ST ANNIVERSARY - BAILEY_6a395d776443d.png",
+      "frameUrl": "/uploads/frames/615_ADP 1ST ANNIVERSARY - BAILEY_6a395d776443d.png",
+      "r2Key": "frames/615_ADP 1ST ANNIVERSARY - BAILEY_6a395d776443d.png",
+      "enabled": true,
+      "displayOrder": 137
+    },
+    {
+      "_id": "frame_imported_138",
+      "name": "ADP 1ST ANNIVERSARY - WOOCHAN",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 800,
+        "height": 2400
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 107,
+          "y": 120,
+          "width": 587,
+          "height": 400
+        },
+        {
+          "x": 100,
+          "y": 587,
+          "width": 587,
+          "height": 413
+        },
+        {
+          "x": 100,
+          "y": 1067,
+          "width": 573,
+          "height": 387
+        },
+        {
+          "x": 113,
+          "y": 1533,
+          "width": 573,
+          "height": 400
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/616_ADP 1ST ANNIVERSARY - WOOCHAN_6a395d8323f0e.png",
+      "previewUrl": "/uploads/frames/616_ADP 1ST ANNIVERSARY - WOOCHAN_6a395d8323f0e.png",
+      "frameUrl": "/uploads/frames/616_ADP 1ST ANNIVERSARY - WOOCHAN_6a395d8323f0e.png",
+      "r2Key": "frames/616_ADP 1ST ANNIVERSARY - WOOCHAN_6a395d8323f0e.png",
+      "enabled": true,
+      "displayOrder": 138
+    },
+    {
+      "_id": "frame_imported_139",
+      "name": "ADP 1ST ANNIVERSARY - YOUNGSEO",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 800,
+        "height": 2400
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 107,
+          "y": 120,
+          "width": 587,
+          "height": 400
+        },
+        {
+          "x": 100,
+          "y": 587,
+          "width": 587,
+          "height": 413
+        },
+        {
+          "x": 100,
+          "y": 1067,
+          "width": 573,
+          "height": 387
+        },
+        {
+          "x": 113,
+          "y": 1533,
+          "width": 573,
+          "height": 400
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/617_ADP 1ST ANNIVERSARY - YOUNGSEO_6a395d8ec572c.png",
+      "previewUrl": "/uploads/frames/617_ADP 1ST ANNIVERSARY - YOUNGSEO_6a395d8ec572c.png",
+      "frameUrl": "/uploads/frames/617_ADP 1ST ANNIVERSARY - YOUNGSEO_6a395d8ec572c.png",
+      "r2Key": "frames/617_ADP 1ST ANNIVERSARY - YOUNGSEO_6a395d8ec572c.png",
+      "enabled": true,
+      "displayOrder": 139
+    },
+    {
+      "_id": "frame_imported_140",
+      "name": "Thanh Hằng",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 2400,
+        "height": 7200
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 140,
+          "y": 440,
+          "width": 2120,
+          "height": 1480
+        },
+        {
+          "x": 140,
+          "y": 2080,
+          "width": 2120,
+          "height": 1440
+        },
+        {
+          "x": 140,
+          "y": 3680,
+          "width": 2120,
+          "height": 1480
+        },
+        {
+          "x": 140,
+          "y": 5280,
+          "width": 2120,
+          "height": 1480
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/620_Thanh Hằng_6a4a142568058.png",
+      "previewUrl": "/uploads/frames/620_Thanh Hằng_6a4a142568058.png",
+      "frameUrl": "/uploads/frames/620_Thanh Hằng_6a4a142568058.png",
+      "r2Key": "frames/620_Thanh Hằng_6a4a142568058.png",
+      "enabled": true,
+      "displayOrder": 140
+    },
+    {
+      "_id": "frame_imported_141",
+      "name": "HANU",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 140,
+          "y": 920,
+          "width": 900,
+          "height": 580
+        },
+        {
+          "x": 140,
+          "y": 1680,
+          "width": 900,
+          "height": 600
+        },
+        {
+          "x": 140,
+          "y": 2460,
+          "width": 900,
+          "height": 600
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/621_HANU_6a5396707e531.png",
+      "previewUrl": "/uploads/frames/621_HANU_6a5396707e531.png",
+      "frameUrl": "/uploads/frames/621_HANU_6a5396707e531.png",
+      "r2Key": "frames/621_HANU_6a5396707e531.png",
+      "enabled": true,
+      "displayOrder": 141
+    },
+    {
+      "_id": "frame_imported_142",
+      "name": "UPRIZE LAVM&PN",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1205,
+        "height": 3591
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 90,
+          "y": 80,
+          "width": 1034,
+          "height": 778
+        },
+        {
+          "x": 70,
+          "y": 1037,
+          "width": 1054,
+          "height": 658
+        },
+        {
+          "x": 70,
+          "y": 1756,
+          "width": 1064,
+          "height": 758
+        },
+        {
+          "x": 70,
+          "y": 2613,
+          "width": 1054,
+          "height": 778
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/623_UPRIZE LAVM&PN_6a5d3a2a9cbd4.png",
+      "previewUrl": "/uploads/frames/623_UPRIZE LAVM&PN_6a5d3a2a9cbd4.png",
+      "frameUrl": "/uploads/frames/623_UPRIZE LAVM&PN_6a5d3a2a9cbd4.png",
+      "r2Key": "frames/623_UPRIZE LAVM&PN_6a5d3a2a9cbd4.png",
+      "enabled": true,
+      "displayOrder": 142
+    },
+    {
+      "_id": "frame_imported_143",
+      "name": "Đào Nguyên Anh Lạc",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 150,
+          "y": 120,
+          "width": 900,
+          "height": 600
+        },
+        {
+          "x": 100,
+          "y": 880,
+          "width": 1000,
+          "height": 660
+        },
+        {
+          "x": 90,
+          "y": 1660,
+          "width": 1020,
+          "height": 640
+        },
+        {
+          "x": 100,
+          "y": 2460,
+          "width": 1010,
+          "height": 640
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/624_Đào Nguyên Anh Lạc_6a6804b365e15.png",
+      "previewUrl": "/uploads/frames/624_Đào Nguyên Anh Lạc_6a6804b365e15.png",
+      "frameUrl": "/uploads/frames/624_Đào Nguyên Anh Lạc_6a6804b365e15.png",
+      "r2Key": "frames/624_Đào Nguyên Anh Lạc_6a6804b365e15.png",
+      "enabled": true,
+      "displayOrder": 143
+    },
+    {
+      "_id": "frame_imported_144",
+      "name": "Mèo Simmy Birthday",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 2668,
+        "height": 8000
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 156,
+          "y": 133,
+          "width": 2335,
+          "height": 1689
+        },
+        {
+          "x": 156,
+          "y": 2000,
+          "width": 2335,
+          "height": 1511
+        },
+        {
+          "x": 200,
+          "y": 3867,
+          "width": 2268,
+          "height": 1556
+        },
+        {
+          "x": 178,
+          "y": 5644,
+          "width": 2312,
+          "height": 1600
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/629_Mèo Simmy Birthday_6a6b3fd2dda67.png",
+      "previewUrl": "/uploads/frames/629_Mèo Simmy Birthday_6a6b3fd2dda67.png",
+      "frameUrl": "/uploads/frames/629_Mèo Simmy Birthday_6a6b3fd2dda67.png",
+      "r2Key": "frames/629_Mèo Simmy Birthday_6a6b3fd2dda67.png",
+      "enabled": true,
+      "displayOrder": 144
+    },
+    {
+      "_id": "frame_imported_146",
+      "name": "Mickey1",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 120,
+          "y": 600,
+          "width": 960,
+          "height": 640
+        },
+        {
+          "x": 120,
+          "y": 1300,
+          "width": 960,
+          "height": 660
+        },
+        {
+          "x": 120,
+          "y": 2600,
+          "width": 960,
+          "height": 700
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/633_Mickey1_6a6cda245682a.png",
+      "previewUrl": "/uploads/frames/633_Mickey1_6a6cda245682a.png",
+      "frameUrl": "/uploads/frames/633_Mickey1_6a6cda245682a.png",
+      "r2Key": "frames/633_Mickey1_6a6cda245682a.png",
+      "enabled": true,
+      "displayOrder": 146
+    },
+    {
+      "_id": "frame_imported_147",
+      "name": "Mickey2",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 1200,
+        "height": 3600
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 120,
+          "y": 620,
+          "width": 960,
+          "height": 640
+        },
+        {
+          "x": 120,
+          "y": 1320,
+          "width": 960,
+          "height": 640
+        },
+        {
+          "x": 120,
+          "y": 2600,
+          "width": 960,
+          "height": 660
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/634_Mickey2_6a6cda2b14c8b.png",
+      "previewUrl": "/uploads/frames/634_Mickey2_6a6cda2b14c8b.png",
+      "frameUrl": "/uploads/frames/634_Mickey2_6a6cda2b14c8b.png",
+      "r2Key": "frames/634_Mickey2_6a6cda2b14c8b.png",
+      "enabled": true,
+      "displayOrder": 147
+    },
+    {
+      "_id": "frame_imported_148",
+      "name": "The First SONata",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 2400,
+        "height": 7200
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 120,
+          "y": 320,
+          "width": 2160,
+          "height": 1200
+        },
+        {
+          "x": 360,
+          "y": 1760,
+          "width": 1920,
+          "height": 1360
+        },
+        {
+          "x": 80,
+          "y": 3320,
+          "width": 2120,
+          "height": 1560
+        },
+        {
+          "x": 200,
+          "y": 5000,
+          "width": 2060,
+          "height": 1440
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/638_The First SONata_6a6eadf6e4105.png",
+      "previewUrl": "/uploads/frames/638_The First SONata_6a6eadf6e4105.png",
+      "frameUrl": "/uploads/frames/638_The First SONata_6a6eadf6e4105.png",
+      "r2Key": "frames/638_The First SONata_6a6eadf6e4105.png",
+      "enabled": true,
+      "displayOrder": 148
+    },
+    {
+      "_id": "frame_imported_149",
+      "name": "Se Điếu",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 677,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1281,
+          "width": 770,
+          "height": 589
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 623,
+          "y": 2223,
+          "width": 198,
+          "height": 162
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/66_Se Điếu_6852977303afd.png",
+      "previewUrl": "/uploads/frames/66_Se Điếu_6852977303afd.png",
+      "frameUrl": "/uploads/frames/66_Se Điếu_6852977303afd.png",
+      "r2Key": "frames/66_Se Điếu_6852977303afd.png",
+      "enabled": true,
+      "displayOrder": 149
+    },
+    {
+      "_id": "frame_imported_150",
+      "name": "Việt Nam",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1899,
+          "width": 770,
+          "height": 574
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/68_Việt Nam_68529b5bf0b08.png",
+      "previewUrl": "/uploads/frames/68_Việt Nam_68529b5bf0b08.png",
+      "frameUrl": "/uploads/frames/68_Việt Nam_68529b5bf0b08.png",
+      "r2Key": "frames/68_Việt Nam_68529b5bf0b08.png",
+      "enabled": true,
+      "displayOrder": 150
+    },
+    {
+      "_id": "frame_imported_151",
+      "name": "HelloKitty",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/69_HelloKitty_68529b8f964a4.png",
+      "previewUrl": "/uploads/frames/69_HelloKitty_68529b8f964a4.png",
+      "frameUrl": "/uploads/frames/69_HelloKitty_68529b8f964a4.png",
+      "r2Key": "frames/69_HelloKitty_68529b8f964a4.png",
+      "enabled": true,
+      "displayOrder": 151
+    },
+    {
+      "_id": "frame_imported_152",
+      "name": "Porsche",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1296,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/74_Porsche_68529bdb96806.png",
+      "previewUrl": "/uploads/frames/74_Porsche_68529bdb96806.png",
+      "frameUrl": "/uploads/frames/74_Porsche_68529bdb96806.png",
+      "r2Key": "frames/74_Porsche_68529bdb96806.png",
+      "enabled": true,
+      "displayOrder": 152
+    },
+    {
+      "_id": "frame_imported_153",
+      "name": "Y2K",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 59,
+          "y": 59,
+          "width": 763,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 663,
+          "width": 770,
+          "height": 589
+        },
+        {
+          "x": 51,
+          "y": 1281,
+          "width": 770,
+          "height": 589
+        },
+        {
+          "x": 51,
+          "y": 1899,
+          "width": 770,
+          "height": 574
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/75_Y2K_68529c39b1183.png",
+      "previewUrl": "/uploads/frames/75_Y2K_68529c39b1183.png",
+      "frameUrl": "/uploads/frames/75_Y2K_68529c39b1183.png",
+      "r2Key": "frames/75_Y2K_68529c39b1183.png",
+      "enabled": true,
+      "displayOrder": 153
+    },
+    {
+      "_id": "frame_imported_154",
+      "name": "Instagram",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 44,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 663,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1281,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/76_Instagram_68529c57c0a28.png",
+      "previewUrl": "/uploads/frames/76_Instagram_68529c57c0a28.png",
+      "frameUrl": "/uploads/frames/76_Instagram_68529c57c0a28.png",
+      "r2Key": "frames/76_Instagram_68529c57c0a28.png",
+      "enabled": true,
+      "displayOrder": 154
+    },
+    {
+      "_id": "frame_imported_155",
+      "name": "Lucky",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/77_Lucky_68529c7e26d92.png",
+      "previewUrl": "/uploads/frames/77_Lucky_68529c7e26d92.png",
+      "frameUrl": "/uploads/frames/77_Lucky_68529c7e26d92.png",
+      "r2Key": "frames/77_Lucky_68529c7e26d92.png",
+      "enabled": true,
+      "displayOrder": 155
+    },
+    {
+      "_id": "frame_imported_156",
+      "name": "Powerpuff",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/80_Powerpuff_68529cb7c6d04.png",
+      "previewUrl": "/uploads/frames/80_Powerpuff_68529cb7c6d04.png",
+      "frameUrl": "/uploads/frames/80_Powerpuff_68529cb7c6d04.png",
+      "r2Key": "frames/80_Powerpuff_68529cb7c6d04.png",
+      "enabled": true,
+      "displayOrder": 156
+    },
+    {
+      "_id": "frame_imported_157",
+      "name": "shinnosuke",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 66,
+          "y": 74,
+          "width": 748,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 677,
+          "width": 755,
+          "height": 559
+        },
+        {
+          "x": 66,
+          "y": 1296,
+          "width": 755,
+          "height": 545
+        },
+        {
+          "x": 66,
+          "y": 1914,
+          "width": 748,
+          "height": 545
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/81_shinnosuke_68529ccce2380.png",
+      "previewUrl": "/uploads/frames/81_shinnosuke_68529ccce2380.png",
+      "frameUrl": "/uploads/frames/81_shinnosuke_68529ccce2380.png",
+      "r2Key": "frames/81_shinnosuke_68529ccce2380.png",
+      "enabled": true,
+      "displayOrder": 157
+    },
+    {
+      "_id": "frame_imported_158",
+      "name": "Jeans",
+      "description": "Imported frame (2:6)",
+      "category": "Imported",
+      "resolution": {
+        "width": 880,
+        "height": 2650
+      },
+      "aspectRatio": "2:6",
+      "layoutMode": "vertical_strip",
+      "slots": [
+        {
+          "x": 51,
+          "y": 59,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 59,
+          "y": 677,
+          "width": 770,
+          "height": 559
+        },
+        {
+          "x": 59,
+          "y": 1281,
+          "width": 770,
+          "height": 574
+        },
+        {
+          "x": 51,
+          "y": 1914,
+          "width": 770,
+          "height": 559
+        }
+      ],
+      "thumbnailUrl": "/uploads/frames/84_Jeans_68529cfb9748d.png",
+      "previewUrl": "/uploads/frames/84_Jeans_68529cfb9748d.png",
+      "frameUrl": "/uploads/frames/84_Jeans_68529cfb9748d.png",
+      "r2Key": "frames/84_Jeans_68529cfb9748d.png",
+      "enabled": true,
+      "displayOrder": 158
+    }
+  ],
+  "sessions": [],
+  "photos": [],
+  "settings": {},
+  "auditLogs": [],
+  "analyticsEvents": []
+}
