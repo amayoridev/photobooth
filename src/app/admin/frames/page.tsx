@@ -85,23 +85,26 @@ export default function AdminFramesPage() {
 
   const handleToggleStatus = async (id: string, currentEnabled: boolean) => {
     try {
-      const res = await fetch(`/api/admin/frames/${id}/status`, {
+      const res = await fetch(`/api/admin/frames/${encodeURIComponent(id)}/status`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ enabled: !currentEnabled }),
       });
       const data = await res.json();
       if (data.success) {
-        setFrames(frames.map((f) => (f._id === id ? { ...f, enabled: !currentEnabled } : f)));
+        setFrames((prev) => prev.map((f) => (String(f._id) === String(id) ? { ...f, enabled: !currentEnabled } : f)));
+      } else {
+        alert(data.error || 'Failed to toggle status.');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to toggle status:', err);
+      alert('Failed to toggle status: ' + err.message);
     }
   };
 
   const handleTogglePin = async (id: string, currentPinned: boolean) => {
     try {
-      const res = await fetch(`/api/admin/frames/${id}/pin`, {
+      const res = await fetch(`/api/admin/frames/${encodeURIComponent(id)}/pin`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ isPinned: !currentPinned }),
@@ -110,7 +113,7 @@ export default function AdminFramesPage() {
       if (data.success) {
         setFrames((prev) =>
           prev
-            .map((f) => (f._id === id ? { ...f, isPinned: !currentPinned } : f))
+            .map((f) => (String(f._id) === String(id) ? { ...f, isPinned: !currentPinned } : f))
             .sort((a, b) => {
               const pinA = a.isPinned ? 1 : 0;
               const pinB = b.isPinned ? 1 : 0;
@@ -118,9 +121,12 @@ export default function AdminFramesPage() {
               return (a.displayOrder || 0) - (b.displayOrder || 0);
             })
         );
+      } else {
+        alert(data.error || 'Failed to toggle pin status.');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to toggle pin status:', err);
+      alert('Failed to toggle pin status: ' + err.message);
     }
   };
 

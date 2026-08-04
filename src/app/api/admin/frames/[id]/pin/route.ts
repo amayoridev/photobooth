@@ -22,6 +22,7 @@ export async function PATCH(
     if (!payload) return unauthorizedResponse();
 
     const { id } = await params;
+    const decodedId = decodeURIComponent(id);
     const body = await req.json();
     const isPinned = body.isPinned === true;
 
@@ -29,14 +30,16 @@ export async function PATCH(
 
     // MemoryDB Sync
     const memDb = getMemoryDB();
-    const frameIdx = memDb.frames.findIndex((f) => f._id === id);
+    const frameIdx = memDb.frames.findIndex(
+      (f) => String(f._id) === String(decodedId) || String(f._id) === String(id)
+    );
     if (frameIdx !== -1) {
       memDb.frames[frameIdx].isPinned = isPinned;
       saveMemoryDB(memDb);
     }
 
     if (isConnected) {
-      const frame = await findFrameById(id);
+      const frame = await findFrameById(decodedId);
       if (frame) {
         frame.isPinned = isPinned;
         await frame.save();

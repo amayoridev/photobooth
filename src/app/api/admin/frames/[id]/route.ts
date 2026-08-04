@@ -27,6 +27,7 @@ export async function PUT(
     if (!payload) return unauthorizedResponse();
 
     const { id } = await params;
+    const decodedId = decodeURIComponent(id);
     const { isConnected } = await connectToDatabase();
 
     const formData = await req.formData();
@@ -56,7 +57,9 @@ export async function PUT(
 
     // Always update local_db.json first
     const memDb = getMemoryDB();
-    const frameIdx = memDb.frames.findIndex((f) => f._id === id || f.name === name);
+    const frameIdx = memDb.frames.findIndex(
+      (f) => String(f._id) === String(decodedId) || String(f._id) === String(id) || f.name === name
+    );
     if (frameIdx !== -1) {
       const memFrame = memDb.frames[frameIdx];
       if (name) memFrame.name = name;
@@ -79,7 +82,7 @@ export async function PUT(
     }
 
     if (isConnected) {
-      const frame = await findFrameById(id);
+      const frame = await findFrameById(decodedId);
       if (frame) {
         if (name) frame.name = name;
         if (description !== null) frame.description = description;
