@@ -134,35 +134,38 @@ export async function DELETE(
     if (!payload) return unauthorizedResponse();
 
     const { id } = await params;
+    const decodedId = decodeURIComponent(id);
     const { isConnected } = await connectToDatabase();
 
     // MemoryDB Sync
     const memDb = getMemoryDB();
-    const frameIdx = memDb.frames.findIndex((f) => f._id === id);
+    const frameIdx = memDb.frames.findIndex(
+      (f) => String(f._id) === String(decodedId) || String(f._id) === String(id)
+    );
+
     if (frameIdx !== -1) {
       const frame = memDb.frames[frameIdx];
       if (frame.r2Key) {
         try { await deleteFromR2(frame.r2Key); } catch {}
-      } else if (frame.frameUrl && frame.frameUrl.startsWith('/uploads/')) {
-        const localFilePath = path.join(process.cwd(), 'public', frame.frameUrl);
+      }
+
+      if (frame.frameUrl) {
+        const cleanPath = frame.frameUrl.replace('/api/uploads/', '').replace('/uploads/', '');
+        const localFilePath = path.join(process.cwd(), 'public', 'uploads', cleanPath);
         if (fs.existsSync(localFilePath)) {
           try { fs.unlinkSync(localFilePath); } catch {}
         }
       }
+
       memDb.frames.splice(frameIdx, 1);
       saveMemoryDB(memDb);
     }
 
     if (isConnected) {
-      const frame = await findFrameById(id);
+      const frame = await findFrameById(decodedId);
       if (frame) {
         if (frame.r2Key) {
           try { await deleteFromR2(frame.r2Key); } catch {}
-        } else if (frame.frameUrl && frame.frameUrl.startsWith('/uploads/')) {
-          const localFilePath = path.join(process.cwd(), 'public', frame.frameUrl);
-          if (fs.existsSync(localFilePath)) {
-            try { fs.unlinkSync(localFilePath); } catch {}
-          }
         }
         await Frame.deleteOne({ _id: frame._id });
 
@@ -170,7 +173,7 @@ export async function DELETE(
           await AuditLog.create({
             adminId: payload.adminId,
             action: 'DELETE_FRAME',
-            details: { frameId: id, name: frame.name },
+            details: { frameId: decodedId, name: frame.name },
           });
         } catch {}
       }

@@ -128,13 +128,16 @@ export default function AdminFramesPage() {
     if (!confirm('Are you sure you want to delete this frame?')) return;
     setDeletingId(id);
     try {
-      const res = await fetch(`/api/admin/frames/${id}`, { method: 'DELETE' });
+      const res = await fetch(`/api/admin/frames/${encodeURIComponent(id)}`, { method: 'DELETE' });
       const data = await res.json();
       if (data.success) {
-        setFrames(frames.filter((f) => f._id !== id));
+        setFrames((prev) => prev.filter((f) => String(f._id) !== String(id)));
+      } else {
+        alert(data.error || 'Failed to delete frame.');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to delete frame:', err);
+      alert('Failed to delete frame: ' + (err.message || 'Network error'));
     } finally {
       setDeletingId(null);
     }
