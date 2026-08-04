@@ -128,9 +128,14 @@ export async function DELETE(
     if (!payload) return unauthorizedResponse();
 
     const { id } = await params;
-    const decodedId = decodeURIComponent(id);
-    const { isConnected } = await connectToDatabase();
+    const rawDecoded = decodeURIComponent(id);
+    let cleanTarget = rawDecoded;
+    if (cleanTarget.includes('url=')) {
+      try { cleanTarget = decodeURIComponent(cleanTarget.split('url=')[1]); } catch {}
+    }
+    const baseName = path.basename(cleanTarget);
 
+    const { isConnected } = await connectToDatabase();
     let deletedAny = false;
 
     // 1. MemoryDB Sync
@@ -174,15 +179,19 @@ export async function DELETE(
           });
         } catch {}
       } else {
-        const queryOr: any[] = [
-          { _id: decodedId },
-          { name: decodedId },
-          { frameUrl: { $regex: decodedId, $options: 'i' } },
-          { thumbnailUrl: { $regex: decodedId, $options: 'i' } },
-        ];
+        const searchTerms = Array.from(new Set([rawDecoded, cleanTarget, baseName])).filter(Boolean);
+        const queryOr: any[] = [];
 
-        if (mongoose.Types.ObjectId.isValid(decodedId)) {
-          queryOr.push({ _id: new mongoose.Types.ObjectId(decodedId) });
+        for (const term of searchTerms) {
+          queryOr.push({ _id: term });
+          queryOr.push({ name: term });
+          queryOr.push({ frameUrl: { $regex: term, $options: 'i' } });
+          queryOr.push({ thumbnailUrl: { $regex: term, $options: 'i' } });
+          queryOr.push({ r2Key: { $regex: term, $options: 'i' } });
+
+          if (mongoose.Types.ObjectId.isValid(term)) {
+            queryOr.push({ _id: new mongoose.Types.ObjectId(term) });
+          }
         }
 
         const deleteRes = await Frame.deleteMany({ $or: queryOr });
