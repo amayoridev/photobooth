@@ -6,11 +6,15 @@ import { Frame } from '@/models/Frame';
 import { getMemoryDB, saveMemoryDB } from '@/lib/memoryDb';
 
 async function findFrameById(id: string) {
-  if (mongoose.Types.ObjectId.isValid(id)) {
-    const byId = await Frame.findById(id);
+  if (!id) return null;
+  const decoded = decodeURIComponent(id);
+  if (mongoose.Types.ObjectId.isValid(decoded)) {
+    const byId = await Frame.findById(decoded);
     if (byId) return byId;
   }
-  return await Frame.findOne({ _id: id });
+  const byIdStr = await Frame.findOne({ _id: decoded });
+  if (byIdStr) return byIdStr;
+  return await Frame.findOne({ name: decoded });
 }
 
 export async function PATCH(
@@ -37,7 +41,10 @@ export async function PATCH(
     // MemoryDB Sync
     const memDb = getMemoryDB();
     const frameIdx = memDb.frames.findIndex(
-      (f) => String(f._id) === String(decodedId) || String(f._id) === String(id)
+      (f) =>
+        String(f._id) === String(decodedId) ||
+        String(f._id) === String(id) ||
+        f.name.toLowerCase() === decodedId.toLowerCase()
     );
 
     if (frameIdx !== -1) {
