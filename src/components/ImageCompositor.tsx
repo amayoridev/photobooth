@@ -3,23 +3,26 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { IFrame, ISystemSettings } from '@/types';
 import { composePhotoBoothImage } from '@/lib/canvas';
-import { Sparkles, QrCode, Download, RefreshCcw, Loader2 } from 'lucide-react';
+import { Sparkles, QrCode, Download, RefreshCcw, Loader2, Video, Image as ImageIcon } from 'lucide-react';
 import { QRCodeModal } from './QRCodeModal';
 
 interface ImageCompositorProps {
   frame: IFrame;
   photos: string[];
+  btsVideo?: string;
   onRetake: () => void;
 }
 
-export function ImageCompositor({ frame, photos, onRetake }: ImageCompositorProps) {
+export function ImageCompositor({ frame, photos, btsVideo, onRetake }: ImageCompositorProps) {
   const [composedImageUrl, setComposedImageUrl] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(true);
   const [isUploading, setIsUploading] = useState<boolean>(false);
+  const [activeTab, setActiveTab] = useState<'photo' | 'video'>('photo');
   const [sessionResult, setSessionResult] = useState<{
     qrToken: string;
     downloadToken: string;
     finalImageUrl: string;
+    btsVideoUrl?: string;
     expiresAt?: string;
   } | null>(null);
 
@@ -88,6 +91,7 @@ export function ImageCompositor({ frame, photos, onRetake }: ImageCompositorProp
           layout: frame.layoutMode,
           photos,
           finalImage: imageDataUrl,
+          btsVideo,
         }),
       });
 
@@ -97,6 +101,7 @@ export function ImageCompositor({ frame, photos, onRetake }: ImageCompositorProp
           qrToken: data.qrToken,
           downloadToken: data.downloadToken,
           finalImageUrl: data.finalImageUrl,
+          btsVideoUrl: data.btsVideoUrl,
           expiresAt: data.expiresAt,
         });
       }
@@ -116,26 +121,65 @@ export function ImageCompositor({ frame, photos, onRetake }: ImageCompositorProp
     <div className="w-full max-w-3xl mx-auto flex flex-col items-center gap-6">
       {/* Header Title */}
       <div className="text-center space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Composition Ready</span>
+          <span>Composition & BTS Video Ready</span>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Your Photo Collage</h2>
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Your PhotoBooth Moment</h2>
         <p className="text-xs sm:text-sm text-slate-400">
-          High-resolution image rendered with custom frame & admin watermark.
+          High-resolution photo collage & live behind-the-scenes video motion capture.
         </p>
       </div>
 
-      {/* Composition Display Box */}
+      {/* Photo vs Video Switcher Tabs (If BTS Video exists) */}
+      {btsVideo && (
+        <div className="flex items-center bg-slate-900 border border-slate-800 p-1.5 rounded-2xl gap-2 shadow-lg">
+          <button
+            onClick={() => setActiveTab('photo')}
+            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+              activeTab === 'photo'
+                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            <ImageIcon className="w-4 h-4" />
+            <span>📸 Photo Collage</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('video')}
+            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+              activeTab === 'video'
+                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-md shadow-pink-500/20'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            <Video className="w-4 h-4 text-pink-400" />
+            <span>🎬 Behind-The-Scenes Video</span>
+          </button>
+        </div>
+      )}
+
+      {/* Composition / BTS Video Display Box */}
       <div className="relative w-full max-w-md aspect-[4/6] bg-slate-950 rounded-3xl border-2 border-slate-800 overflow-hidden shadow-2xl p-4 flex items-center justify-center">
         {isProcessing || isUploading ? (
           <div className="flex flex-col items-center gap-3 text-center">
             <Loader2 className="w-10 h-10 text-indigo-500 animate-spin" />
             <p className="text-sm font-semibold text-white">
-              {isProcessing ? 'Merging frame & photos...' : 'Uploading to Cloudflare R2...'}
+              {isProcessing ? 'Merging frame & photos...' : 'Uploading photo & BTS video to Cloudflare R2...'}
             </p>
             <p className="text-xs text-slate-400">Creating instant high-res QR download link...</p>
           </div>
+        ) : activeTab === 'video' && btsVideo ? (
+          <video
+            src={btsVideo}
+            controls
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-contain rounded-2xl drop-shadow-2xl bg-black"
+          />
         ) : composedImageUrl ? (
           <img
             src={composedImageUrl}

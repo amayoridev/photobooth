@@ -17,7 +17,7 @@ import {
 
 interface CameraBoothProps {
   frame: IFrame;
-  onPhotosCaptured: (photos: string[]) => void;
+  onPhotosCaptured: (photos: string[], btsVideo?: string) => void;
 }
 
 export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
@@ -126,10 +126,38 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
     return canvas.toDataURL('image/jpeg', 0.95);
   }, [isMirror, facingMode]);
 
-  // Trigger full photo sequence capture session
+  // Trigger full photo sequence capture session with Behind-The-Scenes video recording
   const startCaptureSequence = async () => {
     if (isCapturing) return;
     setIsCapturing(true);
+
+    // Initialize Behind-The-Scenes MediaRecorder
+    let mediaRecorder: MediaRecorder | null = null;
+    const recordedChunks: Blob[] = [];
+
+    if (typeof window !== 'undefined' && window.MediaRecorder && streamRef.current) {
+      try {
+        const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
+          ? 'video/webm;codecs=vp9'
+          : MediaRecorder.isTypeSupported('video/webm')
+          ? 'video/webm'
+          : MediaRecorder.isTypeSupported('video/mp4')
+          ? 'video/mp4'
+          : '';
+
+        if (mimeType) {
+          mediaRecorder = new MediaRecorder(streamRef.current, { mimeType });
+          mediaRecorder.ondataavailable = (e) => {
+            if (e.data && e.data.size > 0) {
+              recordedChunks.push(e.data);
+            }
+          };
+          mediaRecorder.start(100);
+        }
+      } catch (err) {
+        console.warn('MediaRecorder initialization warning:', err);
+      }
+    }
 
     const newPhotos: string[] = [];
 
@@ -157,13 +185,35 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
       }
     }
 
+    // Stop MediaRecorder & assemble BTS Video
+    let btsVideoBase64: string | undefined = undefined;
+
+    if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+      await new Promise<void>((resolve) => {
+        mediaRecorder!.onstop = () => {
+          try {
+            const btsBlob = new Blob(recordedChunks, { type: mediaRecorder!.mimeType || 'video/webm' });
+            const reader = new FileReader();
+            reader.onloadend = () => {
+              btsVideoBase64 = reader.result as string;
+              resolve();
+            };
+            reader.readAsDataURL(btsBlob);
+          } catch {
+            resolve();
+          }
+        };
+        mediaRecorder!.stop();
+      });
+    }
+
     setIsCapturing(false);
 
     // Auto trigger complete if all photos captured
     if (newPhotos.length >= requiredPhotoCount) {
       setTimeout(() => {
-        onPhotosCaptured(newPhotos);
-      }, 500);
+        onPhotosCaptured(newPhotos, btsVideoBase64);
+      }, 300);
     }
   };
 

@@ -43,7 +43,7 @@ export async function uploadToR2(
   contentType: string
 ): Promise<{ url: string; key: string }> {
   const buffer = typeof fileBuffer === 'string'
-    ? Buffer.from(fileBuffer.replace(/^data:image\/\w+;base64,/, ''), 'base64')
+    ? Buffer.from(fileBuffer.replace(/^data:(image|video)\/[\w\-]+;base64,/, ''), 'base64')
     : fileBuffer;
 
   // 1. ALWAYS write copy to local disk first

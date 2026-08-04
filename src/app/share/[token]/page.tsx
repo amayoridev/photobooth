@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { Download, Sparkles, Eye, Clock, AlertTriangle, Share2, Check, Copy } from 'lucide-react';
+import { Download, Sparkles, Eye, Clock, AlertTriangle, Share2, Check, Video, Image as ImageIcon } from 'lucide-react';
 import { formatDate } from '@/lib/utils';
 
 export default function SharePage() {
@@ -15,6 +15,7 @@ export default function SharePage() {
     id: string;
     frameName: string;
     finalImageUrl: string;
+    btsVideoUrl?: string;
     downloadToken: string;
     downloadCount: number;
     scanCount: number;
@@ -26,6 +27,7 @@ export default function SharePage() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState<boolean>(false);
+  const [activeTab, setActiveTab] = useState<'photo' | 'video'>('photo');
 
   useEffect(() => {
     if (!token) return;
@@ -56,7 +58,7 @@ export default function SharePage() {
       try {
         await navigator.share({
           title: session?.frameName || 'Antigravity PhotoBooth',
-          text: 'Check out my PhotoBooth picture!',
+          text: 'Check out my PhotoBooth picture & behind-the-scenes video!',
           url: window.location.href,
         });
         return;
@@ -77,7 +79,7 @@ export default function SharePage() {
         {isLoading ? (
           <div className="py-24 text-center space-y-3">
             <Sparkles className="w-8 h-8 text-indigo-500 animate-spin mx-auto" />
-            <p className="text-sm font-semibold text-slate-400">Fetching high-res photo...</p>
+            <p className="text-sm font-semibold text-slate-400">Fetching high-res photo & video...</p>
           </div>
         ) : error ? (
           <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-md text-center space-y-4 shadow-2xl">
@@ -99,17 +101,58 @@ export default function SharePage() {
               </p>
             </div>
 
-            {/* Main Photo Card */}
+            {/* Photo / BTS Video Tab Switcher */}
+            {session.btsVideoUrl && (
+              <div className="flex items-center bg-slate-900 border border-slate-800 p-1.5 rounded-2xl gap-2 shadow-lg">
+                <button
+                  onClick={() => setActiveTab('photo')}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                    activeTab === 'photo'
+                      ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
+                      : 'text-slate-400 hover:text-slate-200'
+                  }`}
+                >
+                  <ImageIcon className="w-4 h-4" />
+                  <span>📸 Photo Strip</span>
+                </button>
+
+                <button
+                  onClick={() => setActiveTab('video')}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 ${
+                    activeTab === 'video'
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-md shadow-pink-500/20'
+                      : 'text-slate-400 hover:text-slate-200'
+                  }`}
+                >
+                  <Video className="w-4 h-4 text-pink-400" />
+                  <span>🎬 Video Behind-The-Scenes</span>
+                </button>
+              </div>
+            )}
+
+            {/* Main Display Box */}
             <div className="relative w-full max-w-sm sm:max-w-md aspect-[4/6] max-h-[60vh] bg-slate-900 rounded-3xl border-2 border-slate-800 p-3 sm:p-4 shadow-2xl overflow-hidden flex items-center justify-center">
-              <img
-                src={session.finalImageUrl}
-                alt="PhotoBooth Memories"
-                className="w-full h-full object-contain rounded-2xl drop-shadow-2xl"
-              />
+              {activeTab === 'video' && session.btsVideoUrl ? (
+                <video
+                  src={session.btsVideoUrl}
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-contain rounded-2xl drop-shadow-2xl bg-black"
+                />
+              ) : (
+                <img
+                  src={session.finalImageUrl}
+                  alt="PhotoBooth Memories"
+                  className="w-full h-full object-contain rounded-2xl drop-shadow-2xl"
+                />
+              )}
             </div>
 
             <p className="text-[11px] text-slate-400 text-center">
-              💡 Chạm giữ vào hình ảnh để lưu nhanh vào bộ sưu tập điện thoại.
+              💡 Chạm giữ vào hình ảnh/video để lưu nhanh vào bộ sưu tập điện thoại.
             </p>
 
             {/* Metrics Bar */}
@@ -137,12 +180,12 @@ export default function SharePage() {
             {/* Download & Share Actions */}
             <div className="w-full max-w-sm sm:max-w-md flex flex-col sm:flex-row items-center gap-3">
               <a
-                href={`/api/download/${session.downloadToken}`}
+                href={activeTab === 'video' && session.btsVideoUrl ? session.btsVideoUrl : `/api/download/${session.downloadToken}`}
                 download
                 className="w-full sm:flex-1 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 hover:scale-[1.02] active:scale-95 text-white font-bold text-sm shadow-xl shadow-indigo-500/25 transition-all flex items-center justify-center gap-2"
               >
                 <Download className="w-4 h-4" />
-                <span>Tải Ảnh Về Máy</span>
+                <span>{activeTab === 'video' ? 'Tải Video BTS' : 'Tải Ảnh Về Máy'}</span>
               </a>
 
               <button
@@ -157,7 +200,7 @@ export default function SharePage() {
                 ) : (
                   <>
                     <Share2 className="w-4 h-4 text-indigo-400" />
-                    <span>Chia Sẻ Ảnh</span>
+                    <span>Chia Sẻ</span>
                   </>
                 )}
               </button>

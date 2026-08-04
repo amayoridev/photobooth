@@ -47,6 +47,8 @@ export interface ISession {
   photoUrls: string[];
   finalImageUrl: string;
   r2Key: string;
+  btsVideoUrl?: string;
+  btsVideoR2Key?: string;
   qrToken: string;
   downloadToken: string;
   downloadCount: number;

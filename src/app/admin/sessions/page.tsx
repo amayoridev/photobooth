@@ -3,7 +3,22 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ISession } from '@/types';
 import { formatDate } from '@/lib/utils';
-import { Camera, Search, Trash2, Download, ExternalLink, Clock, RefreshCw, Eye, CheckSquare, Square, AlertCircle, Loader2 } from 'lucide-react';
+import {
+  Camera,
+  Search,
+  Trash2,
+  Download,
+  ExternalLink,
+  Clock,
+  RefreshCw,
+  Eye,
+  CheckSquare,
+  Square,
+  AlertCircle,
+  Loader2,
+  Video,
+  X,
+} from 'lucide-react';
 
 export default function AdminSessionsPage() {
   const [sessions, setSessions] = useState<ISession[]>([]);
@@ -107,7 +122,7 @@ export default function AdminSessionsPage() {
             <Camera className="w-5 h-5 text-indigo-400" />
           </h1>
           <p className="text-xs text-slate-400 mt-1">
-            Search session tokens, view metrics, download high-res files, expire links, or bulk delete.
+            Search session tokens, view BTS videos, download high-res files, expire links, or bulk delete.
           </p>
         </div>
 
@@ -172,7 +187,7 @@ export default function AdminSessionsPage() {
                   </th>
                   <th className="p-4">Preview</th>
                   <th className="p-4">Session Tokens</th>
-                  <th className="p-4">Layout</th>
+                  <th className="p-4">Layout & BTS</th>
                   <th className="p-4">Downloads / Scans</th>
                   <th className="p-4">Created Date</th>
                   <th className="p-4 text-right">Actions</th>
@@ -196,7 +211,10 @@ export default function AdminSessionsPage() {
                       </td>
 
                       <td className="p-4">
-                        <div className="w-12 h-16 rounded-lg bg-slate-950 border border-slate-800 overflow-hidden">
+                        <div
+                          onClick={() => setViewingSession(session)}
+                          className="w-12 h-16 rounded-lg bg-slate-950 border border-slate-800 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity"
+                        >
                           <img
                             src={session.finalImageUrl}
                             alt="Final Preview"
@@ -212,8 +230,18 @@ export default function AdminSessionsPage() {
                         </div>
                       </td>
 
-                      <td className="p-4 capitalize font-semibold text-slate-300">
-                        {session.layout?.replace('_', ' ') || 'Standard'}
+                      <td className="p-4">
+                        <div className="space-y-1">
+                          <p className="capitalize font-semibold text-slate-300">
+                            {session.layout?.replace('_', ' ') || 'Standard'}
+                          </p>
+                          {session.btsVideoUrl && (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-[10px] font-bold">
+                              <Video className="w-3 h-3" />
+                              <span>BTS Recorded</span>
+                            </span>
+                          )}
+                        </div>
                       </td>
 
                       <td className="p-4">
@@ -238,10 +266,18 @@ export default function AdminSessionsPage() {
 
                       <td className="p-4 text-right">
                         <div className="flex items-center justify-end gap-2">
+                          <button
+                            onClick={() => setViewingSession(session)}
+                            className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-400"
+                            title="Inspect Session & Play BTS Video"
+                          >
+                            <Eye className="w-3.5 h-3.5" />
+                          </button>
+
                           <a
                             href={`/share/${session.qrToken}`}
                             target="_blank"
-                            className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-400"
+                            className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-purple-400"
                             title="View Public Share Page"
                           >
                             <ExternalLink className="w-3.5 h-3.5" />
@@ -292,6 +328,76 @@ export default function AdminSessionsPage() {
               >
                 Next
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Admin Session Inspector Modal */}
+      {viewingSession && (
+        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="bg-slate-900 border border-slate-800 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-6 shadow-2xl relative">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+              <div className="flex items-center gap-2">
+                <Camera className="w-5 h-5 text-indigo-400" />
+                <h3 className="font-bold text-lg text-white">Session Inspector</h3>
+              </div>
+              <button
+                onClick={() => setViewingSession(null)}
+                className="p-1.5 rounded-xl bg-slate-800 text-slate-400 hover:text-white"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Photo Preview */}
+              <div className="space-y-2">
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">📸 Composite Photo</p>
+                <div className="aspect-[4/6] bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden p-2">
+                  <img
+                    src={viewingSession.finalImageUrl}
+                    alt="Final Composite"
+                    className="w-full h-full object-contain rounded-xl"
+                  />
+                </div>
+              </div>
+
+              {/* BTS Video Preview */}
+              <div className="space-y-2">
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">🎬 Behind-The-Scenes Video</p>
+                <div className="aspect-[4/6] bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden p-2 flex items-center justify-center">
+                  {viewingSession.btsVideoUrl ? (
+                    <video
+                      src={viewingSession.btsVideoUrl}
+                      controls
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-contain rounded-xl bg-black"
+                    />
+                  ) : (
+                    <div className="text-center p-6 space-y-2">
+                      <Video className="w-8 h-8 text-slate-600 mx-auto" />
+                      <p className="text-xs text-slate-500">No BTS video recorded for this session.</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Actions Footer */}
+            <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+              <span className="font-mono text-slate-400">QR: {viewingSession.qrToken}</span>
+              <a
+                href={`/share/${viewingSession.qrToken}`}
+                target="_blank"
+                className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold flex items-center gap-1.5"
+              >
+                <span>Open Public Page</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
