@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { IFrame, LayoutMode, LayoutSlot } from '@/types';
 import { getDefaultSlotsForLayout, analyzeFrame } from '@/lib/canvas';
-import { X, Upload, Check, RefreshCw, Wand2 } from 'lucide-react';
+import { X, Upload, Check, RefreshCw, Wand2, Plus, Trash2, Sliders, RotateCcw } from 'lucide-react';
 
 interface FrameEditorModalProps {
   frame?: IFrame | null;
@@ -27,6 +27,7 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
       : getDefaultSlotsForLayout(frame?.layoutMode || 'single', 1200, 1800)
   );
 
+  const [selectedSlotIdx, setSelectedSlotIdx] = useState<number>(0);
   const [file, setFile] = useState<File | null>(null);
   const [filePreview, setFilePreview] = useState<string>(frame?.frameUrl || '');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -61,6 +62,7 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
 
       if (res.slots && res.slots.length > 0) {
         setSlots(res.slots);
+        setSelectedSlotIdx(0);
       } else {
         setSlots(getDefaultSlotsForLayout(layoutMode, res.width, res.height));
       }
@@ -74,6 +76,7 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
   const handleLayoutModeChange = (mode: LayoutMode) => {
     setLayoutMode(mode);
     setSlots(getDefaultSlotsForLayout(mode, width, height));
+    setSelectedSlotIdx(0);
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -84,6 +87,37 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
       setFilePreview(previewUrl);
       autoDetectFrameCutouts(previewUrl);
     }
+  };
+
+  const handleUpdateSlot = (index: number, key: keyof LayoutSlot, val: number) => {
+    const updated = [...slots];
+    updated[index] = { ...updated[index], [key]: Math.max(0, val) };
+    setSlots(updated);
+  };
+
+  const handleAddSlot = () => {
+    const newSlot: LayoutSlot = {
+      x: Math.round(width * 0.1),
+      y: Math.round(height * 0.1),
+      width: Math.round(width * 0.8),
+      height: Math.round(height * 0.3),
+    };
+    setSlots([...slots, newSlot]);
+    setSelectedSlotIdx(slots.length);
+  };
+
+  const handleDeleteSlot = (index: number) => {
+    if (slots.length <= 1) return;
+    const updated = slots.filter((_, i) => i !== index);
+    setSlots(updated);
+    if (selectedSlotIdx >= updated.length) {
+      setSelectedSlotIdx(Math.max(0, updated.length - 1));
+    }
+  };
+
+  const handleResetDefaults = () => {
+    setSlots(getDefaultSlotsForLayout(layoutMode, width, height));
+    setSelectedSlotIdx(0);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -145,7 +179,7 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
             <h3 className="text-xl font-bold text-white">
               {frame ? 'Edit Frame Configuration' : 'Upload New Frame'}
             </h3>
-            <p className="text-xs text-slate-400">Configure layout slots, dimensions, strip modes, and transparent PNG overlay.</p>
+            <p className="text-xs text-slate-400">Configure auto/manual cutout slots, dimensions, strip modes, and transparent PNG overlay.</p>
           </div>
           <button
             onClick={onClose}
@@ -267,43 +301,72 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
                 />
                 <span>Enable Frame Immediately</span>
               </label>
-
-              {filePreview && (
-                <button
-                  type="button"
-                  onClick={() => autoDetectFrameCutouts(filePreview)}
-                  disabled={isAnalyzing}
-                  className="text-[11px] font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 bg-indigo-500/10 px-2.5 py-1 rounded-lg border border-indigo-500/20"
-                >
-                  <Wand2 className="w-3.5 h-3.5" />
-                  <span>{isAnalyzing ? 'Scanning...' : 'Auto-Detect Cutouts'}</span>
-                </button>
-              )}
             </div>
           </div>
 
-          {/* Right Column: Visual Slots Preview & Controls */}
-          <div className="flex flex-col gap-4">
-            <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider">
-              Frame Preview & Detected Cutout Slots ({slots.length} Photos)
-            </label>
+          {/* Right Column: Preview & Hybrid Auto/Manual Cutout Editor */}
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center justify-between">
+              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider">
+                Cutout Slots ({slots.length} Photos)
+              </label>
 
-            <div className="relative w-full aspect-[4/6] max-h-[380px] bg-slate-950 border-2 border-slate-800 rounded-2xl p-2 overflow-hidden flex items-center justify-center mx-auto">
+              <div className="flex items-center gap-1.5">
+                {filePreview && (
+                  <button
+                    type="button"
+                    onClick={() => autoDetectFrameCutouts(filePreview)}
+                    disabled={isAnalyzing}
+                    className="text-[11px] font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 bg-indigo-500/10 px-2 py-1 rounded-lg border border-indigo-500/20 transition-all"
+                    title="Tự động quét ô đục lỗ"
+                  >
+                    <Wand2 className="w-3.5 h-3.5" />
+                    <span>{isAnalyzing ? 'Scanning...' : 'Auto-Detect'}</span>
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={handleAddSlot}
+                  className="text-[11px] font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 bg-emerald-500/10 px-2 py-1 rounded-lg border border-emerald-500/20 transition-all"
+                  title="Thêm ô ảnh thủ công"
+                >
+                  <Plus className="w-3.5 h-3.5" />
+                  <span>+ Slot</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={handleResetDefaults}
+                  className="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-all"
+                  title="Khôi phục mặc định"
+                >
+                  <RotateCcw className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Canvas Preview with Click-to-Select Slots */}
+            <div className="relative w-full aspect-[4/6] max-h-[280px] bg-slate-950 border-2 border-slate-800 rounded-2xl p-2 overflow-hidden flex items-center justify-center mx-auto select-none">
               <div className="relative w-full h-full">
                 {slots.map((slot, idx) => {
                   const scaleX = 100 / width;
                   const scaleY = 100 / height;
+                  const isSelected = selectedSlotIdx === idx;
 
                   return (
                     <div
                       key={idx}
+                      onClick={() => setSelectedSlotIdx(idx)}
                       style={{
                         left: `${slot.x * scaleX}%`,
                         top: `${slot.y * scaleY}%`,
                         width: `${slot.width * scaleX}%`,
                         height: `${slot.height * scaleY}%`,
                       }}
-                      className="absolute border-2 border-indigo-500 bg-indigo-500/30 rounded-md flex items-center justify-center text-[10px] font-extrabold text-white shadow-lg"
+                      className={`absolute border-2 cursor-pointer transition-all rounded-md flex items-center justify-center text-[10px] font-extrabold shadow-lg ${
+                        isSelected
+                          ? 'border-indigo-400 bg-indigo-500/40 text-white ring-2 ring-indigo-400/50 z-20'
+                          : 'border-slate-500 bg-slate-500/20 text-slate-300 hover:border-indigo-400/70 z-10'
+                      }`}
                     >
                       Photo #{idx + 1}
                     </div>
@@ -314,14 +377,75 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
                   <img
                     src={filePreview}
                     alt="Frame Overlay Preview"
-                    className="absolute inset-0 w-full h-full object-contain pointer-events-none z-10"
+                    className="absolute inset-0 w-full h-full object-contain pointer-events-none z-30"
                   />
                 )}
               </div>
             </div>
 
+            {/* Manual Adjuster Controls for Selected Slot */}
+            {slots[selectedSlotIdx] && (
+              <div className="bg-slate-950 border border-slate-800 rounded-2xl p-3 space-y-2.5">
+                <div className="flex items-center justify-between border-b border-slate-800/80 pb-1.5">
+                  <span className="text-[11px] font-bold text-indigo-400 flex items-center gap-1.5">
+                    <Sliders className="w-3.5 h-3.5" />
+                    <span>Manual Slot Adjuster: Photo #{selectedSlotIdx + 1}</span>
+                  </span>
+                  {slots.length > 1 && (
+                    <button
+                      type="button"
+                      onClick={() => handleDeleteSlot(selectedSlotIdx)}
+                      className="text-[10px] font-bold text-rose-400 hover:text-rose-300 flex items-center gap-1 bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20"
+                    >
+                      <Trash2 className="w-3 h-3" />
+                      <span>Remove</span>
+                    </button>
+                  )}
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase mb-0.5">X (px)</label>
+                    <input
+                      type="number"
+                      value={slots[selectedSlotIdx].x}
+                      onChange={(e) => handleUpdateSlot(selectedSlotIdx, 'x', parseInt(e.target.value, 10) || 0)}
+                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-white text-xs text-center focus:border-indigo-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase mb-0.5">Y (px)</label>
+                    <input
+                      type="number"
+                      value={slots[selectedSlotIdx].y}
+                      onChange={(e) => handleUpdateSlot(selectedSlotIdx, 'y', parseInt(e.target.value, 10) || 0)}
+                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-white text-xs text-center focus:border-indigo-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase mb-0.5">Width (px)</label>
+                    <input
+                      type="number"
+                      value={slots[selectedSlotIdx].width}
+                      onChange={(e) => handleUpdateSlot(selectedSlotIdx, 'width', parseInt(e.target.value, 10) || 0)}
+                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-white text-xs text-center focus:border-indigo-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase mb-0.5">Height (px)</label>
+                    <input
+                      type="number"
+                      value={slots[selectedSlotIdx].height}
+                      onChange={(e) => handleUpdateSlot(selectedSlotIdx, 'height', parseInt(e.target.value, 10) || 0)}
+                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-white text-xs text-center focus:border-indigo-500"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Action buttons */}
-            <div className="flex items-center gap-3 mt-auto pt-4 border-t border-slate-800">
+            <div className="flex items-center gap-3 mt-auto pt-3 border-t border-slate-800">
               <button
                 type="button"
                 onClick={onClose}
