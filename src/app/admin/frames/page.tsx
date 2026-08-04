@@ -209,25 +209,25 @@ export default function AdminFramesPage() {
   return (
     <div className="space-y-8 max-w-7xl mx-auto">
       {/* Header Bar */}
-      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 bg-slate-900/80 border border-slate-800 p-6 rounded-3xl backdrop-blur-md">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 bg-slate-900/80 border border-slate-800 p-4 sm:p-6 rounded-3xl backdrop-blur-md">
         <div>
-          <h1 className="text-2xl font-extrabold text-white flex items-center gap-2">
+          <h1 className="text-xl sm:text-2xl font-extrabold text-white flex items-center gap-2">
             <span>Frame Management</span>
-            <Layers className="w-5 h-5 text-indigo-400" />
+            <Layers className="w-5 h-5 text-indigo-400 shrink-0" />
           </h1>
           <p className="text-xs text-slate-400 mt-1">
-            Upload designer PNG overlays, pin featured frames to the top, & auto-detect photo cutouts for all frames.
+            Upload designer PNG overlays, pin featured frames to top, & auto-detect photo cutouts for all frames.
           </p>
         </div>
 
-        <div className="flex items-center gap-3 w-full lg:w-auto">
+        <div className="flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3 w-full lg:w-auto">
           {/* Batch Auto-Detect Cutouts Button */}
           <button
             onClick={handleAutoScanAllFrames}
             disabled={isBatchScanning || frames.length === 0}
-            className="flex-1 lg:flex-initial px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 transition-all"
+            className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 transition-all"
           >
-            <ScanLine className="w-4 h-4" />
+            <ScanLine className="w-4 h-4 shrink-0" />
             <span>{isBatchScanning ? `Scanning (${scanProgress}/${scanTotal})...` : '✨ Auto-Detect All Cutouts'}</span>
           </button>
 
@@ -237,9 +237,9 @@ export default function AdminFramesPage() {
               setEditingFrame(null);
               setIsModalOpen(true);
             }}
-            className="flex-1 lg:flex-initial px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xs font-bold shadow-lg shadow-indigo-500/20 flex items-center justify-center gap-2 transition-all"
+            className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xs font-bold shadow-lg shadow-indigo-500/20 flex items-center justify-center gap-2 transition-all"
           >
-            <Plus className="w-4 h-4" />
+            <Plus className="w-4 h-4 shrink-0" />
             <span>Upload New Frame</span>
           </button>
         </div>
