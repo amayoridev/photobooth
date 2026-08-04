@@ -55,10 +55,10 @@ export function Navbar({ appName: initialAppName, logoUrl: initialLogoUrl }: Nav
         <div className="flex items-center space-x-3">
           <Link
             href="/booth"
-            className="hidden sm:inline-flex items-center space-x-2 text-sm font-semibold px-4 py-2 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/30 transition-all shadow-sm"
+            className="inline-flex items-center space-x-1.5 text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 border border-indigo-500/30 transition-all shadow-sm"
           >
-            <Sparkles className="w-4 h-4 text-indigo-400" />
-            <span>Launch Booth</span>
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-400" />
+            <span>Booth</span>
           </Link>
 
           <Link

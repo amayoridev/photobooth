@@ -153,7 +153,7 @@ export function FrameSelector({ frames, onSelectFrame }: FrameSelectorProps) {
         </div>
       ) : (
         <>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
             {visibleFrames.map((frame) => {
               const isSelected = activeFrameId === frame._id;
 
@@ -161,7 +161,7 @@ export function FrameSelector({ frames, onSelectFrame }: FrameSelectorProps) {
                 <div
                   key={frame._id}
                   onClick={() => setActiveFrameId(frame._id)}
-                  className={`group relative bg-slate-900/90 border rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer flex flex-col justify-between ${
+                  className={`group relative bg-slate-900/90 border rounded-2xl sm:rounded-3xl overflow-hidden transition-all duration-300 cursor-pointer flex flex-col justify-between ${
                     isSelected
                       ? 'border-indigo-500 ring-2 ring-indigo-500/50 shadow-2xl shadow-indigo-500/20 scale-[1.02]'
                       : frame.isPinned
@@ -170,7 +170,7 @@ export function FrameSelector({ frames, onSelectFrame }: FrameSelectorProps) {
                   }`}
                 >
                   {/* Frame Preview Image Card */}
-                  <div className="relative aspect-[4/5] w-full bg-slate-950 p-4 flex items-center justify-center overflow-hidden">
+                  <div className="relative aspect-[4/5] w-full bg-slate-950 p-2 sm:p-4 flex items-center justify-center overflow-hidden">
                     <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:16px_16px] opacity-20" />
 
                     <img
@@ -181,36 +181,33 @@ export function FrameSelector({ frames, onSelectFrame }: FrameSelectorProps) {
                     />
 
                     {/* Layout & Aspect Badges */}
-                    <div className="absolute top-3 left-3 flex items-center gap-1.5 z-20">
+                    <div className="absolute top-2 left-2 sm:top-3 sm:left-3 flex flex-wrap items-center gap-1 z-20">
                       {frame.isPinned && (
-                        <span className="bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1 shadow-md">
-                          <Pin className="w-3 h-3 fill-slate-950" />
+                        <span className="bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-extrabold text-[9px] sm:text-[10px] px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full uppercase tracking-wider flex items-center gap-0.5 shadow-md">
+                          <Pin className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-slate-950" />
                           <span>Pinned</span>
                         </span>
                       )}
-                      <span className="bg-slate-950/80 backdrop-blur-md text-indigo-300 border border-indigo-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                      <span className="bg-slate-950/80 backdrop-blur-md text-indigo-300 border border-indigo-500/30 text-[9px] sm:text-[10px] font-bold px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full uppercase tracking-wider">
                         {frame.layoutMode.replace('_', ' ')}
-                      </span>
-                      <span className="bg-slate-950/80 backdrop-blur-md text-slate-300 border border-slate-800 text-[10px] font-bold px-2 py-1 rounded-full">
-                        {frame.aspectRatio}
                       </span>
                     </div>
 
                     {isSelected && (
-                      <div className="absolute top-3 right-3 bg-indigo-600 text-white p-1.5 rounded-full shadow-lg z-20">
-                        <Check className="w-4 h-4 stroke-[3]" />
+                      <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-indigo-600 text-white p-1 sm:p-1.5 rounded-full shadow-lg z-20">
+                        <Check className="w-3 h-3 sm:w-4 sm:h-4 stroke-[3]" />
                       </div>
                     )}
                   </div>
 
                   {/* Card Info & Select Button */}
-                  <div className="p-5 bg-slate-900 border-t border-slate-800/80 flex flex-col gap-3">
+                  <div className="p-3 sm:p-5 bg-slate-900 border-t border-slate-800/80 flex flex-col gap-2 sm:gap-3">
                     <div>
-                      <h3 className="text-base font-bold text-white group-hover:text-indigo-300 transition-colors flex items-center gap-1.5">
-                        <span>{frame.name}</span>
-                        {frame.isPinned && <Sparkles className="w-3.5 h-3.5 text-amber-400" />}
+                      <h3 className="text-xs sm:text-base font-bold text-white group-hover:text-indigo-300 transition-colors flex items-center gap-1 truncate">
+                        <span className="truncate">{frame.name}</span>
+                        {frame.isPinned && <Sparkles className="w-3 h-3 text-amber-400 shrink-0" />}
                       </h3>
-                      <p className="text-xs text-slate-400 line-clamp-2 mt-1">
+                      <p className="text-[10px] sm:text-xs text-slate-400 line-clamp-1 sm:line-clamp-2 mt-0.5 sm:mt-1">
                         {frame.description || 'Custom digital photo frame design.'}
                       </p>
                     </div>
@@ -220,7 +217,7 @@ export function FrameSelector({ frames, onSelectFrame }: FrameSelectorProps) {
                         e.stopPropagation();
                         onSelectFrame(frame);
                       }}
-                      className={`w-full py-2.5 rounded-xl font-semibold text-xs transition-all flex items-center justify-center gap-2 ${
+                      className={`w-full py-2 sm:py-2.5 rounded-xl font-semibold text-[11px] sm:text-xs transition-all flex items-center justify-center gap-1.5 ${
                         isSelected
                           ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/20'
                           : frame.isPinned
@@ -228,8 +225,8 @@ export function FrameSelector({ frames, onSelectFrame }: FrameSelectorProps) {
                           : 'bg-slate-800 hover:bg-indigo-600 text-slate-200 hover:text-white'
                       }`}
                     >
-                      <span>Use This Frame</span>
-                      <Sparkles className="w-3.5 h-3.5" />
+                      <span>Use Frame</span>
+                      <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                     </button>
                   </div>
                 </div>

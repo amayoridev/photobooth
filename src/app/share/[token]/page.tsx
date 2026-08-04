@@ -51,7 +51,19 @@ export default function SharePage() {
     loadShareDetails();
   }, [token]);
 
-  const handleShareLinkCopy = () => {
+  const handleShareLinkCopy = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: session?.frameName || 'Antigravity PhotoBooth',
+          text: 'Check out my PhotoBooth picture!',
+          url: window.location.href,
+        });
+        return;
+      } catch (err) {
+        // Fallback to copy if user cancelled
+      }
+    }
     navigator.clipboard.writeText(window.location.href);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
@@ -61,7 +73,7 @@ export default function SharePage() {
     <div className="min-h-screen flex flex-col justify-between bg-slate-950 text-slate-100">
       <Navbar appName={branding.appName} />
 
-      <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col items-center gap-8">
+      <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 flex flex-col items-center gap-6 sm:gap-8">
         {isLoading ? (
           <div className="py-24 text-center space-y-3">
             <Sparkles className="w-8 h-8 text-indigo-500 animate-spin mx-auto" />
@@ -81,14 +93,14 @@ export default function SharePage() {
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>{session.frameName}</span>
               </div>
-              <h1 className="text-3xl font-extrabold text-white">Your PhotoBooth Moment</h1>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-white">Your PhotoBooth Moment</h1>
               <p className="text-xs text-slate-400">
                 Created on {formatDate(session.createdAt)}
               </p>
             </div>
 
             {/* Main Photo Card */}
-            <div className="relative w-full max-w-md aspect-[4/6] bg-slate-900 rounded-3xl border-2 border-slate-800 p-4 shadow-2xl overflow-hidden flex items-center justify-center">
+            <div className="relative w-full max-w-sm sm:max-w-md aspect-[4/6] max-h-[60vh] bg-slate-900 rounded-3xl border-2 border-slate-800 p-3 sm:p-4 shadow-2xl overflow-hidden flex items-center justify-center">
               <img
                 src={session.finalImageUrl}
                 alt="PhotoBooth Memories"
@@ -96,15 +108,19 @@ export default function SharePage() {
               />
             </div>
 
+            <p className="text-[11px] text-slate-400 text-center">
+              💡 Chạm giữ vào hình ảnh để lưu nhanh vào bộ sưu tập điện thoại.
+            </p>
+
             {/* Metrics Bar */}
-            <div className="w-full max-w-md bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex items-center justify-around text-xs backdrop-blur-md">
-              <div className="flex items-center gap-2 text-slate-300">
-                <Download className="w-4 h-4 text-indigo-400" />
+            <div className="w-full max-w-sm sm:max-w-md bg-slate-900/80 border border-slate-800 rounded-2xl p-3.5 flex items-center justify-around text-xs backdrop-blur-md">
+              <div className="flex items-center gap-1.5 text-slate-300">
+                <Download className="w-3.5 h-3.5 text-indigo-400" />
                 <span><strong className="text-white">{session.downloadCount}</strong> Downloads</span>
               </div>
               <div className="h-4 w-px bg-slate-800" />
-              <div className="flex items-center gap-2 text-slate-300">
-                <Eye className="w-4 h-4 text-purple-400" />
+              <div className="flex items-center gap-1.5 text-slate-300">
+                <Eye className="w-3.5 h-3.5 text-purple-400" />
                 <span><strong className="text-white">{session.scanCount}</strong> QR Scans</span>
               </div>
               {session.expiresAt && (
@@ -119,14 +135,14 @@ export default function SharePage() {
             </div>
 
             {/* Download & Share Actions */}
-            <div className="w-full max-w-md flex flex-col sm:flex-row items-center gap-3">
+            <div className="w-full max-w-sm sm:max-w-md flex flex-col sm:flex-row items-center gap-3">
               <a
                 href={`/api/download/${session.downloadToken}`}
                 download
-                className="w-full sm:flex-1 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 hover:scale-105 active:scale-95 text-white font-bold text-sm shadow-xl shadow-indigo-500/25 transition-all flex items-center justify-center gap-2"
+                className="w-full sm:flex-1 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 hover:scale-[1.02] active:scale-95 text-white font-bold text-sm shadow-xl shadow-indigo-500/25 transition-all flex items-center justify-center gap-2"
               >
                 <Download className="w-4 h-4" />
-                <span>Download Photo</span>
+                <span>Tải Ảnh Về Máy</span>
               </a>
 
               <button
@@ -136,12 +152,12 @@ export default function SharePage() {
                 {copied ? (
                   <>
                     <Check className="w-4 h-4 text-emerald-400" />
-                    <span>Copied Link</span>
+                    <span>Đã Copy Link</span>
                   </>
                 ) : (
                   <>
                     <Share2 className="w-4 h-4 text-indigo-400" />
-                    <span>Share Link</span>
+                    <span>Chia Sẻ Ảnh</span>
                   </>
                 )}
               </button>
