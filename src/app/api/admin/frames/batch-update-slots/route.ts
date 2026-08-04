@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import mongoose from 'mongoose';
 import { connectToDatabase } from '@/lib/db';
 import { authenticateAdminRequest, unauthorizedResponse } from '@/lib/auth';
 import { Frame } from '@/models/Frame';
 import { getMemoryDB, saveMemoryDB } from '@/lib/memoryDb';
 import { AuditLog } from '@/models/AuditLog';
+import { findMemoryFrameIndex, findFrameInMongo } from '@/lib/frameLookup';
 
 interface FrameUpdateItem {
   id: string;
@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
 
     // 1. Update MemoryDB (data/local_db.json)
     updates.forEach((item) => {
-      const idx = memDb.frames.findIndex((f) => f._id === item.id);
+      const idx = findMemoryFrameIndex(memDb.frames, item.id);
       if (idx !== -1) {
         if (item.layoutMode) memDb.frames[idx].layoutMode = item.layoutMode as any;
         if (Array.isArray(item.slots) && item.slots.length > 0) {
@@ -48,17 +48,14 @@ export async function POST(req: NextRequest) {
     if (isConnected) {
       for (const item of updates) {
         try {
-          const query = mongoose.Types.ObjectId.isValid(item.id)
-            ? { $or: [{ _id: item.id }, { name: item.id }] }
-            : { _id: item.id };
-
-          const updateFields: any = {};
-          if (item.layoutMode) updateFields.layoutMode = item.layoutMode;
-          if (Array.isArray(item.slots) && item.slots.length > 0) {
-            updateFields.slots = item.slots;
+          const frame = await findFrameInMongo(Frame, item.id);
+          if (frame) {
+            if (item.layoutMode) frame.layoutMode = item.layoutMode;
+            if (Array.isArray(item.slots) && item.slots.length > 0) {
+              frame.slots = item.slots;
+            }
+            await frame.save();
           }
-
-          await Frame.updateOne(query, { $set: updateFields });
         } catch (err) {
           console.warn(`Failed to update mongo frame ${item.id}:`, err);
         }

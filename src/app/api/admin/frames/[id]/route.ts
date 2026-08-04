@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import mongoose from 'mongoose';
 import { connectToDatabase } from '@/lib/db';
 import { authenticateAdminRequest, unauthorizedResponse } from '@/lib/auth';
 import { Frame } from '@/models/Frame';
@@ -7,20 +6,9 @@ import { generateToken } from '@/lib/utils';
 import { AuditLog } from '@/models/AuditLog';
 import { getMemoryDB, saveMemoryDB } from '@/lib/memoryDb';
 import { uploadToR2, deleteFromR2 } from '@/lib/r2';
+import { findMemoryFrameIndex, findFrameInMongo } from '@/lib/frameLookup';
 import fs from 'fs';
 import path from 'path';
-
-async function findFrameById(id: string) {
-  if (!id) return null;
-  const decoded = decodeURIComponent(id);
-  if (mongoose.Types.ObjectId.isValid(decoded)) {
-    const byId = await Frame.findById(decoded);
-    if (byId) return byId;
-  }
-  const byIdStr = await Frame.findOne({ _id: decoded });
-  if (byIdStr) return byIdStr;
-  return await Frame.findOne({ name: decoded });
-}
 
 export async function PUT(
   req: NextRequest,
@@ -31,7 +19,6 @@ export async function PUT(
     if (!payload) return unauthorizedResponse();
 
     const { id } = await params;
-    const decodedId = decodeURIComponent(id);
     const { isConnected } = await connectToDatabase();
 
     const formData = await req.formData();
@@ -61,13 +48,7 @@ export async function PUT(
 
     // Always update local_db.json first
     const memDb = getMemoryDB();
-    const frameIdx = memDb.frames.findIndex(
-      (f) =>
-        String(f._id) === String(decodedId) ||
-        String(f._id) === String(id) ||
-        (name && f.name.toLowerCase() === name.toLowerCase()) ||
-        f.name.toLowerCase() === decodedId.toLowerCase()
-    );
+    const frameIdx = findMemoryFrameIndex(memDb.frames, id);
 
     if (frameIdx !== -1) {
       const memFrame = memDb.frames[frameIdx];
@@ -91,7 +72,7 @@ export async function PUT(
     }
 
     if (isConnected) {
-      const frame = await findFrameById(decodedId);
+      const frame = await findFrameInMongo(Frame, id);
       if (frame) {
         if (name) frame.name = name;
         if (description !== null) frame.description = description;
@@ -146,17 +127,11 @@ export async function DELETE(
     if (!payload) return unauthorizedResponse();
 
     const { id } = await params;
-    const decodedId = decodeURIComponent(id);
     const { isConnected } = await connectToDatabase();
 
     // MemoryDB Sync
     const memDb = getMemoryDB();
-    const frameIdx = memDb.frames.findIndex(
-      (f) =>
-        String(f._id) === String(decodedId) ||
-        String(f._id) === String(id) ||
-        f.name.toLowerCase() === decodedId.toLowerCase()
-    );
+    const frameIdx = findMemoryFrameIndex(memDb.frames, id);
 
     if (frameIdx !== -1) {
       const frame = memDb.frames[frameIdx];
@@ -177,7 +152,7 @@ export async function DELETE(
     }
 
     if (isConnected) {
-      const frame = await findFrameById(decodedId);
+      const frame = await findFrameInMongo(Frame, id);
       if (frame) {
         if (frame.r2Key) {
           try { await deleteFromR2(frame.r2Key); } catch {}
@@ -188,7 +163,7 @@ export async function DELETE(
           await AuditLog.create({
             adminId: payload.adminId,
             action: 'DELETE_FRAME',
-            details: { frameId: decodedId, name: frame.name },
+            details: { frameId: frame._id, name: frame.name },
           });
         } catch {}
       }

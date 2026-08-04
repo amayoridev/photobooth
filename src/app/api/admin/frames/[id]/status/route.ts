@@ -1,21 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import mongoose from 'mongoose';
 import { connectToDatabase } from '@/lib/db';
 import { authenticateAdminRequest, unauthorizedResponse } from '@/lib/auth';
 import { Frame } from '@/models/Frame';
 import { getMemoryDB, saveMemoryDB } from '@/lib/memoryDb';
-
-async function findFrameById(id: string) {
-  if (!id) return null;
-  const decoded = decodeURIComponent(id);
-  if (mongoose.Types.ObjectId.isValid(decoded)) {
-    const byId = await Frame.findById(decoded);
-    if (byId) return byId;
-  }
-  const byIdStr = await Frame.findOne({ _id: decoded });
-  if (byIdStr) return byIdStr;
-  return await Frame.findOne({ name: decoded });
-}
+import { findMemoryFrameIndex, findFrameInMongo } from '@/lib/frameLookup';
 
 export async function PATCH(
   req: NextRequest,
@@ -26,7 +14,6 @@ export async function PATCH(
     if (!payload) return unauthorizedResponse();
 
     const { id } = await params;
-    const decodedId = decodeURIComponent(id);
     const { enabled } = await req.json();
 
     if (typeof enabled !== 'boolean') {
@@ -40,12 +27,7 @@ export async function PATCH(
 
     // MemoryDB Sync
     const memDb = getMemoryDB();
-    const frameIdx = memDb.frames.findIndex(
-      (f) =>
-        String(f._id) === String(decodedId) ||
-        String(f._id) === String(id) ||
-        f.name.toLowerCase() === decodedId.toLowerCase()
-    );
+    const frameIdx = findMemoryFrameIndex(memDb.frames, id);
 
     if (frameIdx !== -1) {
       memDb.frames[frameIdx].enabled = enabled;
@@ -53,7 +35,7 @@ export async function PATCH(
     }
 
     if (isConnected) {
-      const frame = await findFrameById(decodedId);
+      const frame = await findFrameInMongo(Frame, id);
       if (frame) {
         frame.enabled = enabled;
         await frame.save();
