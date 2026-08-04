@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { IFrame, ISystemSettings } from '@/types';
 import { composePhotoBoothImage } from '@/lib/canvas';
 import { Sparkles, QrCode, Download, RefreshCcw, Loader2 } from 'lucide-react';
@@ -25,6 +25,7 @@ export function ImageCompositor({ frame, photos, onRetake }: ImageCompositorProp
 
   const [showQRModal, setShowQRModal] = useState<boolean>(false);
   const [adminSettings, setAdminSettings] = useState<ISystemSettings | null>(null);
+  const uploadingRef = useRef<boolean>(false);
 
   // Fetch admin configured watermark settings on mount
   useEffect(() => {
@@ -75,6 +76,8 @@ export function ImageCompositor({ frame, photos, onRetake }: ImageCompositorProp
   }, [frame, photos, adminSettings]);
 
   const uploadSession = async (imageDataUrl: string) => {
+    if (uploadingRef.current) return;
+    uploadingRef.current = true;
     setIsUploading(true);
     try {
       const res = await fetch('/api/session', {
@@ -99,6 +102,7 @@ export function ImageCompositor({ frame, photos, onRetake }: ImageCompositorProp
       }
     } catch (err) {
       console.error('Session upload error:', err);
+      uploadingRef.current = false;
     } finally {
       setIsUploading(false);
     }
