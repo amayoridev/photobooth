@@ -3,7 +3,13 @@ const path = require('path');
 const https = require('https');
 const http = require('http');
 
-const API_URL = 'https://photo.freehihi.com/api/frame?frame=square';
+const ENDPOINTS = [
+  'https://photo.freehihi.com/api/frame?frame=square',
+  'https://photo.freehihi.com/api/frame?frame=bigrectangle',
+  'https://photo.freehihi.com/api/frame?frame=rectangle',
+  'https://photo.freehihi.com/api/frame?frame=strip',
+];
+
 const CDN_BASE_URL = 'https://cdn.freehihi.com';
 
 const PUBLIC_UPLOADS_DIR = path.join(process.cwd(), 'public', 'uploads', 'frames');
@@ -23,10 +29,10 @@ function fetchJson(url) {
         try {
           resolve(JSON.parse(data));
         } catch (e) {
-          reject(e);
+          resolve([]);
         }
       });
-    }).on('error', reject);
+    }).on('error', () => resolve([]));
   });
 }
 
@@ -52,15 +58,27 @@ function downloadFile(url, destPath) {
 }
 
 async function main() {
-  console.log(`📡 Fetching frame metadata from ${API_URL}...`);
-  const framesList = await fetchJson(API_URL);
+  let allFramesList = [];
 
-  if (!Array.isArray(framesList)) {
-    console.error('❌ Expected array of frames, got:', framesList);
-    return;
+  for (const endpoint of ENDPOINTS) {
+    console.log(`📡 Fetching frame metadata from ${endpoint}...`);
+    const list = await fetchJson(endpoint);
+    if (Array.isArray(list)) {
+      console.log(`   Found ${list.length} frames.`);
+      allFramesList.push(...list);
+    }
   }
 
-  console.log(`🔍 Total frames found: ${framesList.length}`);
+  // Deduplicate by ID / filename
+  const uniqueFrames = new Map();
+  allFramesList.forEach((item) => {
+    if (item.filename) {
+      uniqueFrames.set(item.filename, item);
+    }
+  });
+
+  const framesList = Array.from(uniqueFrames.values());
+  console.log(`\n🔍 Total unique frames found across all categories: ${framesList.length}`);
 
   // Load existing memory database
   let memDb = {
@@ -95,7 +113,11 @@ async function main() {
     const cdnUrl = `${CDN_BASE_URL}/${filename}`;
     const localFilePath = path.join(PUBLIC_UPLOADS_DIR, filename);
 
-    console.log(`[${i + 1}/${framesList.length}] Downloading ${frameName} (${filename})...`);
+    const frameType = item.frame || 'square';
+    const isRectangle = frameType === 'bigrectangle' || frameType === 'rectangle';
+    const width = isRectangle ? 1800 : 1200;
+    const height = isRectangle ? 1200 : 1800;
+    const aspectRatio = isRectangle ? '6:4' : '4:6';
 
     try {
       if (!fs.existsSync(localFilePath) || fs.statSync(localFilePath).size < 100) {
@@ -107,14 +129,14 @@ async function main() {
 
       const frameObj = {
         _id: `freehihi_${item.id}`,
-        name: frameName,
-        description: `Imported frame from FreeHiHi (${categoryName})`,
+        name: `${frameName}${isRectangle ? ' (Rect)' : ''}`,
+        description: `Imported frame from FreeHiHi (${categoryName} - ${frameType})`,
         category: categoryName,
-        resolution: { width: 1200, height: 1800 },
-        aspectRatio: '4:6',
-        layoutMode: 'single',
+        resolution: { width, height },
+        aspectRatio,
+        layoutMode: isRectangle ? 'horizontal_strip' : 'single',
         slots: [
-          { x: 60, y: 60, width: 1080, height: 1680, rotation: 0 }
+          { x: 60, y: 60, width: width - 120, height: height - 120, rotation: 0 }
         ],
         thumbnailUrl: frameUrl,
         previewUrl: frameUrl,
@@ -143,8 +165,8 @@ async function main() {
 
   fs.writeFileSync(DB_FILE, JSON.stringify(memDb, null, 2), 'utf-8');
 
-  console.log(`\n🎉 Import Complete!`);
-  console.log(`✅ Success: ${successCount} frames downloaded and saved to data/local_db.json`);
+  console.log(`\n🎉 Multi-Category Import Complete!`);
+  console.log(`✅ Success: ${successCount} total frames downloaded and saved to data/local_db.json`);
   if (failCount > 0) {
     console.log(`⚠️ Failed: ${failCount} frames`);
   }
