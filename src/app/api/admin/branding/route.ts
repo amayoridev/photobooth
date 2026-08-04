@@ -3,6 +3,7 @@ import { connectToDatabase } from '@/lib/db';
 import { authenticateAdminRequest, unauthorizedResponse } from '@/lib/auth';
 import { Setting } from '@/models/Setting';
 import { getMemoryDB, saveMemoryDB } from '@/lib/memoryDb';
+import { uploadToR2 } from '@/lib/r2';
 import { IBrandingSettings } from '@/types';
 import fs from 'fs';
 import path from 'path';
@@ -66,13 +67,10 @@ export async function PUT(req: NextRequest) {
         const buffer = Buffer.from(await logoFile.arrayBuffer());
         const ext = logoFile.name.split('.').pop() || 'png';
         const filename = `logo_${Date.now()}.${ext}`;
+        const key = `branding/${filename}`;
 
-        const uploadDir = path.join(process.cwd(), 'public', 'uploads', 'branding');
-        if (!fs.existsSync(uploadDir)) {
-          fs.mkdirSync(uploadDir, { recursive: true });
-        }
-        fs.writeFileSync(path.join(uploadDir, filename), buffer);
-        logoUrl = `/api/uploads/branding/${filename}`;
+        const { url: uploadUrl } = await uploadToR2(buffer, key, logoFile.type || 'image/png');
+        logoUrl = uploadUrl.startsWith('http') ? uploadUrl : `/api/uploads/branding/${filename}`;
       }
 
       updatedBranding = {

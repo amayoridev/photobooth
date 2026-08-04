@@ -6,6 +6,7 @@ import { Frame } from '@/models/Frame';
 import { generateToken } from '@/lib/utils';
 import { AuditLog } from '@/models/AuditLog';
 import { getMemoryDB, saveMemoryDB } from '@/lib/memoryDb';
+import { uploadToR2, deleteFromR2 } from '@/lib/r2';
 import fs from 'fs';
 import path from 'path';
 
@@ -47,17 +48,10 @@ export async function PUT(
       const fileBuffer = Buffer.from(await file.arrayBuffer());
       const fileExt = file.name.split('.').pop() || 'png';
       const filename = `${Date.now()}_${generateToken(8)}.${fileExt}`;
-
-      const localUploadDir = path.join(process.cwd(), 'public', 'uploads', 'frames');
-      if (!fs.existsSync(localUploadDir)) {
-        fs.mkdirSync(localUploadDir, { recursive: true });
-      }
-
-      const localFilePath = path.join(localUploadDir, filename);
-      fs.writeFileSync(localFilePath, fileBuffer);
-
-      frameUrl = `/uploads/frames/${filename}`;
       r2Key = `frames/${filename}`;
+
+      const { url: uploadUrl } = await uploadToR2(fileBuffer, r2Key, file.type || 'image/png');
+      frameUrl = uploadUrl.startsWith('http') ? uploadUrl : `/api/uploads/frames/${filename}`;
     }
 
     // Always update local_db.json first
@@ -147,7 +141,9 @@ export async function DELETE(
     const frameIdx = memDb.frames.findIndex((f) => f._id === id);
     if (frameIdx !== -1) {
       const frame = memDb.frames[frameIdx];
-      if (frame.frameUrl && frame.frameUrl.startsWith('/uploads/')) {
+      if (frame.r2Key) {
+        try { await deleteFromR2(frame.r2Key); } catch {}
+      } else if (frame.frameUrl && frame.frameUrl.startsWith('/uploads/')) {
         const localFilePath = path.join(process.cwd(), 'public', frame.frameUrl);
         if (fs.existsSync(localFilePath)) {
           try { fs.unlinkSync(localFilePath); } catch {}
@@ -160,7 +156,9 @@ export async function DELETE(
     if (isConnected) {
       const frame = await findFrameById(id);
       if (frame) {
-        if (frame.frameUrl && frame.frameUrl.startsWith('/uploads/')) {
+        if (frame.r2Key) {
+          try { await deleteFromR2(frame.r2Key); } catch {}
+        } else if (frame.frameUrl && frame.frameUrl.startsWith('/uploads/')) {
           const localFilePath = path.join(process.cwd(), 'public', frame.frameUrl);
           if (fs.existsSync(localFilePath)) {
             try { fs.unlinkSync(localFilePath); } catch {}

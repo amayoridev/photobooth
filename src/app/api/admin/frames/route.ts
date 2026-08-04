@@ -5,6 +5,7 @@ import { Frame } from '@/models/Frame';
 import { generateToken } from '@/lib/utils';
 import { AuditLog } from '@/models/AuditLog';
 import { getMemoryDB, saveMemoryDB } from '@/lib/memoryDb';
+import { uploadToR2 } from '@/lib/r2';
 import fs from 'fs';
 import path from 'path';
 
@@ -20,6 +21,11 @@ function sanitizeFrameUrls(frames: any[]) {
   return frames.map((frame) => {
     const f = frame.toObject ? frame.toObject() : { ...frame };
     if (f.frameUrl) {
+      if (f.frameUrl.startsWith('http://') || f.frameUrl.startsWith('https://')) {
+        f.previewUrl = f.previewUrl || f.frameUrl;
+        f.thumbnailUrl = f.thumbnailUrl || f.frameUrl;
+        return f;
+      }
       const filename = path.basename(f.frameUrl);
       if (existingFiles.has(filename) || f.frameUrl.includes('/uploads/frames/')) {
         f.frameUrl = `/api/uploads/frames/${filename}`;
@@ -99,17 +105,10 @@ export async function POST(req: NextRequest) {
     const fileBuffer = Buffer.from(await file.arrayBuffer());
     const fileExt = file.name.split('.').pop() || 'png';
     const filename = `${Date.now()}_${generateToken(8)}.${fileExt}`;
-
-    const localUploadDir = path.join(process.cwd(), 'public', 'uploads', 'frames');
-    if (!fs.existsSync(localUploadDir)) {
-      fs.mkdirSync(localUploadDir, { recursive: true });
-    }
-
-    const localFilePath = path.join(localUploadDir, filename);
-    fs.writeFileSync(localFilePath, fileBuffer);
-
-    const frameUrl = `/api/uploads/frames/${filename}`;
     const r2Key = `frames/${filename}`;
+
+    const { url: uploadUrl } = await uploadToR2(fileBuffer, r2Key, file.type || 'image/png');
+    const frameUrl = uploadUrl.startsWith('http') ? uploadUrl : `/api/uploads/frames/${filename}`;
 
     const newFrameObj = {
       _id: `frame_${Date.now()}`,

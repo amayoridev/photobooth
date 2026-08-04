@@ -31,6 +31,10 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
+# Create uploads & data directories and set permissions for nextjs user
+RUN mkdir -p ./public/uploads/frames ./public/uploads/branding ./public/uploads/photos ./data && \
+    chown -R nextjs:nodejs ./public ./data
+
 USER nextjs
 
 EXPOSE 3000
