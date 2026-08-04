@@ -42,8 +42,9 @@ export async function GET(
     }
 
     // Serve local attachment file directly with Content-Disposition
-    if (imageUrl.startsWith('/uploads/')) {
-      const filePath = path.join(process.cwd(), 'public', imageUrl);
+    if (imageUrl.startsWith('/uploads/') || imageUrl.startsWith('/api/uploads/')) {
+      const cleanPath = imageUrl.replace(/^\/(api\/)?uploads\//, '');
+      const filePath = path.join(process.cwd(), 'public', 'uploads', cleanPath);
       if (fs.existsSync(filePath)) {
         const fileBuffer = fs.readFileSync(filePath);
         return new NextResponse(fileBuffer, {

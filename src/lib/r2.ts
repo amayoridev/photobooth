@@ -35,7 +35,7 @@ if (isR2Configured) {
 }
 
 /**
- * Uploads a file buffer or base64 string to Cloudflare R2 or local fallback directory.
+ * Uploads a file buffer or base64 string to local storage AND Cloudflare R2 simultaneously.
  */
 export async function uploadToR2(
   fileBuffer: Buffer | string,
@@ -46,6 +46,18 @@ export async function uploadToR2(
     ? Buffer.from(fileBuffer.replace(/^data:image\/\w+;base64,/, ''), 'base64')
     : fileBuffer;
 
+  // 1. ALWAYS write copy to local disk first
+  const localUploadDir = path.join(process.cwd(), 'public', 'uploads', path.dirname(key));
+  if (!fs.existsSync(localUploadDir)) {
+    fs.mkdirSync(localUploadDir, { recursive: true });
+  }
+
+  const localFilePath = path.join(process.cwd(), 'public', 'uploads', key);
+  fs.writeFileSync(localFilePath, buffer);
+
+  const localUrl = `/api/uploads/${key}`;
+
+  // 2. ALSO upload to Cloudflare R2 if configured
   if (isR2Configured && s3Client) {
     try {
       const command = new PutObjectCommand({
@@ -59,24 +71,14 @@ export async function uploadToR2(
 
       const publicUrl = R2_PUBLIC_DOMAIN
         ? `${R2_PUBLIC_DOMAIN.replace(/\/$/, '')}/${key}`
-        : `https://${R2_BUCKET_NAME}.${R2_ACCOUNT_ID}.r2.cloudflarestorage.com/${key}`;
+        : localUrl;
 
       return { url: publicUrl, key };
     } catch (err: any) {
-      console.warn(`⚠️ R2 upload warning (${err.message || 'Signature mismatch'}). Falling back to local storage.`);
+      console.warn(`⚠️ R2 upload warning (${err.message || 'Signature mismatch'}). Falling back to local URL.`);
     }
   }
 
-  // Fallback: Local public uploads folder
-  const localUploadDir = path.join(process.cwd(), 'public', 'uploads', path.dirname(key));
-  if (!fs.existsSync(localUploadDir)) {
-    fs.mkdirSync(localUploadDir, { recursive: true });
-  }
-
-  const localFilePath = path.join(process.cwd(), 'public', 'uploads', key);
-  fs.writeFileSync(localFilePath, buffer);
-
-  const localUrl = `/uploads/${key}`;
   return { url: localUrl, key };
 }
 

@@ -57,27 +57,6 @@ export async function POST(req: NextRequest) {
         userAgent,
       });
 
-      const photoUrls: string[] = [];
-      if (Array.isArray(photos) && photos.length > 0) {
-        for (let i = 0; i < photos.length; i++) {
-          const photoKey = `photos/session_${session._id}_p${i + 1}.jpg`;
-          const { url: photoUrl, key: photoR2Key } = await uploadToR2(
-            photos[i],
-            photoKey,
-            'image/jpeg'
-          );
-          photoUrls.push(photoUrl);
-
-          await Photo.create({
-            sessionId: session._id,
-            r2Key: photoR2Key,
-            url: photoUrl,
-          });
-        }
-        session.photoUrls = photoUrls;
-        await session.save();
-      }
-
       return NextResponse.json({
         success: true,
         sessionId: session._id,
