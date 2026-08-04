@@ -6641,6 +6641,4746 @@
       "r2Key": "frames/84_Jeans_68529cfb9748d.png",
       "enabled": true,
       "displayOrder": 158
+    },
+    {
+      "_id": "freehihi_66",
+      "name": "Se Điếu",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6852977303afd.png",
+      "previewUrl": "/api/uploads/frames/6852977303afd.png",
+      "frameUrl": "/api/uploads/frames/6852977303afd.png",
+      "r2Key": "frames/6852977303afd.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 1,
+      "createdAt": "2025-06-18T10:39:47.000000Z",
+      "updatedAt": "2026-05-07T15:58:18.000000Z"
+    },
+    {
+      "_id": "freehihi_68",
+      "name": "Việt Nam",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68529b5bf0b08.png",
+      "previewUrl": "/api/uploads/frames/68529b5bf0b08.png",
+      "frameUrl": "/api/uploads/frames/68529b5bf0b08.png",
+      "r2Key": "frames/68529b5bf0b08.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 2,
+      "createdAt": "2025-06-18T10:56:27.000000Z",
+      "updatedAt": "2026-05-07T15:58:21.000000Z"
+    },
+    {
+      "_id": "freehihi_69",
+      "name": "HelloKitty",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68529b8f964a4.png",
+      "previewUrl": "/api/uploads/frames/68529b8f964a4.png",
+      "frameUrl": "/api/uploads/frames/68529b8f964a4.png",
+      "r2Key": "frames/68529b8f964a4.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 3,
+      "createdAt": "2025-06-18T10:57:19.000000Z",
+      "updatedAt": "2025-06-18T10:57:19.000000Z"
+    },
+    {
+      "_id": "freehihi_74",
+      "name": "Porsche",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68529bdb96806.png",
+      "previewUrl": "/api/uploads/frames/68529bdb96806.png",
+      "frameUrl": "/api/uploads/frames/68529bdb96806.png",
+      "r2Key": "frames/68529bdb96806.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 4,
+      "createdAt": "2025-06-18T10:58:35.000000Z",
+      "updatedAt": "2025-06-18T10:58:35.000000Z"
+    },
+    {
+      "_id": "freehihi_75",
+      "name": "Y2K",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68529c39b1183.png",
+      "previewUrl": "/api/uploads/frames/68529c39b1183.png",
+      "frameUrl": "/api/uploads/frames/68529c39b1183.png",
+      "r2Key": "frames/68529c39b1183.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 5,
+      "createdAt": "2025-06-18T11:00:09.000000Z",
+      "updatedAt": "2025-06-18T11:00:09.000000Z"
+    },
+    {
+      "_id": "freehihi_76",
+      "name": "Instagram",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68529c57c0a28.png",
+      "previewUrl": "/api/uploads/frames/68529c57c0a28.png",
+      "frameUrl": "/api/uploads/frames/68529c57c0a28.png",
+      "r2Key": "frames/68529c57c0a28.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 6,
+      "createdAt": "2025-06-18T11:00:39.000000Z",
+      "updatedAt": "2026-05-07T15:58:27.000000Z"
+    },
+    {
+      "_id": "freehihi_77",
+      "name": "Lucky",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68529c7e26d92.png",
+      "previewUrl": "/api/uploads/frames/68529c7e26d92.png",
+      "frameUrl": "/api/uploads/frames/68529c7e26d92.png",
+      "r2Key": "frames/68529c7e26d92.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 7,
+      "createdAt": "2025-06-18T11:01:18.000000Z",
+      "updatedAt": "2025-06-18T11:01:18.000000Z"
+    },
+    {
+      "_id": "freehihi_80",
+      "name": "Powerpuff",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68529cb7c6d04.png",
+      "previewUrl": "/api/uploads/frames/68529cb7c6d04.png",
+      "frameUrl": "/api/uploads/frames/68529cb7c6d04.png",
+      "r2Key": "frames/68529cb7c6d04.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 8,
+      "createdAt": "2025-06-18T11:02:15.000000Z",
+      "updatedAt": "2025-06-18T11:02:15.000000Z"
+    },
+    {
+      "_id": "freehihi_81",
+      "name": "shinnosuke",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68529ccce2380.png",
+      "previewUrl": "/api/uploads/frames/68529ccce2380.png",
+      "frameUrl": "/api/uploads/frames/68529ccce2380.png",
+      "r2Key": "frames/68529ccce2380.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 9,
+      "createdAt": "2025-06-18T11:02:36.000000Z",
+      "updatedAt": "2025-06-18T11:02:36.000000Z"
+    },
+    {
+      "_id": "freehihi_84",
+      "name": "Jeans",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68529cfb9748d.png",
+      "previewUrl": "/api/uploads/frames/68529cfb9748d.png",
+      "frameUrl": "/api/uploads/frames/68529cfb9748d.png",
+      "r2Key": "frames/68529cfb9748d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 10,
+      "createdAt": "2025-06-18T11:03:23.000000Z",
+      "updatedAt": "2025-06-18T11:03:23.000000Z"
+    },
+    {
+      "_id": "freehihi_105",
+      "name": "BearBare",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6852d138ea7bf.png",
+      "previewUrl": "/api/uploads/frames/6852d138ea7bf.png",
+      "frameUrl": "/api/uploads/frames/6852d138ea7bf.png",
+      "r2Key": "frames/6852d138ea7bf.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 11,
+      "createdAt": "2025-06-18T14:46:16.000000Z",
+      "updatedAt": "2025-06-18T14:46:16.000000Z"
+    },
+    {
+      "_id": "freehihi_108",
+      "name": "Loopy",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6852d238938b9.png",
+      "previewUrl": "/api/uploads/frames/6852d238938b9.png",
+      "frameUrl": "/api/uploads/frames/6852d238938b9.png",
+      "r2Key": "frames/6852d238938b9.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 12,
+      "createdAt": "2025-06-18T14:50:32.000000Z",
+      "updatedAt": "2025-06-18T14:50:32.000000Z"
+    },
+    {
+      "_id": "freehihi_118",
+      "name": "Giấy Kết Hôn",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6854e5408664d.png",
+      "previewUrl": "/api/uploads/frames/6854e5408664d.png",
+      "frameUrl": "/api/uploads/frames/6854e5408664d.png",
+      "r2Key": "frames/6854e5408664d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 13,
+      "createdAt": "2025-06-20T04:36:16.000000Z",
+      "updatedAt": "2026-05-07T15:58:36.000000Z"
+    },
+    {
+      "_id": "freehihi_123",
+      "name": "EmXinhSayHi",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6856bf7547184.png",
+      "previewUrl": "/api/uploads/frames/6856bf7547184.png",
+      "frameUrl": "/api/uploads/frames/6856bf7547184.png",
+      "r2Key": "frames/6856bf7547184.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 14,
+      "createdAt": "2025-06-21T14:19:33.000000Z",
+      "updatedAt": "2026-05-07T15:58:39.000000Z"
+    },
+    {
+      "_id": "freehihi_129",
+      "name": "Basic-5",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6857dd9fcbe9d.png",
+      "previewUrl": "/api/uploads/frames/6857dd9fcbe9d.png",
+      "frameUrl": "/api/uploads/frames/6857dd9fcbe9d.png",
+      "r2Key": "frames/6857dd9fcbe9d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 15,
+      "createdAt": "2025-06-22T10:40:31.000000Z",
+      "updatedAt": "2025-06-22T10:40:31.000000Z"
+    },
+    {
+      "_id": "freehihi_133",
+      "name": "Basic-6",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/685a41b84c9e3.png",
+      "previewUrl": "/api/uploads/frames/685a41b84c9e3.png",
+      "frameUrl": "/api/uploads/frames/685a41b84c9e3.png",
+      "r2Key": "frames/685a41b84c9e3.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 16,
+      "createdAt": "2025-06-24T06:12:08.000000Z",
+      "updatedAt": "2025-06-24T06:12:08.000000Z"
+    },
+    {
+      "_id": "freehihi_138",
+      "name": "Minion",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6864a24e4b7e2.png",
+      "previewUrl": "/api/uploads/frames/6864a24e4b7e2.png",
+      "frameUrl": "/api/uploads/frames/6864a24e4b7e2.png",
+      "r2Key": "frames/6864a24e4b7e2.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 17,
+      "createdAt": "2025-07-02T03:06:54.000000Z",
+      "updatedAt": "2025-07-02T03:06:54.000000Z"
+    },
+    {
+      "_id": "freehihi_150",
+      "name": "GenG",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/686f38fecdb0d.png",
+      "previewUrl": "/api/uploads/frames/686f38fecdb0d.png",
+      "frameUrl": "/api/uploads/frames/686f38fecdb0d.png",
+      "r2Key": "frames/686f38fecdb0d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 18,
+      "createdAt": "2025-07-10T03:52:30.000000Z",
+      "updatedAt": "2025-07-10T03:52:30.000000Z"
+    },
+    {
+      "_id": "freehihi_152",
+      "name": "Stitch",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/686f44ca41c86.png",
+      "previewUrl": "/api/uploads/frames/686f44ca41c86.png",
+      "frameUrl": "/api/uploads/frames/686f44ca41c86.png",
+      "r2Key": "frames/686f44ca41c86.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 19,
+      "createdAt": "2025-07-10T04:42:50.000000Z",
+      "updatedAt": "2025-07-10T04:42:50.000000Z"
+    },
+    {
+      "_id": "freehihi_155",
+      "name": "Meme",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/686f84a47a36d.png",
+      "previewUrl": "/api/uploads/frames/686f84a47a36d.png",
+      "frameUrl": "/api/uploads/frames/686f84a47a36d.png",
+      "r2Key": "frames/686f84a47a36d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 20,
+      "createdAt": "2025-07-10T09:15:16.000000Z",
+      "updatedAt": "2025-07-10T09:15:16.000000Z"
+    },
+    {
+      "_id": "freehihi_167",
+      "name": "MatchaLatte",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/686fe53db6dfc.png",
+      "previewUrl": "/api/uploads/frames/686fe53db6dfc.png",
+      "frameUrl": "/api/uploads/frames/686fe53db6dfc.png",
+      "r2Key": "frames/686fe53db6dfc.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 21,
+      "createdAt": "2025-07-10T16:07:25.000000Z",
+      "updatedAt": "2025-07-10T16:07:25.000000Z"
+    },
+    {
+      "_id": "freehihi_170",
+      "name": "Conan",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68707f70636a1.png",
+      "previewUrl": "/api/uploads/frames/68707f70636a1.png",
+      "frameUrl": "/api/uploads/frames/68707f70636a1.png",
+      "r2Key": "frames/68707f70636a1.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 22,
+      "createdAt": "2025-07-11T03:05:20.000000Z",
+      "updatedAt": "2025-07-11T03:05:20.000000Z"
+    },
+    {
+      "_id": "freehihi_175",
+      "name": "Vintage1",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6873abf8e3917.png",
+      "previewUrl": "/api/uploads/frames/6873abf8e3917.png",
+      "frameUrl": "/api/uploads/frames/6873abf8e3917.png",
+      "r2Key": "frames/6873abf8e3917.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 23,
+      "createdAt": "2025-07-13T12:52:08.000000Z",
+      "updatedAt": "2025-07-13T12:52:08.000000Z"
+    },
+    {
+      "_id": "freehihi_176",
+      "name": "Vintage2",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6873ac02ab5a1.png",
+      "previewUrl": "/api/uploads/frames/6873ac02ab5a1.png",
+      "frameUrl": "/api/uploads/frames/6873ac02ab5a1.png",
+      "r2Key": "frames/6873ac02ab5a1.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 24,
+      "createdAt": "2025-07-13T12:52:18.000000Z",
+      "updatedAt": "2025-07-13T12:52:18.000000Z"
+    },
+    {
+      "_id": "freehihi_184",
+      "name": "BearPink",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68770830ddc58.png",
+      "previewUrl": "/api/uploads/frames/68770830ddc58.png",
+      "frameUrl": "/api/uploads/frames/68770830ddc58.png",
+      "r2Key": "frames/68770830ddc58.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 25,
+      "createdAt": "2025-07-16T02:02:24.000000Z",
+      "updatedAt": "2025-07-16T02:02:24.000000Z"
+    },
+    {
+      "_id": "freehihi_185",
+      "name": "BunBoHue",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/687779c79d107.png",
+      "previewUrl": "/api/uploads/frames/687779c79d107.png",
+      "frameUrl": "/api/uploads/frames/687779c79d107.png",
+      "r2Key": "frames/687779c79d107.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 26,
+      "createdAt": "2025-07-16T10:07:03.000000Z",
+      "updatedAt": "2026-05-07T15:58:51.000000Z"
+    },
+    {
+      "_id": "freehihi_192",
+      "name": "ĐÙ MÁ",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/687cc3f5c3958.png",
+      "previewUrl": "/api/uploads/frames/687cc3f5c3958.png",
+      "frameUrl": "/api/uploads/frames/687cc3f5c3958.png",
+      "r2Key": "frames/687cc3f5c3958.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 27,
+      "createdAt": "2025-07-20T10:24:53.000000Z",
+      "updatedAt": "2026-05-07T15:58:54.000000Z"
+    },
+    {
+      "_id": "freehihi_195",
+      "name": "Chiikawa",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/687cd152e026d.png",
+      "previewUrl": "/api/uploads/frames/687cd152e026d.png",
+      "frameUrl": "/api/uploads/frames/687cd152e026d.png",
+      "r2Key": "frames/687cd152e026d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 28,
+      "createdAt": "2025-07-20T11:21:54.000000Z",
+      "updatedAt": "2025-07-20T11:21:54.000000Z"
+    },
+    {
+      "_id": "freehihi_197",
+      "name": "Gumball",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/687f0219ebe02.png",
+      "previewUrl": "/api/uploads/frames/687f0219ebe02.png",
+      "frameUrl": "/api/uploads/frames/687f0219ebe02.png",
+      "r2Key": "frames/687f0219ebe02.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 29,
+      "createdAt": "2025-07-22T03:14:33.000000Z",
+      "updatedAt": "2025-07-22T03:14:33.000000Z"
+    },
+    {
+      "_id": "freehihi_206",
+      "name": "Amazing",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/688a37a6b673c.png",
+      "previewUrl": "/api/uploads/frames/688a37a6b673c.png",
+      "frameUrl": "/api/uploads/frames/688a37a6b673c.png",
+      "r2Key": "frames/688a37a6b673c.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 30,
+      "createdAt": "2025-07-30T15:17:58.000000Z",
+      "updatedAt": "2025-07-30T15:17:58.000000Z"
+    },
+    {
+      "_id": "freehihi_223",
+      "name": "Quốc Khánh 2/9",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/689801c6ac302.png",
+      "previewUrl": "/api/uploads/frames/689801c6ac302.png",
+      "frameUrl": "/api/uploads/frames/689801c6ac302.png",
+      "r2Key": "frames/689801c6ac302.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 31,
+      "createdAt": "2025-08-10T02:19:50.000000Z",
+      "updatedAt": "2026-05-07T15:58:57.000000Z"
+    },
+    {
+      "_id": "freehihi_224",
+      "name": "WeAreOne",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/689ab7bec5d76.png",
+      "previewUrl": "/api/uploads/frames/689ab7bec5d76.png",
+      "frameUrl": "/api/uploads/frames/689ab7bec5d76.png",
+      "r2Key": "frames/689ab7bec5d76.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 32,
+      "createdAt": "2025-08-12T03:40:46.000000Z",
+      "updatedAt": "2025-08-12T03:40:46.000000Z"
+    },
+    {
+      "_id": "freehihi_231",
+      "name": "Cinnamoroll",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/689b4afcb36f1.png",
+      "previewUrl": "/api/uploads/frames/689b4afcb36f1.png",
+      "frameUrl": "/api/uploads/frames/689b4afcb36f1.png",
+      "r2Key": "frames/689b4afcb36f1.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 33,
+      "createdAt": "2025-08-12T14:09:00.000000Z",
+      "updatedAt": "2025-08-12T14:09:00.000000Z"
+    },
+    {
+      "_id": "freehihi_237",
+      "name": "Thư",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/689da03a3127c.png",
+      "previewUrl": "/api/uploads/frames/689da03a3127c.png",
+      "frameUrl": "/api/uploads/frames/689da03a3127c.png",
+      "r2Key": "frames/689da03a3127c.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 34,
+      "createdAt": "2025-08-14T08:37:14.000000Z",
+      "updatedAt": "2025-08-14T08:37:14.000000Z"
+    },
+    {
+      "_id": "freehihi_248",
+      "name": "IOS",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68a3d8f16c61d.png",
+      "previewUrl": "/api/uploads/frames/68a3d8f16c61d.png",
+      "frameUrl": "/api/uploads/frames/68a3d8f16c61d.png",
+      "r2Key": "frames/68a3d8f16c61d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 35,
+      "createdAt": "2025-08-19T01:52:49.000000Z",
+      "updatedAt": "2025-08-19T01:52:49.000000Z"
+    },
+    {
+      "_id": "freehihi_252",
+      "name": "QH MasterD",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68a463c666438.png",
+      "previewUrl": "/api/uploads/frames/68a463c666438.png",
+      "frameUrl": "/api/uploads/frames/68a463c666438.png",
+      "r2Key": "frames/68a463c666438.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 36,
+      "createdAt": "2025-08-19T11:45:10.000000Z",
+      "updatedAt": "2026-05-07T15:59:04.000000Z"
+    },
+    {
+      "_id": "freehihi_264",
+      "name": "UEder",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68a98cd549993.png",
+      "previewUrl": "/api/uploads/frames/68a98cd549993.png",
+      "frameUrl": "/api/uploads/frames/68a98cd549993.png",
+      "r2Key": "frames/68a98cd549993.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 37,
+      "createdAt": "2025-08-23T09:41:41.000000Z",
+      "updatedAt": "2026-05-07T15:59:10.000000Z"
+    },
+    {
+      "_id": "freehihi_265",
+      "name": "Juky San",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68a98d0834147.png",
+      "previewUrl": "/api/uploads/frames/68a98d0834147.png",
+      "frameUrl": "/api/uploads/frames/68a98d0834147.png",
+      "r2Key": "frames/68a98d0834147.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 38,
+      "createdAt": "2025-08-23T09:42:32.000000Z",
+      "updatedAt": "2026-05-07T15:59:08.000000Z"
+    },
+    {
+      "_id": "freehihi_269",
+      "name": "Wxrdie",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68aa0dcb8dfa1.png",
+      "previewUrl": "/api/uploads/frames/68aa0dcb8dfa1.png",
+      "frameUrl": "/api/uploads/frames/68aa0dcb8dfa1.png",
+      "r2Key": "frames/68aa0dcb8dfa1.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 39,
+      "createdAt": "2025-08-23T18:51:55.000000Z",
+      "updatedAt": "2025-08-23T18:51:55.000000Z"
+    },
+    {
+      "_id": "freehihi_270",
+      "name": "FanNCT_DREAM",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68ab39da93cd1.png",
+      "previewUrl": "/api/uploads/frames/68ab39da93cd1.png",
+      "frameUrl": "/api/uploads/frames/68ab39da93cd1.png",
+      "r2Key": "frames/68ab39da93cd1.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 40,
+      "createdAt": "2025-08-24T16:12:10.000000Z",
+      "updatedAt": "2026-05-07T15:59:36.000000Z"
+    },
+    {
+      "_id": "freehihi_276",
+      "name": "DPR IAN",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68b0244e76e35.png",
+      "previewUrl": "/api/uploads/frames/68b0244e76e35.png",
+      "frameUrl": "/api/uploads/frames/68b0244e76e35.png",
+      "r2Key": "frames/68b0244e76e35.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 41,
+      "createdAt": "2025-08-28T09:41:34.000000Z",
+      "updatedAt": "2025-08-28T09:41:34.000000Z"
+    },
+    {
+      "_id": "freehihi_278",
+      "name": "AnhTraiSayHi",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68b0907158035.png",
+      "previewUrl": "/api/uploads/frames/68b0907158035.png",
+      "frameUrl": "/api/uploads/frames/68b0907158035.png",
+      "r2Key": "frames/68b0907158035.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 42,
+      "createdAt": "2025-08-28T17:22:57.000000Z",
+      "updatedAt": "2026-05-07T15:59:40.000000Z"
+    },
+    {
+      "_id": "freehihi_311",
+      "name": "Cutie Pinkie",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68d0dd9bb3a08.png",
+      "previewUrl": "/api/uploads/frames/68d0dd9bb3a08.png",
+      "frameUrl": "/api/uploads/frames/68d0dd9bb3a08.png",
+      "r2Key": "frames/68d0dd9bb3a08.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 43,
+      "createdAt": "2025-09-22T05:24:43.000000Z",
+      "updatedAt": "2025-09-22T05:24:43.000000Z"
+    },
+    {
+      "_id": "freehihi_312",
+      "name": "Dâu Tây",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68d50f3783378.png",
+      "previewUrl": "/api/uploads/frames/68d50f3783378.png",
+      "frameUrl": "/api/uploads/frames/68d50f3783378.png",
+      "r2Key": "frames/68d50f3783378.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 44,
+      "createdAt": "2025-09-25T09:45:27.000000Z",
+      "updatedAt": "2025-09-25T09:45:27.000000Z"
+    },
+    {
+      "_id": "freehihi_314",
+      "name": "Retro Windows",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68d89ad14df35.png",
+      "previewUrl": "/api/uploads/frames/68d89ad14df35.png",
+      "frameUrl": "/api/uploads/frames/68d89ad14df35.png",
+      "r2Key": "frames/68d89ad14df35.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 45,
+      "createdAt": "2025-09-28T02:17:53.000000Z",
+      "updatedAt": "2025-09-28T02:17:53.000000Z"
+    },
+    {
+      "_id": "freehihi_316",
+      "name": "ShinChanPink",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68d8f10969679.png",
+      "previewUrl": "/api/uploads/frames/68d8f10969679.png",
+      "frameUrl": "/api/uploads/frames/68d8f10969679.png",
+      "r2Key": "frames/68d8f10969679.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 46,
+      "createdAt": "2025-09-28T08:25:45.000000Z",
+      "updatedAt": "2025-09-28T08:25:45.000000Z"
+    },
+    {
+      "_id": "freehihi_319",
+      "name": "School",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68dbb8968a7c0.png",
+      "previewUrl": "/api/uploads/frames/68dbb8968a7c0.png",
+      "frameUrl": "/api/uploads/frames/68dbb8968a7c0.png",
+      "r2Key": "frames/68dbb8968a7c0.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 47,
+      "createdAt": "2025-09-30T11:01:42.000000Z",
+      "updatedAt": "2025-09-30T11:01:42.000000Z"
+    },
+    {
+      "_id": "freehihi_327",
+      "name": "XinhhAirlines",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68dcc67d7e7ab.png",
+      "previewUrl": "/api/uploads/frames/68dcc67d7e7ab.png",
+      "frameUrl": "/api/uploads/frames/68dcc67d7e7ab.png",
+      "r2Key": "frames/68dcc67d7e7ab.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 48,
+      "createdAt": "2025-10-01T06:13:17.000000Z",
+      "updatedAt": "2026-05-07T15:59:56.000000Z"
+    },
+    {
+      "_id": "freehihi_333",
+      "name": "ToyStory",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68dd4388c0191.png",
+      "previewUrl": "/api/uploads/frames/68dd4388c0191.png",
+      "frameUrl": "/api/uploads/frames/68dd4388c0191.png",
+      "r2Key": "frames/68dd4388c0191.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 49,
+      "createdAt": "2025-10-01T15:06:48.000000Z",
+      "updatedAt": "2025-10-01T15:06:48.000000Z"
+    },
+    {
+      "_id": "freehihi_334",
+      "name": "TV",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68dd4f8543881.png",
+      "previewUrl": "/api/uploads/frames/68dd4f8543881.png",
+      "frameUrl": "/api/uploads/frames/68dd4f8543881.png",
+      "r2Key": "frames/68dd4f8543881.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 50,
+      "createdAt": "2025-10-01T15:57:57.000000Z",
+      "updatedAt": "2025-10-01T15:57:57.000000Z"
+    },
+    {
+      "_id": "freehihi_340",
+      "name": "Basic-1",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68df4196da89b.png",
+      "previewUrl": "/api/uploads/frames/68df4196da89b.png",
+      "frameUrl": "/api/uploads/frames/68df4196da89b.png",
+      "r2Key": "frames/68df4196da89b.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 51,
+      "createdAt": "2025-10-03T03:23:02.000000Z",
+      "updatedAt": "2025-10-03T03:23:02.000000Z"
+    },
+    {
+      "_id": "freehihi_341",
+      "name": "Basic-2",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68df41b70eb0e.png",
+      "previewUrl": "/api/uploads/frames/68df41b70eb0e.png",
+      "frameUrl": "/api/uploads/frames/68df41b70eb0e.png",
+      "r2Key": "frames/68df41b70eb0e.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 52,
+      "createdAt": "2025-10-03T03:23:35.000000Z",
+      "updatedAt": "2025-10-03T03:23:35.000000Z"
+    },
+    {
+      "_id": "freehihi_342",
+      "name": "Basic-7",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68df41df4934f.png",
+      "previewUrl": "/api/uploads/frames/68df41df4934f.png",
+      "frameUrl": "/api/uploads/frames/68df41df4934f.png",
+      "r2Key": "frames/68df41df4934f.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 53,
+      "createdAt": "2025-10-03T03:24:15.000000Z",
+      "updatedAt": "2025-10-03T03:24:15.000000Z"
+    },
+    {
+      "_id": "freehihi_343",
+      "name": "Basic-8",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68df420421b73.png",
+      "previewUrl": "/api/uploads/frames/68df420421b73.png",
+      "frameUrl": "/api/uploads/frames/68df420421b73.png",
+      "r2Key": "frames/68df420421b73.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 54,
+      "createdAt": "2025-10-03T03:24:52.000000Z",
+      "updatedAt": "2025-10-03T03:24:52.000000Z"
+    },
+    {
+      "_id": "freehihi_345",
+      "name": "Basic-11",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68df4242dfa05.png",
+      "previewUrl": "/api/uploads/frames/68df4242dfa05.png",
+      "frameUrl": "/api/uploads/frames/68df4242dfa05.png",
+      "r2Key": "frames/68df4242dfa05.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 55,
+      "createdAt": "2025-10-03T03:25:54.000000Z",
+      "updatedAt": "2025-10-03T03:25:54.000000Z"
+    },
+    {
+      "_id": "freehihi_346",
+      "name": "Basic-10",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68df42a174a8d.png",
+      "previewUrl": "/api/uploads/frames/68df42a174a8d.png",
+      "frameUrl": "/api/uploads/frames/68df42a174a8d.png",
+      "r2Key": "frames/68df42a174a8d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 56,
+      "createdAt": "2025-10-03T03:27:29.000000Z",
+      "updatedAt": "2025-10-03T03:27:29.000000Z"
+    },
+    {
+      "_id": "freehihi_358",
+      "name": "Colorful",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68e471275df2c.png",
+      "previewUrl": "/api/uploads/frames/68e471275df2c.png",
+      "frameUrl": "/api/uploads/frames/68e471275df2c.png",
+      "r2Key": "frames/68e471275df2c.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 57,
+      "createdAt": "2025-10-07T01:47:19.000000Z",
+      "updatedAt": "2025-10-07T01:47:19.000000Z"
+    },
+    {
+      "_id": "freehihi_364",
+      "name": "Jisoo",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68e4dff09e6d5.png",
+      "previewUrl": "/api/uploads/frames/68e4dff09e6d5.png",
+      "frameUrl": "/api/uploads/frames/68e4dff09e6d5.png",
+      "r2Key": "frames/68e4dff09e6d5.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 58,
+      "createdAt": "2025-10-07T09:40:00.000000Z",
+      "updatedAt": "2025-10-07T09:40:00.000000Z"
+    },
+    {
+      "_id": "freehihi_365",
+      "name": "BlackPink",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68e4e44d42393.png",
+      "previewUrl": "/api/uploads/frames/68e4e44d42393.png",
+      "frameUrl": "/api/uploads/frames/68e4e44d42393.png",
+      "r2Key": "frames/68e4e44d42393.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 59,
+      "createdAt": "2025-10-07T09:58:37.000000Z",
+      "updatedAt": "2025-10-07T09:58:37.000000Z"
+    },
+    {
+      "_id": "freehihi_375",
+      "name": "Jin(BTS)",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68e67ec98245f.png",
+      "previewUrl": "/api/uploads/frames/68e67ec98245f.png",
+      "frameUrl": "/api/uploads/frames/68e67ec98245f.png",
+      "r2Key": "frames/68e67ec98245f.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 60,
+      "createdAt": "2025-10-08T15:10:01.000000Z",
+      "updatedAt": "2025-10-08T15:10:01.000000Z"
+    },
+    {
+      "_id": "freehihi_377",
+      "name": "Jimin(BTS)",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68e73af797a67.png",
+      "previewUrl": "/api/uploads/frames/68e73af797a67.png",
+      "frameUrl": "/api/uploads/frames/68e73af797a67.png",
+      "r2Key": "frames/68e73af797a67.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 61,
+      "createdAt": "2025-10-09T04:32:55.000000Z",
+      "updatedAt": "2025-10-09T04:32:55.000000Z"
+    },
+    {
+      "_id": "freehihi_379",
+      "name": "Girly",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68e8e901bae50.png",
+      "previewUrl": "/api/uploads/frames/68e8e901bae50.png",
+      "frameUrl": "/api/uploads/frames/68e8e901bae50.png",
+      "r2Key": "frames/68e8e901bae50.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 62,
+      "createdAt": "2025-10-10T11:07:45.000000Z",
+      "updatedAt": "2025-10-10T11:07:45.000000Z"
+    },
+    {
+      "_id": "freehihi_385",
+      "name": "Tinder",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68ecec87142ee.png",
+      "previewUrl": "/api/uploads/frames/68ecec87142ee.png",
+      "frameUrl": "/api/uploads/frames/68ecec87142ee.png",
+      "r2Key": "frames/68ecec87142ee.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 63,
+      "createdAt": "2025-10-13T12:11:51.000000Z",
+      "updatedAt": "2025-10-13T12:11:51.000000Z"
+    },
+    {
+      "_id": "freehihi_386",
+      "name": "BAV",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68f20a3689a97.png",
+      "previewUrl": "/api/uploads/frames/68f20a3689a97.png",
+      "frameUrl": "/api/uploads/frames/68f20a3689a97.png",
+      "r2Key": "frames/68f20a3689a97.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 64,
+      "createdAt": "2025-10-17T09:19:50.000000Z",
+      "updatedAt": "2026-05-07T16:00:42.000000Z"
+    },
+    {
+      "_id": "freehihi_387",
+      "name": "AOF",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68f213652773c.png",
+      "previewUrl": "/api/uploads/frames/68f213652773c.png",
+      "frameUrl": "/api/uploads/frames/68f213652773c.png",
+      "r2Key": "frames/68f213652773c.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 65,
+      "createdAt": "2025-10-17T09:59:01.000000Z",
+      "updatedAt": "2026-05-07T16:00:44.000000Z"
+    },
+    {
+      "_id": "freehihi_388",
+      "name": "FTU",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68f2143f188f8.png",
+      "previewUrl": "/api/uploads/frames/68f2143f188f8.png",
+      "frameUrl": "/api/uploads/frames/68f2143f188f8.png",
+      "r2Key": "frames/68f2143f188f8.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 66,
+      "createdAt": "2025-10-17T10:02:39.000000Z",
+      "updatedAt": "2026-05-07T16:00:46.000000Z"
+    },
+    {
+      "_id": "freehihi_389",
+      "name": "NEU",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68f215d332a18.png",
+      "previewUrl": "/api/uploads/frames/68f215d332a18.png",
+      "frameUrl": "/api/uploads/frames/68f215d332a18.png",
+      "r2Key": "frames/68f215d332a18.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 67,
+      "createdAt": "2025-10-17T10:09:23.000000Z",
+      "updatedAt": "2026-05-07T16:00:48.000000Z"
+    },
+    {
+      "_id": "freehihi_390",
+      "name": "HNUE",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68f216916ea97.png",
+      "previewUrl": "/api/uploads/frames/68f216916ea97.png",
+      "frameUrl": "/api/uploads/frames/68f216916ea97.png",
+      "r2Key": "frames/68f216916ea97.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 68,
+      "createdAt": "2025-10-17T10:12:33.000000Z",
+      "updatedAt": "2026-05-07T16:00:50.000000Z"
+    },
+    {
+      "_id": "freehihi_413",
+      "name": "Dear Phúc Nguyên",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68f762788685d.png",
+      "previewUrl": "/api/uploads/frames/68f762788685d.png",
+      "frameUrl": "/api/uploads/frames/68f762788685d.png",
+      "r2Key": "frames/68f762788685d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 69,
+      "createdAt": "2025-10-21T10:37:44.000000Z",
+      "updatedAt": "2026-05-10T13:00:36.000000Z"
+    },
+    {
+      "_id": "freehihi_427",
+      "name": "ZEUS TBTW",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/68fdab4e38d77.png",
+      "previewUrl": "/api/uploads/frames/68fdab4e38d77.png",
+      "frameUrl": "/api/uploads/frames/68fdab4e38d77.png",
+      "r2Key": "frames/68fdab4e38d77.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 70,
+      "createdAt": "2025-10-26T05:02:06.000000Z",
+      "updatedAt": "2025-10-26T05:02:06.000000Z"
+    },
+    {
+      "_id": "freehihi_431",
+      "name": "HAU",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69020f0f64a7c.png",
+      "previewUrl": "/api/uploads/frames/69020f0f64a7c.png",
+      "frameUrl": "/api/uploads/frames/69020f0f64a7c.png",
+      "r2Key": "frames/69020f0f64a7c.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 71,
+      "createdAt": "2025-10-29T12:56:47.000000Z",
+      "updatedAt": "2026-05-07T16:00:56.000000Z"
+    },
+    {
+      "_id": "freehihi_441",
+      "name": "V(BTS)",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69024313f210d.png",
+      "previewUrl": "/api/uploads/frames/69024313f210d.png",
+      "frameUrl": "/api/uploads/frames/69024313f210d.png",
+      "r2Key": "frames/69024313f210d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 72,
+      "createdAt": "2025-10-29T16:38:43.000000Z",
+      "updatedAt": "2025-10-29T16:38:43.000000Z"
+    },
+    {
+      "_id": "freehihi_461",
+      "name": "TMU",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/690dcf7ed31b6.png",
+      "previewUrl": "/api/uploads/frames/690dcf7ed31b6.png",
+      "frameUrl": "/api/uploads/frames/690dcf7ed31b6.png",
+      "r2Key": "frames/690dcf7ed31b6.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 73,
+      "createdAt": "2025-11-07T10:52:46.000000Z",
+      "updatedAt": "2026-05-07T16:03:51.000000Z"
+    },
+    {
+      "_id": "freehihi_462",
+      "name": "HMU",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/690dd37aca67e.png",
+      "previewUrl": "/api/uploads/frames/690dd37aca67e.png",
+      "frameUrl": "/api/uploads/frames/690dd37aca67e.png",
+      "r2Key": "frames/690dd37aca67e.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 74,
+      "createdAt": "2025-11-07T11:09:46.000000Z",
+      "updatedAt": "2026-05-07T16:03:47.000000Z"
+    },
+    {
+      "_id": "freehihi_465",
+      "name": "ParkBoGum",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6910bc26e14da.png",
+      "previewUrl": "/api/uploads/frames/6910bc26e14da.png",
+      "frameUrl": "/api/uploads/frames/6910bc26e14da.png",
+      "r2Key": "frames/6910bc26e14da.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 75,
+      "createdAt": "2025-11-09T16:07:02.000000Z",
+      "updatedAt": "2025-11-09T16:07:02.000000Z"
+    },
+    {
+      "_id": "freehihi_470",
+      "name": "Steven Universe",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6921c4526b985.png",
+      "previewUrl": "/api/uploads/frames/6921c4526b985.png",
+      "frameUrl": "/api/uploads/frames/6921c4526b985.png",
+      "r2Key": "frames/6921c4526b985.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 76,
+      "createdAt": "2025-11-22T14:10:26.000000Z",
+      "updatedAt": "2025-11-22T14:10:26.000000Z"
+    },
+    {
+      "_id": "freehihi_471",
+      "name": "matcha",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6921c4677562b.png",
+      "previewUrl": "/api/uploads/frames/6921c4677562b.png",
+      "frameUrl": "/api/uploads/frames/6921c4677562b.png",
+      "r2Key": "frames/6921c4677562b.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 77,
+      "createdAt": "2025-11-22T14:10:47.000000Z",
+      "updatedAt": "2025-11-22T14:10:47.000000Z"
+    },
+    {
+      "_id": "freehihi_472",
+      "name": "cream-soda",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6928ddb90cc97.png",
+      "previewUrl": "/api/uploads/frames/6928ddb90cc97.png",
+      "frameUrl": "/api/uploads/frames/6928ddb90cc97.png",
+      "r2Key": "frames/6928ddb90cc97.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 78,
+      "createdAt": "2025-11-27T23:24:41.000000Z",
+      "updatedAt": "2025-11-27T23:24:41.000000Z"
+    },
+    {
+      "_id": "freehihi_474",
+      "name": "glorious.blue.eyed.king",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6929d01fd3d8c.png",
+      "previewUrl": "/api/uploads/frames/6929d01fd3d8c.png",
+      "frameUrl": "/api/uploads/frames/6929d01fd3d8c.png",
+      "r2Key": "frames/6929d01fd3d8c.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 79,
+      "createdAt": "2025-11-28T16:38:55.000000Z",
+      "updatedAt": "2025-11-28T16:38:55.000000Z"
+    },
+    {
+      "_id": "freehihi_478",
+      "name": "Martin",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/692c31d942db2.png",
+      "previewUrl": "/api/uploads/frames/692c31d942db2.png",
+      "frameUrl": "/api/uploads/frames/692c31d942db2.png",
+      "r2Key": "frames/692c31d942db2.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 80,
+      "createdAt": "2025-11-30T12:00:25.000000Z",
+      "updatedAt": "2025-11-30T12:00:25.000000Z"
+    },
+    {
+      "_id": "freehihi_479",
+      "name": "Keonho",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/692c32375296f.png",
+      "previewUrl": "/api/uploads/frames/692c32375296f.png",
+      "frameUrl": "/api/uploads/frames/692c32375296f.png",
+      "r2Key": "frames/692c32375296f.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 81,
+      "createdAt": "2025-11-30T12:01:59.000000Z",
+      "updatedAt": "2025-11-30T12:01:59.000000Z"
+    },
+    {
+      "_id": "freehihi_482",
+      "name": "Basic-5",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/692d7d65603ca.png",
+      "previewUrl": "/api/uploads/frames/692d7d65603ca.png",
+      "frameUrl": "/api/uploads/frames/692d7d65603ca.png",
+      "r2Key": "frames/692d7d65603ca.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 82,
+      "createdAt": "2025-12-01T11:35:01.000000Z",
+      "updatedAt": "2025-12-01T11:35:01.000000Z"
+    },
+    {
+      "_id": "freehihi_483",
+      "name": "Theater Ticket",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/692d81cfb1e9f.png",
+      "previewUrl": "/api/uploads/frames/692d81cfb1e9f.png",
+      "frameUrl": "/api/uploads/frames/692d81cfb1e9f.png",
+      "r2Key": "frames/692d81cfb1e9f.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 83,
+      "createdAt": "2025-12-01T11:53:51.000000Z",
+      "updatedAt": "2025-12-01T11:53:51.000000Z"
+    },
+    {
+      "_id": "freehihi_484",
+      "name": "Zootopia",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/692d8418563a1.png",
+      "previewUrl": "/api/uploads/frames/692d8418563a1.png",
+      "frameUrl": "/api/uploads/frames/692d8418563a1.png",
+      "r2Key": "frames/692d8418563a1.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 84,
+      "createdAt": "2025-12-01T12:03:36.000000Z",
+      "updatedAt": "2025-12-01T12:03:36.000000Z"
+    },
+    {
+      "_id": "freehihi_486",
+      "name": "BMKTCR x \"BÁO\" THỨC IN ĐẬM INDIE",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/692e9bec9d990.png",
+      "previewUrl": "/api/uploads/frames/692e9bec9d990.png",
+      "frameUrl": "/api/uploads/frames/692e9bec9d990.png",
+      "r2Key": "frames/692e9bec9d990.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 85,
+      "createdAt": "2025-12-02T07:57:32.000000Z",
+      "updatedAt": "2025-12-02T07:57:32.000000Z"
+    },
+    {
+      "_id": "freehihi_491",
+      "name": "Locket",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/692ed2cc19d03.png",
+      "previewUrl": "/api/uploads/frames/692ed2cc19d03.png",
+      "frameUrl": "/api/uploads/frames/692ed2cc19d03.png",
+      "r2Key": "frames/692ed2cc19d03.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 86,
+      "createdAt": "2025-12-02T11:51:40.000000Z",
+      "updatedAt": "2025-12-02T11:51:40.000000Z"
+    },
+    {
+      "_id": "freehihi_492",
+      "name": "seonghyeon",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/692edb205f3f0.png",
+      "previewUrl": "/api/uploads/frames/692edb205f3f0.png",
+      "frameUrl": "/api/uploads/frames/692edb205f3f0.png",
+      "r2Key": "frames/692edb205f3f0.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 87,
+      "createdAt": "2025-12-02T12:27:12.000000Z",
+      "updatedAt": "2025-12-02T12:27:12.000000Z"
+    },
+    {
+      "_id": "freehihi_495",
+      "name": "Merry Chirstmas 🎅🏻",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69310e3a32eac.png",
+      "previewUrl": "/api/uploads/frames/69310e3a32eac.png",
+      "frameUrl": "/api/uploads/frames/69310e3a32eac.png",
+      "r2Key": "frames/69310e3a32eac.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 88,
+      "createdAt": "2025-12-04T04:29:46.000000Z",
+      "updatedAt": "2025-12-04T04:29:46.000000Z"
+    },
+    {
+      "_id": "freehihi_496",
+      "name": "DẤU VÂN TAY x \"BÁO\" THỨC IN ĐẬM INDIE",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6933cabb1dd7d.png",
+      "previewUrl": "/api/uploads/frames/6933cabb1dd7d.png",
+      "frameUrl": "/api/uploads/frames/6933cabb1dd7d.png",
+      "r2Key": "frames/6933cabb1dd7d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 89,
+      "createdAt": "2025-12-06T06:18:35.000000Z",
+      "updatedAt": "2025-12-06T06:18:35.000000Z"
+    },
+    {
+      "_id": "freehihi_500",
+      "name": "CHIPANDCOD x \"BÁO\" THỨC IN ĐẬM INDIE",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69403bba702c9.png",
+      "previewUrl": "/api/uploads/frames/69403bba702c9.png",
+      "frameUrl": "/api/uploads/frames/69403bba702c9.png",
+      "r2Key": "frames/69403bba702c9.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 90,
+      "createdAt": "2025-12-15T16:47:54.000000Z",
+      "updatedAt": "2025-12-15T16:47:54.000000Z"
+    },
+    {
+      "_id": "freehihi_506",
+      "name": "Magazine",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69567d1275bf7.png",
+      "previewUrl": "/api/uploads/frames/69567d1275bf7.png",
+      "frameUrl": "/api/uploads/frames/69567d1275bf7.png",
+      "r2Key": "frames/69567d1275bf7.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 91,
+      "createdAt": "2026-01-01T13:56:34.000000Z",
+      "updatedAt": "2026-01-01T13:56:34.000000Z"
+    },
+    {
+      "_id": "freehihi_507",
+      "name": "2026",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69567d8355fe2.png",
+      "previewUrl": "/api/uploads/frames/69567d8355fe2.png",
+      "frameUrl": "/api/uploads/frames/69567d8355fe2.png",
+      "r2Key": "frames/69567d8355fe2.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 92,
+      "createdAt": "2026-01-01T13:58:27.000000Z",
+      "updatedAt": "2026-01-01T13:58:27.000000Z"
+    },
+    {
+      "_id": "freehihi_508",
+      "name": "Jang Wonyoung",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69567e9b50731.png",
+      "previewUrl": "/api/uploads/frames/69567e9b50731.png",
+      "frameUrl": "/api/uploads/frames/69567e9b50731.png",
+      "r2Key": "frames/69567e9b50731.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 93,
+      "createdAt": "2026-01-01T14:03:07.000000Z",
+      "updatedAt": "2026-01-01T14:03:07.000000Z"
+    },
+    {
+      "_id": "freehihi_511",
+      "name": "Doggo's Day",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/695b91d10ae9f.png",
+      "previewUrl": "/api/uploads/frames/695b91d10ae9f.png",
+      "frameUrl": "/api/uploads/frames/695b91d10ae9f.png",
+      "r2Key": "frames/695b91d10ae9f.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 94,
+      "createdAt": "2026-01-05T10:26:25.000000Z",
+      "updatedAt": "2026-01-05T10:26:25.000000Z"
+    },
+    {
+      "_id": "freehihi_522",
+      "name": "tripleS 3rd anniversary",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/698eb32be5f3e.png",
+      "previewUrl": "/api/uploads/frames/698eb32be5f3e.png",
+      "frameUrl": "/api/uploads/frames/698eb32be5f3e.png",
+      "r2Key": "frames/698eb32be5f3e.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 95,
+      "createdAt": "2026-02-13T05:14:19.000000Z",
+      "updatedAt": "2026-02-13T05:14:19.000000Z"
+    },
+    {
+      "_id": "freehihi_524",
+      "name": "digitalcam cartoon",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6992b4f935784.png",
+      "previewUrl": "/api/uploads/frames/6992b4f935784.png",
+      "frameUrl": "/api/uploads/frames/6992b4f935784.png",
+      "r2Key": "frames/6992b4f935784.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 96,
+      "createdAt": "2026-02-16T06:11:05.000000Z",
+      "updatedAt": "2026-02-16T06:11:05.000000Z"
+    },
+    {
+      "_id": "freehihi_525",
+      "name": "⪩. .⪨ 𝐂𝐞𝐥𝐞𝐛𝐫𝐚𝐭𝐞 “𝓟𝓮𝓪𝓷𝓾𝓽” 𝟏𝟏𝐭𝐡 𝐝𝐞𝐛𝐮𝐭: 🥜",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6999b129e6732.png",
+      "previewUrl": "/api/uploads/frames/6999b129e6732.png",
+      "frameUrl": "/api/uploads/frames/6999b129e6732.png",
+      "r2Key": "frames/6999b129e6732.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 97,
+      "createdAt": "2026-02-21T13:20:41.000000Z",
+      "updatedAt": "2026-02-21T13:20:41.000000Z"
+    },
+    {
+      "_id": "freehihi_526",
+      "name": "Shane Hollander",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/699c22078a038.png",
+      "previewUrl": "/api/uploads/frames/699c22078a038.png",
+      "frameUrl": "/api/uploads/frames/699c22078a038.png",
+      "r2Key": "frames/699c22078a038.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 98,
+      "createdAt": "2026-02-23T09:46:47.000000Z",
+      "updatedAt": "2026-02-23T09:46:47.000000Z"
+    },
+    {
+      "_id": "freehihi_529",
+      "name": "LLYA Rozanov",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/699e172e8caa3.png",
+      "previewUrl": "/api/uploads/frames/699e172e8caa3.png",
+      "frameUrl": "/api/uploads/frames/699e172e8caa3.png",
+      "r2Key": "frames/699e172e8caa3.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 99,
+      "createdAt": "2026-02-24T21:25:02.000000Z",
+      "updatedAt": "2026-02-24T21:25:02.000000Z"
+    },
+    {
+      "_id": "freehihi_531",
+      "name": "Dương Domic",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/699e18607041b.png",
+      "previewUrl": "/api/uploads/frames/699e18607041b.png",
+      "frameUrl": "/api/uploads/frames/699e18607041b.png",
+      "r2Key": "frames/699e18607041b.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 100,
+      "createdAt": "2026-02-24T21:30:08.000000Z",
+      "updatedAt": "2026-02-24T21:30:08.000000Z"
+    },
+    {
+      "_id": "freehihi_532",
+      "name": "아가공'𝑠 𝑂𝑑𝑦𝑠𝑠𝑒𝑦 — ZEKA",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ac4f1c3282f.png",
+      "previewUrl": "/api/uploads/frames/69ac4f1c3282f.png",
+      "frameUrl": "/api/uploads/frames/69ac4f1c3282f.png",
+      "r2Key": "frames/69ac4f1c3282f.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 101,
+      "createdAt": "2026-03-07T16:15:24.000000Z",
+      "updatedAt": "2026-03-07T16:15:24.000000Z"
+    },
+    {
+      "_id": "freehihi_534",
+      "name": "thomeo",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ae27bd104bf.png",
+      "previewUrl": "/api/uploads/frames/69ae27bd104bf.png",
+      "frameUrl": "/api/uploads/frames/69ae27bd104bf.png",
+      "r2Key": "frames/69ae27bd104bf.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 102,
+      "createdAt": "2026-03-09T01:51:57.000000Z",
+      "updatedAt": "2026-05-07T16:01:37.000000Z"
+    },
+    {
+      "_id": "freehihi_538",
+      "name": "Save the date",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ae28ab885ab.png",
+      "previewUrl": "/api/uploads/frames/69ae28ab885ab.png",
+      "frameUrl": "/api/uploads/frames/69ae28ab885ab.png",
+      "r2Key": "frames/69ae28ab885ab.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 103,
+      "createdAt": "2026-03-09T01:55:55.000000Z",
+      "updatedAt": "2026-03-09T01:55:55.000000Z"
+    },
+    {
+      "_id": "freehihi_539",
+      "name": "star1",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ae28bd7352b.png",
+      "previewUrl": "/api/uploads/frames/69ae28bd7352b.png",
+      "frameUrl": "/api/uploads/frames/69ae28bd7352b.png",
+      "r2Key": "frames/69ae28bd7352b.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 104,
+      "createdAt": "2026-03-09T01:56:13.000000Z",
+      "updatedAt": "2026-03-09T01:56:13.000000Z"
+    },
+    {
+      "_id": "freehihi_541",
+      "name": "star3",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ae2913e9287.png",
+      "previewUrl": "/api/uploads/frames/69ae2913e9287.png",
+      "frameUrl": "/api/uploads/frames/69ae2913e9287.png",
+      "r2Key": "frames/69ae2913e9287.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 105,
+      "createdAt": "2026-03-09T01:57:39.000000Z",
+      "updatedAt": "2026-03-09T01:57:39.000000Z"
+    },
+    {
+      "_id": "freehihi_548",
+      "name": "Film1",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69d37be83c0b5.png",
+      "previewUrl": "/api/uploads/frames/69d37be83c0b5.png",
+      "frameUrl": "/api/uploads/frames/69d37be83c0b5.png",
+      "r2Key": "frames/69d37be83c0b5.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 106,
+      "createdAt": "2026-04-06T09:24:56.000000Z",
+      "updatedAt": "2026-04-06T09:24:56.000000Z"
+    },
+    {
+      "_id": "freehihi_549",
+      "name": "Film2",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69d37d2f690d0.png",
+      "previewUrl": "/api/uploads/frames/69d37d2f690d0.png",
+      "frameUrl": "/api/uploads/frames/69d37d2f690d0.png",
+      "r2Key": "frames/69d37d2f690d0.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 107,
+      "createdAt": "2026-04-06T09:30:23.000000Z",
+      "updatedAt": "2026-04-06T09:30:23.000000Z"
+    },
+    {
+      "_id": "freehihi_550",
+      "name": "Basic12",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69d37f1a81d08.png",
+      "previewUrl": "/api/uploads/frames/69d37f1a81d08.png",
+      "frameUrl": "/api/uploads/frames/69d37f1a81d08.png",
+      "r2Key": "frames/69d37f1a81d08.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 108,
+      "createdAt": "2026-04-06T09:38:34.000000Z",
+      "updatedAt": "2026-04-06T09:38:34.000000Z"
+    },
+    {
+      "_id": "freehihi_551",
+      "name": "HLU-card",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69d9c7ac90c0b.png",
+      "previewUrl": "/api/uploads/frames/69d9c7ac90c0b.png",
+      "frameUrl": "/api/uploads/frames/69d9c7ac90c0b.png",
+      "r2Key": "frames/69d9c7ac90c0b.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 109,
+      "createdAt": "2026-04-11T04:01:48.000000Z",
+      "updatedAt": "2026-05-07T16:01:42.000000Z"
+    },
+    {
+      "_id": "freehihi_552",
+      "name": "AOF-card",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69d9c7bcb7dc6.png",
+      "previewUrl": "/api/uploads/frames/69d9c7bcb7dc6.png",
+      "frameUrl": "/api/uploads/frames/69d9c7bcb7dc6.png",
+      "r2Key": "frames/69d9c7bcb7dc6.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 110,
+      "createdAt": "2026-04-11T04:02:04.000000Z",
+      "updatedAt": "2026-05-07T16:01:44.000000Z"
+    },
+    {
+      "_id": "freehihi_553",
+      "name": "NEU-card",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69d9c7cdc6fa9.png",
+      "previewUrl": "/api/uploads/frames/69d9c7cdc6fa9.png",
+      "frameUrl": "/api/uploads/frames/69d9c7cdc6fa9.png",
+      "r2Key": "frames/69d9c7cdc6fa9.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 111,
+      "createdAt": "2026-04-11T04:02:21.000000Z",
+      "updatedAt": "2026-05-07T16:01:47.000000Z"
+    },
+    {
+      "_id": "freehihi_554",
+      "name": "TMU-card",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69d9c7de5f74a.png",
+      "previewUrl": "/api/uploads/frames/69d9c7de5f74a.png",
+      "frameUrl": "/api/uploads/frames/69d9c7de5f74a.png",
+      "r2Key": "frames/69d9c7de5f74a.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 112,
+      "createdAt": "2026-04-11T04:02:38.000000Z",
+      "updatedAt": "2026-05-07T16:01:50.000000Z"
+    },
+    {
+      "_id": "freehihi_555",
+      "name": "HUCE-card",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69d9c7f141687.png",
+      "previewUrl": "/api/uploads/frames/69d9c7f141687.png",
+      "frameUrl": "/api/uploads/frames/69d9c7f141687.png",
+      "r2Key": "frames/69d9c7f141687.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 113,
+      "createdAt": "2026-04-11T04:02:57.000000Z",
+      "updatedAt": "2026-05-07T16:01:52.000000Z"
+    },
+    {
+      "_id": "freehihi_556",
+      "name": "HNUE-card",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69d9c80096719.png",
+      "previewUrl": "/api/uploads/frames/69d9c80096719.png",
+      "frameUrl": "/api/uploads/frames/69d9c80096719.png",
+      "r2Key": "frames/69d9c80096719.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 114,
+      "createdAt": "2026-04-11T04:03:12.000000Z",
+      "updatedAt": "2026-05-07T16:01:54.000000Z"
+    },
+    {
+      "_id": "freehihi_557",
+      "name": "ULIS-card",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69d9c812f05e6.png",
+      "previewUrl": "/api/uploads/frames/69d9c812f05e6.png",
+      "frameUrl": "/api/uploads/frames/69d9c812f05e6.png",
+      "r2Key": "frames/69d9c812f05e6.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 115,
+      "createdAt": "2026-04-11T04:03:30.000000Z",
+      "updatedAt": "2026-05-07T16:01:57.000000Z"
+    },
+    {
+      "_id": "freehihi_558",
+      "name": "Basic-15",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ef60c9a3d12.png",
+      "previewUrl": "/api/uploads/frames/69ef60c9a3d12.png",
+      "frameUrl": "/api/uploads/frames/69ef60c9a3d12.png",
+      "r2Key": "frames/69ef60c9a3d12.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 116,
+      "createdAt": "2026-04-27T13:12:41.000000Z",
+      "updatedAt": "2026-04-27T13:12:41.000000Z"
+    },
+    {
+      "_id": "freehihi_561",
+      "name": "Basic-16",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ef61273725c.png",
+      "previewUrl": "/api/uploads/frames/69ef61273725c.png",
+      "frameUrl": "/api/uploads/frames/69ef61273725c.png",
+      "r2Key": "frames/69ef61273725c.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 117,
+      "createdAt": "2026-04-27T13:14:15.000000Z",
+      "updatedAt": "2026-04-27T13:14:15.000000Z"
+    },
+    {
+      "_id": "freehihi_562",
+      "name": "Basic-17",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ef613158c9e.png",
+      "previewUrl": "/api/uploads/frames/69ef613158c9e.png",
+      "frameUrl": "/api/uploads/frames/69ef613158c9e.png",
+      "r2Key": "frames/69ef613158c9e.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 118,
+      "createdAt": "2026-04-27T13:14:25.000000Z",
+      "updatedAt": "2026-04-27T13:14:25.000000Z"
+    },
+    {
+      "_id": "freehihi_563",
+      "name": "30/4 GPMN",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69f734c41cab0.png",
+      "previewUrl": "/api/uploads/frames/69f734c41cab0.png",
+      "frameUrl": "/api/uploads/frames/69f734c41cab0.png",
+      "r2Key": "frames/69f734c41cab0.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 119,
+      "createdAt": "2026-05-03T11:43:00.000000Z",
+      "updatedAt": "2026-05-07T16:02:01.000000Z"
+    },
+    {
+      "_id": "freehihi_566",
+      "name": "UPRIZE DYLAN/DUY Lân",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69f9c4303b7a8.png",
+      "previewUrl": "/api/uploads/frames/69f9c4303b7a8.png",
+      "frameUrl": "/api/uploads/frames/69f9c4303b7a8.png",
+      "r2Key": "frames/69f9c4303b7a8.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 120,
+      "createdAt": "2026-05-05T10:19:28.000000Z",
+      "updatedAt": "2026-05-07T16:02:11.000000Z"
+    },
+    {
+      "_id": "freehihi_567",
+      "name": "UPRIZE DYLAN/DUY LÂN",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69f9c442b0534.png",
+      "previewUrl": "/api/uploads/frames/69f9c442b0534.png",
+      "frameUrl": "/api/uploads/frames/69f9c442b0534.png",
+      "r2Key": "frames/69f9c442b0534.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 121,
+      "createdAt": "2026-05-05T10:19:46.000000Z",
+      "updatedAt": "2026-05-07T16:02:08.000000Z"
+    },
+    {
+      "_id": "freehihi_568",
+      "name": "Coca",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ff1b1af1890.png",
+      "previewUrl": "/api/uploads/frames/69ff1b1af1890.png",
+      "frameUrl": "/api/uploads/frames/69ff1b1af1890.png",
+      "r2Key": "frames/69ff1b1af1890.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 122,
+      "createdAt": "2026-05-09T11:31:38.000000Z",
+      "updatedAt": "2026-05-09T11:31:38.000000Z"
+    },
+    {
+      "_id": "freehihi_569",
+      "name": "Red Digicam",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ff1bb477e7e.png",
+      "previewUrl": "/api/uploads/frames/69ff1bb477e7e.png",
+      "frameUrl": "/api/uploads/frames/69ff1bb477e7e.png",
+      "r2Key": "frames/69ff1bb477e7e.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 123,
+      "createdAt": "2026-05-09T11:34:12.000000Z",
+      "updatedAt": "2026-05-09T11:34:12.000000Z"
+    },
+    {
+      "_id": "freehihi_570",
+      "name": "Capturing Moment",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ff1be3e00e2.png",
+      "previewUrl": "/api/uploads/frames/69ff1be3e00e2.png",
+      "frameUrl": "/api/uploads/frames/69ff1be3e00e2.png",
+      "r2Key": "frames/69ff1be3e00e2.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 124,
+      "createdAt": "2026-05-09T11:34:59.000000Z",
+      "updatedAt": "2026-05-09T11:34:59.000000Z"
+    },
+    {
+      "_id": "freehihi_573",
+      "name": "Biển hè",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/69ff69b13221a.png",
+      "previewUrl": "/api/uploads/frames/69ff69b13221a.png",
+      "frameUrl": "/api/uploads/frames/69ff69b13221a.png",
+      "r2Key": "frames/69ff69b13221a.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 125,
+      "createdAt": "2026-05-09T17:06:57.000000Z",
+      "updatedAt": "2026-05-09T17:06:57.000000Z"
+    },
+    {
+      "_id": "freehihi_575",
+      "name": "Happy Moments",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a018cc859932.png",
+      "previewUrl": "/api/uploads/frames/6a018cc859932.png",
+      "frameUrl": "/api/uploads/frames/6a018cc859932.png",
+      "r2Key": "frames/6a018cc859932.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 126,
+      "createdAt": "2026-05-11T08:01:12.000000Z",
+      "updatedAt": "2026-05-11T08:01:12.000000Z"
+    },
+    {
+      "_id": "freehihi_576",
+      "name": "Sweet Memories",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a018cfeb3cc9.png",
+      "previewUrl": "/api/uploads/frames/6a018cfeb3cc9.png",
+      "frameUrl": "/api/uploads/frames/6a018cfeb3cc9.png",
+      "r2Key": "frames/6a018cfeb3cc9.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 127,
+      "createdAt": "2026-05-11T08:02:06.000000Z",
+      "updatedAt": "2026-05-11T08:02:06.000000Z"
+    },
+    {
+      "_id": "freehihi_578",
+      "name": "Tem Du Ký",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a01aacc0defd.png",
+      "previewUrl": "/api/uploads/frames/6a01aacc0defd.png",
+      "frameUrl": "/api/uploads/frames/6a01aacc0defd.png",
+      "r2Key": "frames/6a01aacc0defd.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 128,
+      "createdAt": "2026-05-11T10:09:16.000000Z",
+      "updatedAt": "2026-05-11T10:09:16.000000Z"
+    },
+    {
+      "_id": "freehihi_582",
+      "name": "Valorant",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a01b1a4d96d2.png",
+      "previewUrl": "/api/uploads/frames/6a01b1a4d96d2.png",
+      "frameUrl": "/api/uploads/frames/6a01b1a4d96d2.png",
+      "r2Key": "frames/6a01b1a4d96d2.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 129,
+      "createdAt": "2026-05-11T10:38:28.000000Z",
+      "updatedAt": "2026-05-11T10:38:28.000000Z"
+    },
+    {
+      "_id": "freehihi_583",
+      "name": "Liên Quân",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a01b21a7950f.png",
+      "previewUrl": "/api/uploads/frames/6a01b21a7950f.png",
+      "frameUrl": "/api/uploads/frames/6a01b21a7950f.png",
+      "r2Key": "frames/6a01b21a7950f.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 130,
+      "createdAt": "2026-05-11T10:40:26.000000Z",
+      "updatedAt": "2026-05-11T10:40:26.000000Z"
+    },
+    {
+      "_id": "freehihi_584",
+      "name": "BTS",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a01b5474a131.png",
+      "previewUrl": "/api/uploads/frames/6a01b5474a131.png",
+      "frameUrl": "/api/uploads/frames/6a01b5474a131.png",
+      "r2Key": "frames/6a01b5474a131.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 131,
+      "createdAt": "2026-05-11T10:53:59.000000Z",
+      "updatedAt": "2026-05-11T10:53:59.000000Z"
+    },
+    {
+      "_id": "freehihi_585",
+      "name": "BTS_2",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a01b5a37c981.png",
+      "previewUrl": "/api/uploads/frames/6a01b5a37c981.png",
+      "frameUrl": "/api/uploads/frames/6a01b5a37c981.png",
+      "r2Key": "frames/6a01b5a37c981.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 132,
+      "createdAt": "2026-05-11T10:55:31.000000Z",
+      "updatedAt": "2026-05-11T10:55:31.000000Z"
+    },
+    {
+      "_id": "freehihi_586",
+      "name": "BlackPink",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a03104b67254.png",
+      "previewUrl": "/api/uploads/frames/6a03104b67254.png",
+      "frameUrl": "/api/uploads/frames/6a03104b67254.png",
+      "r2Key": "frames/6a03104b67254.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 133,
+      "createdAt": "2026-05-12T11:34:35.000000Z",
+      "updatedAt": "2026-05-12T11:34:35.000000Z"
+    },
+    {
+      "_id": "freehihi_587",
+      "name": "G-Dragon",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a03106a69035.png",
+      "previewUrl": "/api/uploads/frames/6a03106a69035.png",
+      "frameUrl": "/api/uploads/frames/6a03106a69035.png",
+      "r2Key": "frames/6a03106a69035.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 134,
+      "createdAt": "2026-05-12T11:35:06.000000Z",
+      "updatedAt": "2026-05-12T11:35:06.000000Z"
+    },
+    {
+      "_id": "freehihi_590",
+      "name": "LOL",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a03118a5260d.png",
+      "previewUrl": "/api/uploads/frames/6a03118a5260d.png",
+      "frameUrl": "/api/uploads/frames/6a03118a5260d.png",
+      "r2Key": "frames/6a03118a5260d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 135,
+      "createdAt": "2026-05-12T11:39:54.000000Z",
+      "updatedAt": "2026-05-12T11:39:54.000000Z"
+    },
+    {
+      "_id": "freehihi_591",
+      "name": "NewsPaper",
+      "description": "Imported frame from FreeHiHi (Frame Amazing ⭐️)",
+      "category": "Frame Amazing ⭐️",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a031344ec500.png",
+      "previewUrl": "/api/uploads/frames/6a031344ec500.png",
+      "frameUrl": "/api/uploads/frames/6a031344ec500.png",
+      "r2Key": "frames/6a031344ec500.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 136,
+      "createdAt": "2026-05-12T11:47:16.000000Z",
+      "updatedAt": "2026-05-12T11:47:16.000000Z"
+    },
+    {
+      "_id": "freehihi_592",
+      "name": "Bùi Duy Ngọc CODCD",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a059a81d6d23.png",
+      "previewUrl": "/api/uploads/frames/6a059a81d6d23.png",
+      "frameUrl": "/api/uploads/frames/6a059a81d6d23.png",
+      "r2Key": "frames/6a059a81d6d23.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 137,
+      "createdAt": "2026-05-14T09:48:49.000000Z",
+      "updatedAt": "2026-05-14T09:48:49.000000Z"
+    },
+    {
+      "_id": "freehihi_594",
+      "name": "Dương Hoàng Yến's birthday",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a1c0fcaa44bf.png",
+      "previewUrl": "/api/uploads/frames/6a1c0fcaa44bf.png",
+      "frameUrl": "/api/uploads/frames/6a1c0fcaa44bf.png",
+      "r2Key": "frames/6a1c0fcaa44bf.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 138,
+      "createdAt": "2026-05-31T10:39:06.000000Z",
+      "updatedAt": "2026-05-31T10:39:06.000000Z"
+    },
+    {
+      "_id": "freehihi_595",
+      "name": "Eom chíp đi học",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a1c82c6a453d.png",
+      "previewUrl": "/api/uploads/frames/6a1c82c6a453d.png",
+      "frameUrl": "/api/uploads/frames/6a1c82c6a453d.png",
+      "r2Key": "frames/6a1c82c6a453d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 139,
+      "createdAt": "2026-05-31T18:49:42.000000Z",
+      "updatedAt": "2026-05-31T18:49:42.000000Z"
+    },
+    {
+      "_id": "freehihi_597",
+      "name": "James(cortis)",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a1d27c86e757.png",
+      "previewUrl": "/api/uploads/frames/6a1d27c86e757.png",
+      "frameUrl": "/api/uploads/frames/6a1d27c86e757.png",
+      "r2Key": "frames/6a1d27c86e757.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 140,
+      "createdAt": "2026-06-01T06:33:44.000000Z",
+      "updatedAt": "2026-06-01T06:33:44.000000Z"
+    },
+    {
+      "_id": "freehihi_598",
+      "name": "Juhoon(cortis)",
+      "description": "Imported frame from FreeHiHi (Frame Chụp Cùng Idol)",
+      "category": "Frame Chụp Cùng Idol",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a1d27f0e8447.png",
+      "previewUrl": "/api/uploads/frames/6a1d27f0e8447.png",
+      "frameUrl": "/api/uploads/frames/6a1d27f0e8447.png",
+      "r2Key": "frames/6a1d27f0e8447.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 141,
+      "createdAt": "2026-06-01T06:34:24.000000Z",
+      "updatedAt": "2026-06-01T06:34:24.000000Z"
+    },
+    {
+      "_id": "freehihi_601",
+      "name": "Tinh Hoa Rối Nước 1",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a3917dca3beb.png",
+      "previewUrl": "/api/uploads/frames/6a3917dca3beb.png",
+      "frameUrl": "/api/uploads/frames/6a3917dca3beb.png",
+      "r2Key": "frames/6a3917dca3beb.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 142,
+      "createdAt": "2026-06-22T11:09:16.000000Z",
+      "updatedAt": "2026-06-22T11:09:16.000000Z"
+    },
+    {
+      "_id": "freehihi_602",
+      "name": "Tinh Hoa Rối Nước 2",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a3917ea09d52.png",
+      "previewUrl": "/api/uploads/frames/6a3917ea09d52.png",
+      "frameUrl": "/api/uploads/frames/6a3917ea09d52.png",
+      "r2Key": "frames/6a3917ea09d52.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 143,
+      "createdAt": "2026-06-22T11:09:30.000000Z",
+      "updatedAt": "2026-06-22T11:09:30.000000Z"
+    },
+    {
+      "_id": "freehihi_612",
+      "name": "ADP 1ST ANNIVERSARY",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a395d5bec1ec.png",
+      "previewUrl": "/api/uploads/frames/6a395d5bec1ec.png",
+      "frameUrl": "/api/uploads/frames/6a395d5bec1ec.png",
+      "r2Key": "frames/6a395d5bec1ec.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 144,
+      "createdAt": "2026-06-22T16:05:47.000000Z",
+      "updatedAt": "2026-06-22T16:05:47.000000Z"
+    },
+    {
+      "_id": "freehihi_613",
+      "name": "ADP 1ST ANNIVERSARY - ANNIE",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a395d658c2e1.png",
+      "previewUrl": "/api/uploads/frames/6a395d658c2e1.png",
+      "frameUrl": "/api/uploads/frames/6a395d658c2e1.png",
+      "r2Key": "frames/6a395d658c2e1.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 145,
+      "createdAt": "2026-06-22T16:05:57.000000Z",
+      "updatedAt": "2026-06-22T16:05:57.000000Z"
+    },
+    {
+      "_id": "freehihi_614",
+      "name": "ADP 1ST ANNIVERSARY - TARZZAN",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a395d6f9eb60.png",
+      "previewUrl": "/api/uploads/frames/6a395d6f9eb60.png",
+      "frameUrl": "/api/uploads/frames/6a395d6f9eb60.png",
+      "r2Key": "frames/6a395d6f9eb60.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 146,
+      "createdAt": "2026-06-22T16:06:07.000000Z",
+      "updatedAt": "2026-06-22T16:06:07.000000Z"
+    },
+    {
+      "_id": "freehihi_615",
+      "name": "ADP 1ST ANNIVERSARY - BAILEY",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a395d776443d.png",
+      "previewUrl": "/api/uploads/frames/6a395d776443d.png",
+      "frameUrl": "/api/uploads/frames/6a395d776443d.png",
+      "r2Key": "frames/6a395d776443d.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 147,
+      "createdAt": "2026-06-22T16:06:15.000000Z",
+      "updatedAt": "2026-06-22T16:06:15.000000Z"
+    },
+    {
+      "_id": "freehihi_616",
+      "name": "ADP 1ST ANNIVERSARY - WOOCHAN",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a395d8323f0e.png",
+      "previewUrl": "/api/uploads/frames/6a395d8323f0e.png",
+      "frameUrl": "/api/uploads/frames/6a395d8323f0e.png",
+      "r2Key": "frames/6a395d8323f0e.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 148,
+      "createdAt": "2026-06-22T16:06:27.000000Z",
+      "updatedAt": "2026-06-22T16:06:27.000000Z"
+    },
+    {
+      "_id": "freehihi_617",
+      "name": "ADP 1ST ANNIVERSARY - YOUNGSEO",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a395d8ec572c.png",
+      "previewUrl": "/api/uploads/frames/6a395d8ec572c.png",
+      "frameUrl": "/api/uploads/frames/6a395d8ec572c.png",
+      "r2Key": "frames/6a395d8ec572c.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 149,
+      "createdAt": "2026-06-22T16:06:38.000000Z",
+      "updatedAt": "2026-06-22T16:06:38.000000Z"
+    },
+    {
+      "_id": "freehihi_620",
+      "name": "Thanh Hằng",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a4a142568058.png",
+      "previewUrl": "/api/uploads/frames/6a4a142568058.png",
+      "frameUrl": "/api/uploads/frames/6a4a142568058.png",
+      "r2Key": "frames/6a4a142568058.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 150,
+      "createdAt": "2026-07-05T08:21:57.000000Z",
+      "updatedAt": "2026-07-05T08:21:57.000000Z"
+    },
+    {
+      "_id": "freehihi_621",
+      "name": "HANU",
+      "description": "Imported frame from FreeHiHi (Frame Đại Học)",
+      "category": "Frame Đại Học",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a5396707e531.png",
+      "previewUrl": "/api/uploads/frames/6a5396707e531.png",
+      "frameUrl": "/api/uploads/frames/6a5396707e531.png",
+      "r2Key": "frames/6a5396707e531.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 151,
+      "createdAt": "2026-07-12T13:28:16.000000Z",
+      "updatedAt": "2026-07-12T13:28:16.000000Z"
+    },
+    {
+      "_id": "freehihi_623",
+      "name": "UPRIZE LAVM&PN",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a5d3a2a9cbd4.png",
+      "previewUrl": "/api/uploads/frames/6a5d3a2a9cbd4.png",
+      "frameUrl": "/api/uploads/frames/6a5d3a2a9cbd4.png",
+      "r2Key": "frames/6a5d3a2a9cbd4.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 152,
+      "createdAt": "2026-07-19T20:57:14.000000Z",
+      "updatedAt": "2026-07-19T20:57:14.000000Z"
+    },
+    {
+      "_id": "freehihi_624",
+      "name": "Đào Nguyên Anh Lạc",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a6804b365e15.png",
+      "previewUrl": "/api/uploads/frames/6a6804b365e15.png",
+      "frameUrl": "/api/uploads/frames/6a6804b365e15.png",
+      "r2Key": "frames/6a6804b365e15.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 153,
+      "createdAt": "2026-07-28T01:24:03.000000Z",
+      "updatedAt": "2026-07-28T01:24:03.000000Z"
+    },
+    {
+      "_id": "freehihi_629",
+      "name": "Mèo Simmy Birthday",
+      "description": "Imported frame from FreeHiHi (Frame Sự Kiện)",
+      "category": "Frame Sự Kiện",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a6b3fd2dda67.png",
+      "previewUrl": "/api/uploads/frames/6a6b3fd2dda67.png",
+      "frameUrl": "/api/uploads/frames/6a6b3fd2dda67.png",
+      "r2Key": "frames/6a6b3fd2dda67.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 154,
+      "createdAt": "2026-07-30T12:13:06.000000Z",
+      "updatedAt": "2026-07-30T12:13:06.000000Z"
+    },
+    {
+      "_id": "freehihi_632",
+      "name": "Film2",
+      "description": "Imported frame from FreeHiHi (Frame Basic)",
+      "category": "Frame Basic",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a6cd95d455b0.png",
+      "previewUrl": "/api/uploads/frames/6a6cd95d455b0.png",
+      "frameUrl": "/api/uploads/frames/6a6cd95d455b0.png",
+      "r2Key": "frames/6a6cd95d455b0.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 155,
+      "createdAt": "2026-07-31T17:20:29.000000Z",
+      "updatedAt": "2026-07-31T17:20:29.000000Z"
+    },
+    {
+      "_id": "freehihi_633",
+      "name": "Mickey1",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a6cda245682a.png",
+      "previewUrl": "/api/uploads/frames/6a6cda245682a.png",
+      "frameUrl": "/api/uploads/frames/6a6cda245682a.png",
+      "r2Key": "frames/6a6cda245682a.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 156,
+      "createdAt": "2026-07-31T17:23:48.000000Z",
+      "updatedAt": "2026-07-31T17:23:48.000000Z"
+    },
+    {
+      "_id": "freehihi_634",
+      "name": "Mickey2",
+      "description": "Imported frame from FreeHiHi (Frame Cartoon)",
+      "category": "Frame Cartoon",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a6cda2b14c8b.png",
+      "previewUrl": "/api/uploads/frames/6a6cda2b14c8b.png",
+      "frameUrl": "/api/uploads/frames/6a6cda2b14c8b.png",
+      "r2Key": "frames/6a6cda2b14c8b.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 157,
+      "createdAt": "2026-07-31T17:23:55.000000Z",
+      "updatedAt": "2026-07-31T17:23:55.000000Z"
+    },
+    {
+      "_id": "freehihi_638",
+      "name": "The First SONata",
+      "description": "Imported frame from FreeHiHi (Frame IDOL Hoạt Họa)",
+      "category": "Frame IDOL Hoạt Họa",
+      "resolution": {
+        "width": 1200,
+        "height": 1800
+      },
+      "aspectRatio": "4:6",
+      "layoutMode": "single",
+      "slots": [
+        {
+          "x": 60,
+          "y": 60,
+          "width": 1080,
+          "height": 1680,
+          "rotation": 0
+        }
+      ],
+      "thumbnailUrl": "/api/uploads/frames/6a6eadf6e4105.png",
+      "previewUrl": "/api/uploads/frames/6a6eadf6e4105.png",
+      "frameUrl": "/api/uploads/frames/6a6eadf6e4105.png",
+      "r2Key": "frames/6a6eadf6e4105.png",
+      "enabled": true,
+      "isPinned": false,
+      "displayOrder": 158,
+      "createdAt": "2026-08-02T02:39:50.000000Z",
+      "updatedAt": "2026-08-02T02:39:50.000000Z"
     }
   ],
   "sessions": [],
