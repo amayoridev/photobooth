@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import mongoose from 'mongoose';
 import { connectToDatabase } from '@/lib/db';
 import { authenticateAdminRequest, unauthorizedResponse } from '@/lib/auth';
 import { Frame } from '@/models/Frame';
@@ -127,9 +128,12 @@ export async function DELETE(
     if (!payload) return unauthorizedResponse();
 
     const { id } = await params;
+    const decodedId = decodeURIComponent(id);
     const { isConnected } = await connectToDatabase();
 
-    // MemoryDB Sync
+    let deletedAny = false;
+
+    // 1. MemoryDB Sync
     const memDb = getMemoryDB();
     const frameIdx = findMemoryFrameIndex(memDb.frames, id);
 
@@ -149,8 +153,10 @@ export async function DELETE(
 
       memDb.frames.splice(frameIdx, 1);
       saveMemoryDB(memDb);
+      deletedAny = true;
     }
 
+    // 2. MongoDB Sync & Force Delete Fallback
     if (isConnected) {
       const frame = await findFrameInMongo(Frame, id);
       if (frame) {
@@ -158,6 +164,7 @@ export async function DELETE(
           try { await deleteFromR2(frame.r2Key); } catch {}
         }
         await Frame.deleteOne({ _id: frame._id });
+        deletedAny = true;
 
         try {
           await AuditLog.create({
@@ -166,10 +173,30 @@ export async function DELETE(
             details: { frameId: frame._id, name: frame.name },
           });
         } catch {}
+      } else {
+        const queryOr: any[] = [
+          { _id: decodedId },
+          { name: decodedId },
+          { frameUrl: { $regex: decodedId, $options: 'i' } },
+          { thumbnailUrl: { $regex: decodedId, $options: 'i' } },
+        ];
+
+        if (mongoose.Types.ObjectId.isValid(decodedId)) {
+          queryOr.push({ _id: new mongoose.Types.ObjectId(decodedId) });
+        }
+
+        const deleteRes = await Frame.deleteMany({ $or: queryOr });
+        if (deleteRes.deletedCount > 0) {
+          deletedAny = true;
+        }
       }
     }
 
-    return NextResponse.json({ success: true, message: 'Frame deleted successfully.' });
+    if (deletedAny) {
+      return NextResponse.json({ success: true, message: 'Frame deleted successfully.' });
+    }
+
+    return NextResponse.json({ success: false, error: 'Frame not found.' }, { status: 404 });
   } catch (error: any) {
     return NextResponse.json(
       { success: false, error: error.message || 'Failed to delete frame.' },
