@@ -22,6 +22,11 @@ function sanitizeFrameUrls(frames: any[]) {
         f.frameUrl = `/api/uploads/frames/${filename}`;
         f.previewUrl = `/api/uploads/frames/${filename}`;
         f.thumbnailUrl = `/api/uploads/frames/${filename}`;
+      } else if (f.frameUrl.startsWith('http://') || f.frameUrl.startsWith('https://')) {
+        const proxiedUrl = `/api/proxy-image?url=${encodeURIComponent(f.frameUrl)}`;
+        f.frameUrl = proxiedUrl;
+        f.previewUrl = proxiedUrl;
+        f.thumbnailUrl = proxiedUrl;
       }
     }
     return f;

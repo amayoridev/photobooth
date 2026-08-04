@@ -165,25 +165,22 @@ export async function loadImage(src: string): Promise<HTMLImageElement> {
   if (src.includes('/uploads/frames/')) {
     const filename = src.split('/uploads/frames/').pop()?.split('?')[0];
     const relativePath = `/api/uploads/frames/${filename}`;
-    if (typeof window !== 'undefined') {
-      targetUrl = `${window.location.origin}${relativePath}`;
-    } else {
-      targetUrl = relativePath;
-    }
+    targetUrl = typeof window !== 'undefined' ? `${window.location.origin}${relativePath}` : relativePath;
   } else if (src.includes('/uploads/')) {
     const relativePath = '/uploads/' + src.split('/uploads/').pop();
-    if (typeof window !== 'undefined') {
-      targetUrl = `${window.location.origin}${relativePath}`;
-    } else {
-      targetUrl = relativePath;
-    }
-  } else if (typeof window !== 'undefined') {
-    if (src.startsWith('/')) {
-      targetUrl = `${window.location.origin}${src}`;
-    } else if (src.startsWith('http') && !src.includes(window.location.host)) {
-      // Route external cross-origin images through proxy route upfront to bypass browser CORS block
+    targetUrl = typeof window !== 'undefined' ? `${window.location.origin}${relativePath}` : relativePath;
+  } else if (typeof window !== 'undefined' && src.startsWith('http')) {
+    try {
+      const parsedUrl = new URL(src);
+      if (parsedUrl.origin !== window.location.origin) {
+        // Different origin/subdomain (e.g. r2.ndqm.eu.org vs ndqm.eu.org) -> route through proxy image endpoint
+        targetUrl = `/api/proxy-image?url=${encodeURIComponent(src)}`;
+      }
+    } catch {
       targetUrl = `/api/proxy-image?url=${encodeURIComponent(src)}`;
     }
+  } else if (typeof window !== 'undefined' && src.startsWith('/')) {
+    targetUrl = `${window.location.origin}${src}`;
   }
 
   // Fetch image as a Blob to create a local Blob Object URL, guaranteeing untainted Canvas
@@ -207,8 +204,12 @@ export async function loadImage(src: string): Promise<HTMLImageElement> {
   // Multi-layered fallback: Try loading via standard HTMLImageElement
   return new Promise((resolve, reject) => {
     const img = new Image();
-    if (typeof window !== 'undefined' && targetUrl.startsWith('http') && !targetUrl.includes(window.location.host)) {
-      img.crossOrigin = 'anonymous';
+    if (typeof window !== 'undefined' && targetUrl.startsWith('http')) {
+      try {
+        if (new URL(targetUrl).origin !== window.location.origin) {
+          img.crossOrigin = 'anonymous';
+        }
+      } catch {}
     }
     img.onload = () => resolve(img);
     img.onerror = () => {

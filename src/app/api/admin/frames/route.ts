@@ -21,16 +21,16 @@ function sanitizeFrameUrls(frames: any[]) {
   return frames.map((frame) => {
     const f = frame.toObject ? frame.toObject() : { ...frame };
     if (f.frameUrl) {
-      if (f.frameUrl.startsWith('http://') || f.frameUrl.startsWith('https://')) {
-        f.previewUrl = f.previewUrl || f.frameUrl;
-        f.thumbnailUrl = f.thumbnailUrl || f.frameUrl;
-        return f;
-      }
       const filename = path.basename(f.frameUrl);
       if (existingFiles.has(filename) || f.frameUrl.includes('/uploads/frames/')) {
         f.frameUrl = `/api/uploads/frames/${filename}`;
         f.previewUrl = `/api/uploads/frames/${filename}`;
         f.thumbnailUrl = `/api/uploads/frames/${filename}`;
+      } else if (f.frameUrl.startsWith('http://') || f.frameUrl.startsWith('https://')) {
+        const proxiedUrl = `/api/proxy-image?url=${encodeURIComponent(f.frameUrl)}`;
+        f.frameUrl = proxiedUrl;
+        f.previewUrl = proxiedUrl;
+        f.thumbnailUrl = proxiedUrl;
       }
     }
     return f;
