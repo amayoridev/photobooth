@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
   try {
     const { isConnected } = await connectToDatabase();
 
-    const { frameId, layout, photos, finalImage, btsVideo } = await req.json();
+    const { frameId, layout, photos, finalImage } = await req.json();
 
     if (!frameId || !finalImage) {
       return NextResponse.json(
@@ -35,25 +35,6 @@ export async function POST(req: NextRequest) {
       'image/jpeg'
     );
 
-    // Upload BTS Video if recorded
-    let btsVideoUrl: string | undefined = undefined;
-    let btsVideoR2Key: string | undefined = undefined;
-
-    if (btsVideo && typeof btsVideo === 'string' && btsVideo.length > 50) {
-      try {
-        const videoKey = `sessions/bts_${Date.now()}_${qrToken}.webm`;
-        const { url: vUrl, key: vKey } = await uploadToR2(
-          btsVideo,
-          videoKey,
-          'video/webm'
-        );
-        btsVideoUrl = vUrl;
-        btsVideoR2Key = vKey;
-      } catch (err) {
-        console.warn('⚠️ BTS Video upload warning:', err);
-      }
-    }
-
     const ipAddress = req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || '127.0.0.1';
     const userAgent = req.headers.get('user-agent') || 'Unknown';
 
@@ -69,8 +50,6 @@ export async function POST(req: NextRequest) {
         photoUrls: [],
         finalImageUrl,
         r2Key,
-        btsVideoUrl,
-        btsVideoR2Key,
         qrToken,
         downloadToken,
         expiresAt,
@@ -84,7 +63,6 @@ export async function POST(req: NextRequest) {
         qrToken: session.qrToken,
         downloadToken: session.downloadToken,
         finalImageUrl: session.finalImageUrl,
-        btsVideoUrl: session.btsVideoUrl,
         expiresAt: session.expiresAt,
       });
     }
@@ -100,8 +78,6 @@ export async function POST(req: NextRequest) {
       photoUrls: [],
       finalImageUrl,
       r2Key,
-      btsVideoUrl,
-      btsVideoR2Key,
       qrToken,
       downloadToken,
       downloadCount: 0,
@@ -121,7 +97,6 @@ export async function POST(req: NextRequest) {
       qrToken,
       downloadToken,
       finalImageUrl,
-      btsVideoUrl: sessionObj.btsVideoUrl,
       expiresAt: sessionObj.expiresAt,
     });
   } catch (error: any) {

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { IFrame } from '@/types';
-import { analyzeFrame } from '@/lib/canvas';
+import { IFrame, LayoutSlot } from '@/types';
+import { analyzeFrame, getDefaultSlotsForLayout } from '@/lib/canvas';
 import {
   Camera,
   Timer,
@@ -11,13 +11,14 @@ import {
   Sparkles,
   AlertCircle,
   Upload,
-  Check,
   Image as ImageIcon,
+  Eye,
+  EyeOff,
 } from 'lucide-react';
 
 interface CameraBoothProps {
   frame: IFrame;
-  onPhotosCaptured: (photos: string[], btsVideo?: string) => void;
+  onPhotosCaptured: (photos: string[]) => void;
 }
 
 export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
@@ -26,7 +27,8 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
 
   const [facingMode, setFacingMode] = useState<'user' | 'environment'>('user');
   const [isMirror, setIsMirror] = useState<boolean>(true);
-  const [countdownDuration, setCountdownDuration] = useState<3 | 5 | 10>(3);
+  const [showFrameOverlay, setShowFrameOverlay] = useState<boolean>(true);
+  const [countdownDuration, setCountdownDuration] = useState<3 | 5 | 7 | 10>(3);
   const [currentCountdown, setCurrentCountdown] = useState<number | null>(null);
   const [isCapturing, setIsCapturing] = useState<boolean>(false);
   const [cameraError, setCameraError] = useState<string | null>(null);
@@ -38,30 +40,58 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
     return frame.slots?.length || 1;
   });
 
+  const [activeSlots, setActiveSlots] = useState<LayoutSlot[]>(() => frame.slots || []);
+  const [frameDimensions, setFrameDimensions] = useState<{ width: number; height: number }>({
+    width: frame.resolution?.width || 1200,
+    height: frame.resolution?.height || 1800,
+  });
+
   const [capturedPhotos, setCapturedPhotos] = useState<string[]>([]);
   const [activePhotoIndex, setActivePhotoIndex] = useState<number>(0);
 
-  // Auto analyze frame overlay to count transparent cutouts
+  // Auto analyze frame PNG overlay to extract exact cutout slots and frame dimensions
   useEffect(() => {
     async function inspectFrameCutouts() {
-      if (!frame.frameUrl) return;
-      try {
-        const info = await analyzeFrame(frame.frameUrl);
-        if (info.photoCount && info.photoCount > 0) {
-          setRequiredPhotoCount(info.photoCount);
+      let slots: LayoutSlot[] = frame.slots && frame.slots.length > 0 ? frame.slots : [];
+      let w = frame.resolution?.width || 1200;
+      let h = frame.resolution?.height || 1800;
+
+      if (!slots || slots.length === 0) {
+        if (frame.frameUrl) {
+          try {
+            const info = await analyzeFrame(frame.frameUrl);
+            if (info.slots && info.slots.length > 0) {
+              slots = info.slots;
+            }
+            if (info.width && info.height) {
+              w = info.width;
+              h = info.height;
+            }
+          } catch {}
         }
-      } catch {
-        // fallback
       }
+
+      if (!slots || slots.length === 0) {
+        slots = getDefaultSlotsForLayout(frame.layoutMode, w, h, requiredPhotoCount);
+      }
+
+      setActiveSlots(slots);
+      setRequiredPhotoCount(slots.length);
+      setFrameDimensions({ width: w, height: h });
     }
     inspectFrameCutouts();
   }, [frame]);
+
+  // Current cutout slot active for current photo shot
+  const currentSlot = activeSlots[activePhotoIndex] || activeSlots[0];
+  const slotAspectRatio = currentSlot && currentSlot.width > 0 && currentSlot.height > 0
+    ? currentSlot.width / currentSlot.height
+    : null;
 
   // Initialize browser MediaDevices camera stream
   const initCamera = useCallback(async () => {
     setCameraError(null);
 
-    // Check if browser supports MediaDevices (restricted by browsers on unsecure HTTP public IPs)
     if (typeof navigator === 'undefined' || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
       setCameraError(
         'Camera API is restricted by browsers on unsecure HTTP connections. Access via HTTPS or Localhost for live camera, or upload photos directly below!'
@@ -69,7 +99,6 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
       return;
     }
 
-    // Stop current stream
     if (streamRef.current) {
       streamRef.current.getTracks().forEach((track) => track.stop());
     }
@@ -106,58 +135,76 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
     };
   }, [initCamera]);
 
-  // Capture a single frame snapshot from video element
+  // Capture a single photo snapshot, cropped exactly to active slot cutout aspect ratio
   const takeSinglePhotoSnapshot = useCallback((): string | null => {
     if (!videoRef.current) return null;
     const video = videoRef.current;
 
+    const videoW = video.videoWidth || 1280;
+    const videoH = video.videoHeight || 720;
+    const videoRatio = videoW / videoH;
+
+    const slot = activeSlots[activePhotoIndex] || activeSlots[0];
+    const targetRatio = slot && slot.width > 0 && slot.height > 0
+      ? slot.width / slot.height
+      : null;
+
     const canvas = document.createElement('canvas');
-    canvas.width = video.videoWidth || 1280;
-    canvas.height = video.videoHeight || 720;
     const ctx = canvas.getContext('2d');
     if (!ctx) return null;
 
-    if (isMirror && facingMode === 'user') {
-      ctx.translate(canvas.width, 0);
-      ctx.scale(-1, 1);
+    if (targetRatio) {
+      let cropW = videoW;
+      let cropH = videoH;
+      let cropX = 0;
+      let cropY = 0;
+
+      if (videoRatio > targetRatio) {
+        cropW = videoH * targetRatio;
+        cropX = (videoW - cropW) / 2;
+      } else {
+        cropH = videoW / targetRatio;
+        cropY = (videoH - cropH) / 2;
+      }
+
+      canvas.width = Math.round(cropW);
+      canvas.height = Math.round(cropH);
+
+      if (isMirror && facingMode === 'user') {
+        ctx.translate(canvas.width, 0);
+        ctx.scale(-1, 1);
+      }
+
+      ctx.drawImage(
+        video,
+        cropX,
+        cropY,
+        cropW,
+        cropH,
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
+    } else {
+      canvas.width = videoW;
+      canvas.height = videoH;
+
+      if (isMirror && facingMode === 'user') {
+        ctx.translate(canvas.width, 0);
+        ctx.scale(-1, 1);
+      }
+
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     }
 
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     return canvas.toDataURL('image/jpeg', 0.95);
-  }, [isMirror, facingMode]);
+  }, [isMirror, facingMode, activeSlots, activePhotoIndex]);
 
-  // Trigger full photo sequence capture session with Behind-The-Scenes video recording
+  // Trigger full photo sequence capture session
   const startCaptureSequence = async () => {
     if (isCapturing) return;
     setIsCapturing(true);
-
-    // Initialize Behind-The-Scenes MediaRecorder
-    let mediaRecorder: MediaRecorder | null = null;
-    const recordedChunks: Blob[] = [];
-
-    if (typeof window !== 'undefined' && window.MediaRecorder && streamRef.current) {
-      try {
-        const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
-          ? 'video/webm;codecs=vp9'
-          : MediaRecorder.isTypeSupported('video/webm')
-          ? 'video/webm'
-          : MediaRecorder.isTypeSupported('video/mp4')
-          ? 'video/mp4'
-          : '';
-
-        if (mimeType) {
-          mediaRecorder = new MediaRecorder(streamRef.current, { mimeType });
-          mediaRecorder.ondataavailable = (e) => {
-            if (e.data && e.data.size > 0) {
-              recordedChunks.push(e.data);
-            }
-          };
-          mediaRecorder.start(100);
-        }
-      } catch (err) {
-        console.warn('MediaRecorder initialization warning:', err);
-      }
-    }
 
     const newPhotos: string[] = [];
 
@@ -185,34 +232,12 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
       }
     }
 
-    // Stop MediaRecorder & assemble BTS Video
-    let btsVideoBase64: string | undefined = undefined;
-
-    if (mediaRecorder && mediaRecorder.state !== 'inactive') {
-      await new Promise<void>((resolve) => {
-        mediaRecorder!.onstop = () => {
-          try {
-            const btsBlob = new Blob(recordedChunks, { type: mediaRecorder!.mimeType || 'video/webm' });
-            const reader = new FileReader();
-            reader.onloadend = () => {
-              btsVideoBase64 = reader.result as string;
-              resolve();
-            };
-            reader.readAsDataURL(btsBlob);
-          } catch {
-            resolve();
-          }
-        };
-        mediaRecorder!.stop();
-      });
-    }
-
     setIsCapturing(false);
 
     // Auto trigger complete if all photos captured
     if (newPhotos.length >= requiredPhotoCount) {
       setTimeout(() => {
-        onPhotosCaptured(newPhotos, btsVideoBase64);
+        onPhotosCaptured(newPhotos);
       }, 300);
     }
   };
@@ -259,12 +284,28 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
             <span>{frame.name}</span>
           </h2>
           <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5">
-            Layout: <span className="capitalize text-indigo-300 font-semibold">{frame.layoutMode.replace('_', ' ')}</span> • {capturedPhotos.length} / {requiredPhotoCount} Photos
+            Layout: <span className="capitalize text-indigo-300 font-semibold">{frame.layoutMode.replace('_', ' ')}</span> • Shot {capturedPhotos.length + 1} / {requiredPhotoCount}
           </p>
         </div>
 
         {/* Action Controls */}
         <div className="flex items-center justify-center gap-1.5 sm:gap-2 flex-wrap sm:flex-nowrap">
+          {/* Frame Overlay Toggle */}
+          {frame.frameUrl && (
+            <button
+              onClick={() => setShowFrameOverlay(!showFrameOverlay)}
+              className={`p-2 sm:p-2.5 rounded-xl border text-[11px] sm:text-xs font-semibold flex items-center gap-1 transition-all ${
+                showFrameOverlay
+                  ? 'bg-purple-600/30 border-purple-500 text-purple-200'
+                  : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-700'
+              }`}
+              title="Toggle Live Frame Overlay"
+            >
+              {showFrameOverlay ? <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-purple-400" /> : <EyeOff className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
+              <span>Frame Overlay</span>
+            </button>
+          )}
+
           {/* Mirror Toggle */}
           <button
             onClick={() => setIsMirror(!isMirror)}
@@ -292,7 +333,7 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
           {/* Countdown Selector */}
           <div className="flex items-center bg-slate-800/80 border border-slate-700 rounded-xl p-1">
             <Timer className="w-3.5 h-3.5 text-slate-400 ml-1.5 mr-0.5 hidden sm:inline" />
-            {([3, 5, 10] as const).map((secs) => (
+            {([3, 5, 7, 10] as const).map((secs) => (
               <button
                 key={secs}
                 onClick={() => setCountdownDuration(secs)}
@@ -310,11 +351,22 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
         </div>
       </div>
 
-      {/* Main Viewfinder Display */}
-      <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] max-h-[50vh] sm:max-h-[600px] bg-black rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl flex items-center justify-center">
+      {/* Main Viewfinder Display with Auto-Crop & Slot Frame Zoom Overlay */}
+      <div
+        className="relative w-full max-h-[50vh] sm:max-h-[550px] bg-black rounded-3xl overflow-hidden border-2 border-slate-800 shadow-2xl flex items-center justify-center transition-all duration-500"
+        style={{
+          aspectRatio: slotAspectRatio ? `${slotAspectRatio}` : '4/3',
+        }}
+      >
+        {/* Slot Target Indicator Badge */}
+        <div className="absolute top-3 left-3 bg-slate-950/85 backdrop-blur-md text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold flex items-center gap-1.5 z-20 shadow-lg animate-pulse">
+          <Sparkles className="w-3.5 h-3.5" />
+          <span>Cutout Slot #{activePhotoIndex + 1} ({currentSlot ? `${currentSlot.width}×${currentSlot.height}px` : 'Auto-Fit'})</span>
+        </div>
+
         {/* Camera Error / Non-HTTPS Fallback */}
         {cameraError ? (
-          <div className="p-6 sm:p-8 text-center max-w-lg space-y-4">
+          <div className="p-6 sm:p-8 text-center max-w-lg space-y-4 z-20">
             <AlertCircle className="w-10 h-10 sm:w-12 sm:h-12 text-amber-400 mx-auto" />
             <div>
               <h3 className="text-base sm:text-lg font-bold text-white">Browser Camera Access Notice</h3>
@@ -344,7 +396,24 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
           </div>
         ) : (
           <>
-            {/* Live Video Element */}
+            {/* Frame PNG Overlay (Auto-Cropped & Zoomed to Cutout Slot #N) */}
+            {frame.frameUrl && showFrameOverlay && currentSlot && (
+              <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+                <img
+                  src={frame.frameUrl}
+                  alt="Live Frame Cutout Overlay"
+                  className="absolute max-w-none transition-all duration-300 pointer-events-none drop-shadow-xl"
+                  style={{
+                    width: `${(frameDimensions.width / currentSlot.width) * 100}%`,
+                    height: `${(frameDimensions.height / currentSlot.height) * 100}%`,
+                    left: `${(-currentSlot.x / currentSlot.width) * 100}%`,
+                    top: `${(-currentSlot.y / currentSlot.height) * 100}%`,
+                  }}
+                />
+              </div>
+            )}
+
+            {/* Live Video Viewfinder Stream */}
             <video
               ref={videoRef}
               playsInline
@@ -354,12 +423,11 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
               }`}
             />
 
-            {/* Countdown Overlay */}
+            {/* Unobstructed Countdown Badge in Top-Right Corner */}
             {currentCountdown !== null && (
-              <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-30">
-                <span className="text-8xl sm:text-9xl font-black text-white drop-shadow-2xl animate-ping">
-                  {currentCountdown}
-                </span>
+              <div className="absolute top-3 right-3 z-30 bg-gradient-to-r from-amber-500 via-rose-500 to-pink-600 text-white font-black text-2xl sm:text-4xl px-4 py-1.5 rounded-2xl shadow-2xl border-2 border-white/40 flex items-center gap-2 animate-bounce">
+                <Timer className="w-5 h-5 sm:w-7 sm:h-7 text-white animate-spin" />
+                <span>{currentCountdown}s</span>
               </div>
             )}
           </>

@@ -6,8 +6,6 @@ export interface ISessionDocument extends Document {
   photoUrls: string[];
   finalImageUrl: string;
   r2Key: string;
-  btsVideoUrl?: string;
-  btsVideoR2Key?: string;
   qrToken: string;
   downloadToken: string;
   downloadCount: number;
@@ -26,8 +24,6 @@ const SessionSchema = new Schema<ISessionDocument>(
     photoUrls: [{ type: String }],
     finalImageUrl: { type: String, required: true },
     r2Key: { type: String, required: true },
-    btsVideoUrl: { type: String },
-    btsVideoR2Key: { type: String },
     qrToken: { type: String, required: true, unique: true, index: true },
     downloadToken: { type: String, required: true, unique: true, index: true },
     downloadCount: { type: Number, default: 0 },

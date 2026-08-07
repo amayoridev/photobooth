@@ -16,7 +16,6 @@ export default function PhotoBoothPage() {
   const [frames, setFrames] = useState<IFrame[]>([]);
   const [selectedFrame, setSelectedFrame] = useState<IFrame | null>(null);
   const [capturedPhotos, setCapturedPhotos] = useState<string[]>([]);
-  const [btsVideo, setBtsVideo] = useState<string | undefined>(undefined);
   const [isLoadingFrames, setIsLoadingFrames] = useState<boolean>(true);
 
   // Fetch enabled frames from API
@@ -54,25 +53,21 @@ export default function PhotoBoothPage() {
   const handleSelectFrame = (frame: IFrame) => {
     setSelectedFrame(frame);
     setCapturedPhotos([]);
-    setBtsVideo(undefined);
     setStep('CAMERA_SESSION');
   };
 
-  const handlePhotosCaptured = (photos: string[], videoBase64?: string) => {
+  const handlePhotosCaptured = (photos: string[]) => {
     setCapturedPhotos(photos);
-    setBtsVideo(videoBase64);
     setStep('COMPOSITION');
   };
 
   const handleRetake = () => {
     setCapturedPhotos([]);
-    setBtsVideo(undefined);
     setStep('CAMERA_SESSION');
   };
 
   const handleBackToFrames = () => {
     setCapturedPhotos([]);
-    setBtsVideo(undefined);
     setSelectedFrame(null);
     setStep('SELECT_FRAME');
   };
@@ -115,7 +110,7 @@ export default function PhotoBoothPage() {
         ) : step === 'CAMERA_SESSION' && selectedFrame ? (
           <CameraBooth frame={selectedFrame} onPhotosCaptured={handlePhotosCaptured} />
         ) : step === 'COMPOSITION' && selectedFrame ? (
-          <ImageCompositor frame={selectedFrame} photos={capturedPhotos} btsVideo={btsVideo} onRetake={handleRetake} />
+          <ImageCompositor frame={selectedFrame} photos={capturedPhotos} onRetake={handleRetake} />
         ) : null}
       </main>
 

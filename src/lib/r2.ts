@@ -1,5 +1,8 @@
 import { S3Client, PutObjectCommand, DeleteObjectCommand, GetObjectCommand } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
+import { NodeHttpHandler } from '@smithy/node-http-handler';
+import http from 'http';
+import https from 'https';
 import fs from 'fs';
 import path from 'path';
 
@@ -17,6 +20,14 @@ const isR2Configured = Boolean(
     !R2_SECRET_ACCESS_KEY.includes('YOUR_')
 );
 
+// High performance S3 HTTP Keep-Alive agent to reuse TCP/TLS sockets across uploads
+const requestHandler = new NodeHttpHandler({
+  httpAgent: new http.Agent({ keepAlive: true, maxSockets: 50, keepAliveMsecs: 30000 }),
+  httpsAgent: new https.Agent({ keepAlive: true, maxSockets: 50, keepAliveMsecs: 30000 }),
+  connectionTimeout: 8000,
+  requestTimeout: 60000,
+});
+
 let s3Client: S3Client | null = null;
 
 if (isR2Configured) {
@@ -28,6 +39,7 @@ if (isR2Configured) {
         accessKeyId: R2_ACCESS_KEY_ID!,
         secretAccessKey: R2_SECRET_ACCESS_KEY!,
       },
+      requestHandler,
     });
   } catch {
     s3Client = null;
@@ -35,7 +47,7 @@ if (isR2Configured) {
 }
 
 /**
- * Uploads a file buffer or base64 string to local storage AND Cloudflare R2 simultaneously.
+ * Uploads a file buffer or base64 string to local storage AND Cloudflare R2 concurrently with HTTP Keep-Alive.
  */
 export async function uploadToR2(
   fileBuffer: Buffer | string,
@@ -43,43 +55,55 @@ export async function uploadToR2(
   contentType: string
 ): Promise<{ url: string; key: string }> {
   const buffer = typeof fileBuffer === 'string'
-    ? Buffer.from(fileBuffer.replace(/^data:(image|video)\/[\w\-]+;base64,/, ''), 'base64')
+    ? Buffer.from(fileBuffer.replace(/^data:image\/\w+;base64,/, ''), 'base64')
     : fileBuffer;
 
-  // 1. ALWAYS write copy to local disk first
   const localUploadDir = path.join(process.cwd(), 'public', 'uploads', path.dirname(key));
-  if (!fs.existsSync(localUploadDir)) {
-    fs.mkdirSync(localUploadDir, { recursive: true });
-  }
-
   const localFilePath = path.join(process.cwd(), 'public', 'uploads', key);
-  fs.writeFileSync(localFilePath, buffer);
-
   const localUrl = `/api/uploads/${key}`;
 
-  // 2. ALSO upload to Cloudflare R2 if configured
-  if (isR2Configured && s3Client) {
+  // 1. Asynchronous local file write
+  const writeLocalPromise = (async () => {
     try {
-      const command = new PutObjectCommand({
-        Bucket: R2_BUCKET_NAME,
-        Key: key,
-        Body: buffer,
-        ContentType: contentType,
-      });
-
-      await s3Client.send(command);
-
-      const publicUrl = R2_PUBLIC_DOMAIN
-        ? `${R2_PUBLIC_DOMAIN.replace(/\/$/, '')}/${key}`
-        : localUrl;
-
-      return { url: publicUrl, key };
-    } catch (err: any) {
-      console.warn(`⚠️ R2 upload warning (${err.message || 'Signature mismatch'}). Falling back to local URL.`);
+      if (!fs.existsSync(localUploadDir)) {
+        await fs.promises.mkdir(localUploadDir, { recursive: true });
+      }
+      await fs.promises.writeFile(localFilePath, buffer);
+    } catch (err) {
+      console.warn('Local disk write warning:', err);
     }
+  })();
+
+  // 2. Parallel Cloudflare R2 upload with persistent S3 Keep-Alive client
+  let finalUrl = localUrl;
+
+  if (isR2Configured && s3Client) {
+    const uploadR2Promise = (async () => {
+      try {
+        const command = new PutObjectCommand({
+          Bucket: R2_BUCKET_NAME,
+          Key: key,
+          Body: buffer,
+          ContentType: contentType,
+          CacheControl: 'public, max-age=31536000, immutable',
+        });
+
+        await s3Client.send(command);
+
+        if (R2_PUBLIC_DOMAIN) {
+          finalUrl = `${R2_PUBLIC_DOMAIN.replace(/\/$/, '')}/${key}`;
+        }
+      } catch (err: any) {
+        console.warn(`⚠️ R2 upload warning (${err.message || 'Upload error'}). Falling back to local URL.`);
+      }
+    })();
+
+    await Promise.all([writeLocalPromise, uploadR2Promise]);
+  } else {
+    await writeLocalPromise;
   }
 
-  return { url: localUrl, key };
+  return { url: finalUrl, key };
 }
 
 /**
@@ -93,7 +117,6 @@ export async function deleteFromR2(key: string): Promise<boolean> {
         Key: key,
       });
       await s3Client.send(command);
-      return true;
     } catch (err) {
       console.error('Cloudflare R2 delete error:', err);
     }
@@ -102,7 +125,7 @@ export async function deleteFromR2(key: string): Promise<boolean> {
   try {
     const localFilePath = path.join(process.cwd(), 'public', 'uploads', key);
     if (fs.existsSync(localFilePath)) {
-      fs.unlinkSync(localFilePath);
+      await fs.promises.unlink(localFilePath);
     }
     return true;
   } catch (err) {
