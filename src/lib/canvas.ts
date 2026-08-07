@@ -158,8 +158,11 @@ export function detectTransparentCutouts(
           const boxW = maxC - minC + 1;
           const boxH = maxR - minR + 1;
 
-          // Filter out noise: keep inner cutout windows spanning at least 5% width and 3% height
-          if (boxW >= detectW * 0.05 && boxH >= detectH * 0.03) {
+          // Filter out noise early on grid: minimum 25% grid width and 10% grid height
+          const minGridW = Math.round(detectW * 0.25);
+          const minGridH = Math.round(detectH * 0.10);
+
+          if (boxW >= minGridW && boxH >= minGridH) {
             rawCutouts.push({ minR, maxR, minC, maxC });
           }
         }
@@ -177,9 +180,9 @@ export function detectTransparentCutouts(
       const scaleX = canvasWidth / detectW;
       const scaleY = canvasHeight / detectH;
 
-      // Minimum slot dimensions requested: >= 350px width, >= 240px height (proportional scale for narrow strips)
-      const minSlotW = Math.round(Math.min(350, canvasWidth * 0.28));
-      const minSlotH = Math.round(Math.min(240, canvasHeight * 0.10));
+      // Strict hard limits: Minimum width 350px (300px for narrow strips), Minimum height 240px
+      const minSlotW = canvasWidth < 900 ? 300 : 350;
+      const minSlotH = 240;
 
       const validSlots: LayoutSlot[] = [];
 
@@ -189,7 +192,7 @@ export function detectTransparentCutouts(
         const slotW = Math.round((box.maxC - box.minC + 1) * scaleX);
         const slotH = Math.round((box.maxR - box.minR + 1) * scaleY);
 
-        // Filter out small transparent noise cutouts around stickers, flags, text, or lotus overlays
+        // Strictly reject any small transparent holes/overlays below 350px width and 240px height
         if (slotW >= minSlotW && slotH >= minSlotH) {
           validSlots.push({ x: slotX, y: slotY, width: slotW, height: slotH });
         }
