@@ -33,9 +33,9 @@ export function detectTransparentCutouts(
     const naturalW = frameImg.naturalWidth || canvasWidth || 1200;
     const naturalH = frameImg.naturalHeight || canvasHeight || 1800;
 
-    // Fixed downsampled detection grid (300px width) for ultra-fast processing (< 5ms)
-    const detectW = 300;
-    const detectH = Math.max(100, Math.round(detectW * (naturalH / naturalW)));
+    // High precision detection grid (600px width) for exact bounding boxes
+    const detectW = 600;
+    const detectH = Math.max(200, Math.round(detectW * (naturalH / naturalW)));
 
     const tempCanvas = document.createElement('canvas');
     tempCanvas.width = detectW;
@@ -44,7 +44,6 @@ export function detectTransparentCutouts(
 
     if (!tempCtx) return [];
 
-    // Draw downsampled frame image onto detection canvas
     tempCtx.drawImage(frameImg, 0, 0, detectW, detectH);
     const imgData = tempCtx.getImageData(0, 0, detectW, detectH);
     const { data } = imgData;
@@ -53,12 +52,12 @@ export function detectTransparentCutouts(
       Array(detectW).fill(false)
     );
 
-    // Alpha threshold: < 128 catches transparent and semi-transparent cutouts
+    // Alpha threshold < 180 catches transparent and semi-transparent photo cutouts
     for (let r = 0; r < detectH; r++) {
       for (let c = 0; c < detectW; c++) {
         const pixelIdx = (r * detectW + c) * 4;
         const alpha = data[pixelIdx + 3];
-        if (alpha < 128) {
+        if (alpha < 180) {
           isTransparent[r][c] = true;
         }
       }
@@ -68,31 +67,72 @@ export function detectTransparentCutouts(
       Array(detectW).fill(false)
     );
 
+    // Pass 1: Flood fill outer transparent margins starting from all 4 outer canvas boundaries
+    const outerQueue: [number, number][] = [];
+
+    for (let c = 0; c < detectW; c++) {
+      if (isTransparent[0][c] && !visited[0][c]) {
+        visited[0][c] = true;
+        outerQueue.push([0, c]);
+      }
+      if (isTransparent[detectH - 1][c] && !visited[detectH - 1][c]) {
+        visited[detectH - 1][c] = true;
+        outerQueue.push([detectH - 1, c]);
+      }
+    }
+
+    for (let r = 0; r < detectH; r++) {
+      if (isTransparent[r][0] && !visited[r][0]) {
+        visited[r][0] = true;
+        outerQueue.push([r, 0]);
+      }
+      if (isTransparent[r][detectW - 1] && !visited[r][detectW - 1]) {
+        visited[r][detectW - 1] = true;
+        outerQueue.push([r, detectW - 1]);
+      }
+    }
+
+    while (outerQueue.length > 0) {
+      const [cr, cc] = outerQueue.pop()!;
+      const neighbors: [number, number][] = [
+        [cr - 1, cc],
+        [cr + 1, cc],
+        [cr, cc - 1],
+        [cr, cc + 1],
+      ];
+
+      for (const [nr, nc] of neighbors) {
+        if (
+          nr >= 0 &&
+          nr < detectH &&
+          nc >= 0 &&
+          nc < detectW &&
+          isTransparent[nr][nc] &&
+          !visited[nr][nc]
+        ) {
+          visited[nr][nc] = true;
+          outerQueue.push([nr, nc]);
+        }
+      }
+    }
+
+    // Pass 2: Remaining unvisited transparent regions MUST be inner photo windows!
     const rawCutouts: { minR: number; maxR: number; minC: number; maxC: number }[] = [];
 
     for (let r = 0; r < detectH; r++) {
       for (let c = 0; c < detectW; c++) {
         if (isTransparent[r][c] && !visited[r][c]) {
           let minR = r, maxR = r, minC = c, maxC = c;
-          let cellCount = 0;
-          let touchesTop = false, touchesBottom = false, touchesLeft = false, touchesRight = false;
-
           const stack: [number, number][] = [[r, c]];
           visited[r][c] = true;
 
           while (stack.length > 0) {
             const [cr, cc] = stack.pop()!;
-            cellCount++;
 
             if (cr < minR) minR = cr;
             if (cr > maxR) maxR = cr;
             if (cc < minC) minC = cc;
             if (cc > maxC) maxC = cc;
-
-            if (cr === 0) touchesTop = true;
-            if (cr === detectH - 1) touchesBottom = true;
-            if (cc === 0) touchesLeft = true;
-            if (cc === detectW - 1) touchesRight = true;
 
             const neighbors: [number, number][] = [
               [cr - 1, cc],
@@ -119,13 +159,8 @@ export function detectTransparentCutouts(
           const boxW = maxC - minC + 1;
           const boxH = maxR - minR + 1;
 
-          // Filter out outer transparent background (which touches all 4 outer borders or covers >75% of canvas)
-          const isOuterBackground =
-            (touchesTop && touchesBottom && touchesLeft && touchesRight) ||
-            cellCount > detectW * detectH * 0.75;
-
-          // Keep valid inner cutout slots (spanning at least 8% width and 4% height)
-          if (!isOuterBackground && boxW >= detectW * 0.08 && boxH >= detectH * 0.04) {
+          // Keep valid inner photo cutout slots (spanning at least 4% width and 3% height)
+          if (boxW >= detectW * 0.04 && boxH >= detectH * 0.03) {
             rawCutouts.push({ minR, maxR, minC, maxC });
           }
         }
@@ -135,7 +170,7 @@ export function detectTransparentCutouts(
     // Sort cutouts top-to-bottom, left-to-right
     rawCutouts.sort((a, b) => {
       const rowDiff = a.minR - b.minR;
-      if (Math.abs(rowDiff) > 8) return rowDiff;
+      if (Math.abs(rowDiff) > 12) return rowDiff;
       return a.minC - b.minC;
     });
 
@@ -152,7 +187,7 @@ export function detectTransparentCutouts(
       });
     }
   } catch (err) {
-    console.warn('Auto cutout detection error:', err);
+    console.warn('High precision cutout detection error:', err);
   }
 
   return [];

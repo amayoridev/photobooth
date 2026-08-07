@@ -36,7 +36,13 @@ function sanitizeAndEnsureSlots(frames: any[], memDb: any, isConnected: boolean)
       }
     }
 
-    // 2. Ensure cutout slots are permanently populated in DB
+    // 2. Explicit BDers frame matching & layout mode resolution
+    const isBDers = (f.name && /bders/i.test(f.name)) || (f.frameUrl && /bders/i.test(f.frameUrl));
+    if (isBDers && (!f.layoutMode || f.layoutMode === 'single')) {
+      f.layoutMode = 'vertical_strip';
+    }
+
+    // 3. Ensure cutout slots are permanently populated in DB
     if (!Array.isArray(f.slots) || f.slots.length === 0) {
       const w = f.resolution?.width || 1200;
       const h = f.resolution?.height || 1800;
