@@ -177,13 +177,25 @@ export function detectTransparentCutouts(
       const scaleX = canvasWidth / detectW;
       const scaleY = canvasHeight / detectH;
 
-      return rawCutouts.map((box) => {
+      // Minimum slot dimensions requested: >= 350px width, >= 240px height (proportional scale for narrow strips)
+      const minSlotW = Math.round(Math.min(350, canvasWidth * 0.28));
+      const minSlotH = Math.round(Math.min(240, canvasHeight * 0.10));
+
+      const validSlots: LayoutSlot[] = [];
+
+      rawCutouts.forEach((box) => {
         const slotX = Math.round(box.minC * scaleX);
         const slotY = Math.round(box.minR * scaleY);
         const slotW = Math.round((box.maxC - box.minC + 1) * scaleX);
         const slotH = Math.round((box.maxR - box.minR + 1) * scaleY);
-        return { x: slotX, y: slotY, width: slotW, height: slotH };
+
+        // Filter out small transparent noise cutouts around stickers, flags, text, or lotus overlays
+        if (slotW >= minSlotW && slotH >= minSlotH) {
+          validSlots.push({ x: slotX, y: slotY, width: slotW, height: slotH });
+        }
       });
+
+      return validSlots;
     }
   } catch (err) {
     console.warn('Cutout detection error:', err);
