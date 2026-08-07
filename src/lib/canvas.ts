@@ -20,8 +20,8 @@ export interface ComposeOptions {
 }
 
 /**
- * Automatically detects transparent cutout rectangles inside ANY frame PNG image.
- * Uses 2-pass outer boundary flood fill on alpha channel to find inner photo windows while ignoring outer borders.
+ * High-Precision 2-Pass Outer-Boundary Flood Fill & Color-Independent Cutout Detector.
+ * Finds transparent holes or white/light placeholder boxes inside designer PNG frames while excluding outer margins.
  */
 export function detectTransparentCutouts(
   frameImg: HTMLImageElement,
@@ -116,7 +116,7 @@ export function detectTransparentCutouts(
     }
 
     // Pass 2: Remaining unvisited transparent regions MUST be inner photo windows!
-    const rawCutouts: { minR: number; maxR: number; minC: number; maxC: number }[] = [];
+    let rawCutouts: { minR: number; maxR: number; minC: number; maxC: number }[] = [];
 
     for (let r = 0; r < detectH; r++) {
       for (let c = 0; c < detectW; c++) {
@@ -158,26 +158,134 @@ export function detectTransparentCutouts(
           const boxW = maxC - minC + 1;
           const boxH = maxR - minR + 1;
 
-          // Keep valid inner photo cutout slots (spanning at least 2.5% width and 2% height)
-          if (boxW >= detectW * 0.025 && boxH >= detectH * 0.02) {
+          // Keep valid inner photo cutout slots (spanning at least 2% width and 1.5% height)
+          if (boxW >= detectW * 0.02 && boxH >= detectH * 0.015) {
             rawCutouts.push({ minR, maxR, minC, maxC });
           }
         }
       }
     }
 
-    // Sort cutouts top-to-bottom, left-to-right
-    rawCutouts.sort((a, b) => {
-      const rowDiff = a.minR - b.minR;
-      if (Math.abs(rowDiff) > 12) return rowDiff;
-      return a.minC - b.minC;
-    });
+    // Pass 3: Solid Light Placeholder Detection (Fallback if opaque PNG has white box cutouts)
+    if (rawCutouts.length === 0) {
+      const isSolidWhite: boolean[][] = Array.from({ length: detectH }, () =>
+        Array(detectW).fill(false)
+      );
 
+      for (let r = 0; r < detectH; r++) {
+        for (let c = 0; c < detectW; c++) {
+          const pixelIdx = (r * detectW + c) * 4;
+          const red = data[pixelIdx];
+          const green = data[pixelIdx + 1];
+          const blue = data[pixelIdx + 2];
+          if (red > 245 && green > 245 && blue > 245) {
+            isSolidWhite[r][c] = true;
+          }
+        }
+      }
+
+      const whiteVisited: boolean[][] = Array.from({ length: detectH }, () =>
+        Array(detectW).fill(false)
+      );
+
+      for (let r = 0; r < detectH; r++) {
+        for (let c = 0; c < detectW; c++) {
+          if (isSolidWhite[r][c] && !whiteVisited[r][c]) {
+            let minR = r, maxR = r, minC = c, maxC = c;
+            let touchesBorder = false;
+            const stack: [number, number][] = [[r, c]];
+            whiteVisited[r][c] = true;
+
+            while (stack.length > 0) {
+              const [cr, cc] = stack.pop()!;
+              if (cr < minR) minR = cr;
+              if (cr > maxR) maxR = cr;
+              if (cc < minC) minC = cc;
+              if (cc > maxC) maxC = cc;
+
+              if (cr === 0 || cr === detectH - 1 || cc === 0 || cc === detectW - 1) {
+                touchesBorder = true;
+              }
+
+              const neighbors: [number, number][] = [
+                [cr - 1, cc],
+                [cr + 1, cc],
+                [cr, cc - 1],
+                [cr, cc + 1],
+              ];
+
+              for (const [nr, nc] of neighbors) {
+                if (
+                  nr >= 0 &&
+                  nr < detectH &&
+                  nc >= 0 &&
+                  nc < detectW &&
+                  isSolidWhite[nr][nc] &&
+                  !whiteVisited[nr][nc]
+                ) {
+                  whiteVisited[nr][nc] = true;
+                  stack.push([nr, nc]);
+                }
+              }
+            }
+
+            const boxW = maxC - minC + 1;
+            const boxH = maxR - minR + 1;
+
+            if (!touchesBorder && boxW >= detectW * 0.08 && boxH >= detectH * 0.05) {
+              rawCutouts.push({ minR, maxR, minC, maxC });
+            }
+          }
+        }
+      }
+    }
+
+    // High Precision Row-Clustering Sorting Algorithm (Top-Left -> Top-Right -> Bottom-Left -> Bottom-Right)
     if (rawCutouts.length > 0) {
+      // Cluster boxes into rows by vertical center coordinate
+      const items = rawCutouts.map((b) => ({
+        ...b,
+        centerY: (b.minR + b.maxR) / 2,
+        centerX: (b.minC + b.maxC) / 2,
+        height: b.maxR - b.minR + 1,
+      }));
+
+      const rows: typeof items[] = [];
+
+      items.forEach((item) => {
+        let addedToRow = false;
+        for (const row of rows) {
+          const avgRowY = row.reduce((sum, r) => sum + r.centerY, 0) / row.length;
+          const avgRowH = row.reduce((sum, r) => sum + r.height, 0) / row.length;
+          if (Math.abs(item.centerY - avgRowY) < avgRowH * 0.45) {
+            row.push(item);
+            addedToRow = true;
+            break;
+          }
+        }
+        if (!addedToRow) {
+          rows.push([item]);
+        }
+      });
+
+      // Sort rows top-to-bottom
+      rows.sort((rowA, rowB) => {
+        const avgYA = rowA.reduce((sum, r) => sum + r.centerY, 0) / rowA.length;
+        const avgYB = rowB.reduce((sum, r) => sum + r.centerY, 0) / rowB.length;
+        return avgYA - avgYB;
+      });
+
+      // Sort items within each row left-to-right
+      const sortedBoxes: typeof items = [];
+      rows.forEach((row) => {
+        row.sort((a, b) => a.centerX - b.centerX);
+        sortedBoxes.push(...row);
+      });
+
       const scaleX = canvasWidth / detectW;
       const scaleY = canvasHeight / detectH;
 
-      return rawCutouts.map((box) => {
+      return sortedBoxes.map((box) => {
         const slotX = Math.round(box.minC * scaleX);
         const slotY = Math.round(box.minR * scaleY);
         const slotW = Math.round((box.maxC - box.minC + 1) * scaleX);
@@ -286,8 +394,8 @@ export async function analyzeFrame(frameUrl: string): Promise<{
     const h = img.naturalHeight || 1800;
     let detected = detectTransparentCutouts(img, w, h);
 
-    let suggestedLayout: LayoutMode = 'single';
     const isBDers = frameUrl.toLowerCase().includes('bders');
+    let suggestedLayout: LayoutMode = 'single';
 
     if (isBDers) {
       suggestedLayout = 'vertical_strip';
@@ -304,9 +412,9 @@ export async function analyzeFrame(frameUrl: string): Promise<{
         suggestedLayout = 'four_grid';
       }
     } else {
-      if (h > w * 2.6) suggestedLayout = 'vertical_strip';
-      else if (h > w * 2.0) suggestedLayout = 'three_photo';
-      else if (h > w * 1.5) suggestedLayout = 'two_photo';
+      if (h > w * 2.5) suggestedLayout = 'vertical_strip';
+      else if (h > w * 1.9) suggestedLayout = 'three_photo';
+      else if (h > w * 1.4) suggestedLayout = 'two_photo';
       else suggestedLayout = 'single';
     }
 
