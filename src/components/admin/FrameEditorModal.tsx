@@ -390,18 +390,19 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
               </div>
             </div>
 
-            {/* Canvas Preview Box dynamically aligned to exact frame resolution aspect ratio */}
-            <div className="relative w-full max-h-[340px] bg-slate-950 border-2 border-slate-800 rounded-2xl p-2 overflow-hidden flex items-center justify-center mx-auto select-none">
+            {/* Canvas Preview Box */}
+            <div className="relative w-full h-[300px] bg-slate-950 border-2 border-slate-800 rounded-2xl p-3 overflow-hidden flex items-center justify-center mx-auto select-none">
               <div
-                className="relative h-full max-h-[320px] bg-slate-900 border border-slate-700/50 rounded-xl overflow-hidden shadow-2xl flex items-center justify-center"
+                className="relative max-h-full max-w-full bg-slate-900 border border-slate-700/50 rounded-xl overflow-hidden shadow-2xl flex items-center justify-center"
                 style={{
                   aspectRatio: width && height ? `${width} / ${height}` : '4/6',
+                  height: '100%',
                 }}
               >
                 {/* Interactive Cutout Overlay Slots */}
                 {slots.map((slot, idx) => {
-                  const scaleX = 100 / width;
-                  const scaleY = 100 / height;
+                  const scaleX = 100 / (width || 1200);
+                  const scaleY = 100 / (height || 1800);
                   const isSelected = selectedSlotIdx === idx;
 
                   return (
@@ -425,12 +426,12 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
                   );
                 })}
 
-                {/* Frame PNG Image Overlay - Aligned 100% with slot container */}
+                {/* Frame PNG Image Overlay */}
                 {filePreview && (
                   <img
                     src={filePreview}
                     alt="Frame Overlay Preview"
-                    className="absolute inset-0 w-full h-full object-fill pointer-events-none z-30 drop-shadow-md"
+                    className="absolute inset-0 w-full h-full object-contain pointer-events-none z-30 drop-shadow-md"
                   />
                 )}
               </div>
