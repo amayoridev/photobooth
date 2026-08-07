@@ -1,11 +1,12 @@
 import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/lib/db';
 import { Frame } from '@/models/Frame';
-import { getMemoryDB } from '@/lib/memoryDb';
+import { getMemoryDB, saveMemoryDB } from '@/lib/memoryDb';
+import { getDefaultSlotsForLayout } from '@/lib/canvas';
 import fs from 'fs';
 import path from 'path';
 
-function sanitizeFrameUrls(frames: any[]) {
+function sanitizeAndEnsureSlots(frames: any[], memDb: any, isConnected: boolean) {
   const localFramesDir = path.join(process.cwd(), 'public', 'uploads', 'frames');
   let existingFiles: Set<string>;
   try {
@@ -14,8 +15,13 @@ function sanitizeFrameUrls(frames: any[]) {
     existingFiles = new Set();
   }
 
-  return frames.map((frame) => {
+  let memoryDbModified = false;
+  const mongoUpdates: Promise<any>[] = [];
+
+  const processed = frames.map((frame) => {
     const f = frame.toObject ? frame.toObject() : { ...frame };
+
+    // 1. Sanitize URLs
     if (f.frameUrl) {
       const filename = path.basename(f.frameUrl);
       if (existingFiles.has(filename) || f.frameUrl.includes('/uploads/frames/')) {
@@ -29,8 +35,44 @@ function sanitizeFrameUrls(frames: any[]) {
         f.thumbnailUrl = proxiedUrl;
       }
     }
+
+    // 2. Ensure cutout slots are permanently populated in DB
+    if (!Array.isArray(f.slots) || f.slots.length === 0) {
+      const w = f.resolution?.width || 1200;
+      const h = f.resolution?.height || 1800;
+      const autoSlots = getDefaultSlotsForLayout(f.layoutMode || 'single', w, h);
+
+      if (autoSlots && autoSlots.length > 0) {
+        f.slots = autoSlots;
+
+        // Sync back to memoryDB
+        const memIdx = (memDb.frames || []).findIndex((m: any) => String(m._id) === String(f._id) || m.name === f.name);
+        if (memIdx !== -1) {
+          memDb.frames[memIdx].slots = autoSlots;
+          memoryDbModified = true;
+        }
+
+        // Sync back to MongoDB
+        if (isConnected && f._id) {
+          mongoUpdates.push(
+            Frame.updateOne({ _id: f._id }, { $set: { slots: autoSlots } }).catch(() => null)
+          );
+        }
+      }
+    }
+
     return f;
   });
+
+  if (memoryDbModified) {
+    try { saveMemoryDB(memDb); } catch {}
+  }
+
+  if (mongoUpdates.length > 0) {
+    Promise.all(mongoUpdates).catch(() => {});
+  }
+
+  return processed;
 }
 
 export async function GET() {
@@ -58,7 +100,9 @@ export async function GET() {
       return (a.displayOrder || 0) - (b.displayOrder || 0);
     });
 
-    return NextResponse.json({ success: true, frames: sanitizeFrameUrls(combinedFrames) });
+    const finalizedFrames = sanitizeAndEnsureSlots(combinedFrames, memDb, isConnected);
+
+    return NextResponse.json({ success: true, frames: finalizedFrames });
   } catch (error: any) {
     return NextResponse.json(
       { success: false, error: error.message || 'Failed to fetch frames.' },

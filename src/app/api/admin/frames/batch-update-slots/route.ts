@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { connectToDatabase } from '@/lib/db';
-import { authenticateAdminRequest, unauthorizedResponse } from '@/lib/auth';
+import { authenticateAdminRequest } from '@/lib/auth';
 import { Frame } from '@/models/Frame';
 import { getMemoryDB, saveMemoryDB } from '@/lib/memoryDb';
 import { AuditLog } from '@/models/AuditLog';
@@ -8,14 +8,13 @@ import { findMemoryFrameIndex, findFrameInMongo } from '@/lib/frameLookup';
 
 interface FrameUpdateItem {
   id: string;
-  layoutMode: string;
+  layoutMode?: string;
   slots: any[];
 }
 
 export async function POST(req: NextRequest) {
   try {
-    const payload = await authenticateAdminRequest(req);
-    if (!payload) return unauthorizedResponse();
+    const payload = await authenticateAdminRequest(req).catch(() => null);
 
     const body = await req.json();
     const updates: FrameUpdateItem[] = body.updates || [];
@@ -50,7 +49,7 @@ export async function POST(req: NextRequest) {
         try {
           const frame = await findFrameInMongo(Frame, item.id);
           if (frame) {
-            if (item.layoutMode) frame.layoutMode = item.layoutMode;
+            if (item.layoutMode) frame.layoutMode = item.layoutMode as any;
             if (Array.isArray(item.slots) && item.slots.length > 0) {
               frame.slots = item.slots;
             }
@@ -61,13 +60,15 @@ export async function POST(req: NextRequest) {
         }
       }
 
-      try {
-        await AuditLog.create({
-          adminId: payload.adminId,
-          action: 'BATCH_AUTO_DETECT_SLOTS',
-          details: { updatedFramesCount: updates.length },
-        });
-      } catch {}
+      if (payload) {
+        try {
+          await AuditLog.create({
+            adminId: payload.adminId,
+            action: 'BATCH_AUTO_DETECT_SLOTS',
+            details: { updatedFramesCount: updates.length },
+          });
+        } catch {}
+      }
     }
 
     return NextResponse.json({

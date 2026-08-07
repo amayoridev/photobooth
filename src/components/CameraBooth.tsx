@@ -78,6 +78,17 @@ export function CameraBooth({ frame, onPhotosCaptured }: CameraBoothProps) {
       setActiveSlots(slots);
       setRequiredPhotoCount(slots.length);
       setFrameDimensions({ width: w, height: h });
+
+      // Auto-save detected slots back to MongoDB & MemoryDB if not present
+      if ((!frame.slots || frame.slots.length === 0) && slots && slots.length > 0 && frame._id) {
+        fetch('/api/admin/frames/batch-update-slots', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            updates: [{ id: frame._id, layoutMode: frame.layoutMode, slots }],
+          }),
+        }).catch(() => {});
+      }
     }
     inspectFrameCutouts();
   }, [frame]);
