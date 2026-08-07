@@ -34,6 +34,20 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Auto-detect actual image resolution on mount to prevent aspect ratio mismatches
+  useEffect(() => {
+    if (frame?.frameUrl) {
+      const img = new Image();
+      img.onload = () => {
+        if (img.naturalWidth && img.naturalHeight) {
+          setWidth(img.naturalWidth);
+          setHeight(img.naturalHeight);
+        }
+      };
+      img.src = frame.frameUrl;
+    }
+  }, [frame]);
+
   // Auto-detect slots & dimensions whenever file preview changes
   const autoDetectFrameCutouts = async (previewUrl: string) => {
     if (!previewUrl) return;
@@ -45,13 +59,13 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
         setHeight(res.height);
 
         // Auto-select aspect ratio & strip layout mode
-        if (res.height > res.width * 2.8) {
+        if (res.height > res.width * 2.0) {
           setLayoutMode('vertical_strip');
           setAspectRatio('2:6');
-        } else if (res.height > res.width * 2.2) {
+        } else if (res.height > res.width * 1.6) {
           setLayoutMode('three_photo');
           setAspectRatio('2:6');
-        } else if (res.height > res.width * 1.6) {
+        } else if (res.height > res.width * 1.3) {
           setLayoutMode('two_photo');
           setAspectRatio('4:6');
         } else if (res.width === res.height) {
@@ -64,7 +78,7 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
         setSlots(res.slots);
         setSelectedSlotIdx(0);
       } else {
-        setSlots(getDefaultSlotsForLayout(layoutMode, res.width, res.height));
+        setSlots(getDefaultSlotsForLayout(layoutMode, res.width || width, res.height || height));
       }
     } catch {
       // fallback
@@ -200,36 +214,43 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
           <div className="space-y-4">
             <div>
               <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
-                Frame Name
+                Frame Display Name *
               </label>
               <input
                 type="text"
-                required
-                placeholder="e.g. Vintage 4-Photo Strip Frame"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                placeholder="e.g. BearBare Vintage Strip"
+                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                required
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                Description
+              </label>
+              <input
+                type="text"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                placeholder="Brief description of theme..."
+                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
                   Category
                 </label>
-                <select
+                <input
+                  type="text"
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-indigo-500"
-                >
-                  <option value="General">General</option>
-                  <option value="Wedding">Wedding</option>
-                  <option value="Birthday">Birthday</option>
-                  <option value="Party">Party</option>
-                  <option value="Vintage">Vintage</option>
-                  <option value="Minimal">Minimal</option>
-                  <option value="Imported">Imported</option>
-                </select>
+                  placeholder="e.g. Vintage, Cute, Event"
+                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                />
               </div>
 
               <div>
@@ -239,14 +260,39 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
                 <select
                   value={aspectRatio}
                   onChange={(e) => setAspectRatio(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-indigo-500"
+                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500"
                 >
-                  <option value="4:6">4:6 Standard</option>
-                  <option value="2:6">2:6 Strip (Dải ảnh)</option>
-                  <option value="1:1">1:1 Square</option>
-                  <option value="3:4">3:4 Portrait</option>
-                  <option value="16:9">16:9 Landscape</option>
+                  <option value="4:6">4:6 (Standard Portrait)</option>
+                  <option value="2:6">2:6 (Tall 4-Photo Strip)</option>
+                  <option value="1:1">1:1 (Square Grid)</option>
+                  <option value="16:9">16:9 (Widescreen)</option>
                 </select>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                  Canvas Width (px)
+                </label>
+                <input
+                  type="number"
+                  value={width}
+                  onChange={(e) => setWidth(parseInt(e.target.value, 10) || 1200)}
+                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 font-mono"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1.5">
+                  Canvas Height (px)
+                </label>
+                <input
+                  type="number"
+                  value={height}
+                  onChange={(e) => setHeight(parseInt(e.target.value, 10) || 1800)}
+                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 font-mono"
+                />
               </div>
             </div>
 
@@ -304,7 +350,7 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
             </div>
           </div>
 
-          {/* Right Column: Preview & Hybrid Auto/Manual Cutout Editor */}
+          {/* Right Column: Dynamic Aspect-Ratio Aligned Preview & Cutout Editor */}
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between">
               <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider">
@@ -344,9 +390,15 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
               </div>
             </div>
 
-            {/* Canvas Preview with Click-to-Select Slots */}
-            <div className="relative w-full aspect-[4/6] max-h-[280px] bg-slate-950 border-2 border-slate-800 rounded-2xl p-2 overflow-hidden flex items-center justify-center mx-auto select-none">
-              <div className="relative w-full h-full">
+            {/* Canvas Preview Box dynamically aligned to exact frame resolution aspect ratio */}
+            <div className="relative w-full max-h-[340px] bg-slate-950 border-2 border-slate-800 rounded-2xl p-2 overflow-hidden flex items-center justify-center mx-auto select-none">
+              <div
+                className="relative h-full max-h-[320px] bg-slate-900 border border-slate-700/50 rounded-xl overflow-hidden shadow-2xl flex items-center justify-center"
+                style={{
+                  aspectRatio: width && height ? `${width} / ${height}` : '4/6',
+                }}
+              >
+                {/* Interactive Cutout Overlay Slots */}
                 {slots.map((slot, idx) => {
                   const scaleX = 100 / width;
                   const scaleY = 100 / height;
@@ -365,7 +417,7 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
                       className={`absolute border-2 cursor-pointer transition-all rounded-md flex items-center justify-center text-[10px] font-extrabold shadow-lg ${
                         isSelected
                           ? 'border-indigo-400 bg-indigo-500/40 text-white ring-2 ring-indigo-400/50 z-20'
-                          : 'border-slate-500 bg-slate-500/20 text-slate-300 hover:border-indigo-400/70 z-10'
+                          : 'border-amber-400/80 bg-amber-500/20 text-amber-200 hover:border-amber-300 z-10'
                       }`}
                     >
                       Photo #{idx + 1}
@@ -373,11 +425,12 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
                   );
                 })}
 
+                {/* Frame PNG Image Overlay - Aligned 100% with slot container */}
                 {filePreview && (
                   <img
                     src={filePreview}
                     alt="Frame Overlay Preview"
-                    className="absolute inset-0 w-full h-full object-contain pointer-events-none z-30"
+                    className="absolute inset-0 w-full h-full object-fill pointer-events-none z-30 drop-shadow-md"
                   />
                 )}
               </div>
@@ -398,76 +451,76 @@ export function FrameEditorModal({ frame, onClose, onSaveSuccess }: FrameEditorM
                       className="text-[10px] font-bold text-rose-400 hover:text-rose-300 flex items-center gap-1 bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20"
                     >
                       <Trash2 className="w-3 h-3" />
-                      <span>Remove</span>
+                      <span>Delete</span>
                     </button>
                   )}
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                <div className="grid grid-cols-2 gap-2 text-xs">
                   <div>
-                    <label className="block text-[10px] font-bold text-slate-400 uppercase mb-0.5">X (px)</label>
+                    <label className="text-[10px] font-semibold text-slate-400">Position X (px)</label>
                     <input
                       type="number"
                       value={slots[selectedSlotIdx].x}
                       onChange={(e) => handleUpdateSlot(selectedSlotIdx, 'x', parseInt(e.target.value, 10) || 0)}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-white text-xs text-center focus:border-indigo-500"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1 text-xs text-white font-mono mt-0.5"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-bold text-slate-400 uppercase mb-0.5">Y (px)</label>
+                    <label className="text-[10px] font-semibold text-slate-400">Position Y (px)</label>
                     <input
                       type="number"
                       value={slots[selectedSlotIdx].y}
                       onChange={(e) => handleUpdateSlot(selectedSlotIdx, 'y', parseInt(e.target.value, 10) || 0)}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-white text-xs text-center focus:border-indigo-500"
+                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1 text-xs text-white font-mono mt-0.5"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-bold text-slate-400 uppercase mb-0.5">Width (px)</label>
+                    <label className="text-[10px] font-semibold text-slate-400">Width (px)</label>
                     <input
                       type="number"
                       value={slots[selectedSlotIdx].width}
-                      onChange={(e) => handleUpdateSlot(selectedSlotIdx, 'width', parseInt(e.target.value, 10) || 0)}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-white text-xs text-center focus:border-indigo-500"
+                      onChange={(e) => handleUpdateSlot(selectedSlotIdx, 'width', parseInt(e.target.value, 10) || 10)}
+                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1 text-xs text-white font-mono mt-0.5"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-bold text-slate-400 uppercase mb-0.5">Height (px)</label>
+                    <label className="text-[10px] font-semibold text-slate-400">Height (px)</label>
                     <input
                       type="number"
                       value={slots[selectedSlotIdx].height}
-                      onChange={(e) => handleUpdateSlot(selectedSlotIdx, 'height', parseInt(e.target.value, 10) || 0)}
-                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-white text-xs text-center focus:border-indigo-500"
+                      onChange={(e) => handleUpdateSlot(selectedSlotIdx, 'height', parseInt(e.target.value, 10) || 10)}
+                      className="w-full bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1 text-xs text-white font-mono mt-0.5"
                     />
                   </div>
                 </div>
               </div>
             )}
+          </div>
 
-            {/* Action buttons */}
-            <div className="flex items-center gap-3 mt-auto pt-3 border-t border-slate-800">
-              <button
-                type="button"
-                onClick={onClose}
-                className="flex-1 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold"
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="flex-1 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold shadow-lg flex items-center justify-center gap-2"
-              >
-                {isSubmitting ? (
-                  <RefreshCw className="w-4 h-4 animate-spin text-white" />
-                ) : (
-                  <>
-                    <Check className="w-4 h-4" />
-                    <span>{frame ? 'Update Frame' : 'Save Frame'}</span>
-                  </>
-                )}
-              </button>
-            </div>
+          {/* Action Buttons */}
+          <div className="md:col-span-2 border-t border-slate-800 pt-4 flex items-center justify-end gap-3">
+            <button
+              type="button"
+              onClick={onClose}
+              className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold border border-slate-700 transition-all"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white text-xs font-bold shadow-lg shadow-indigo-500/20 transition-all flex items-center gap-2"
+            >
+              {isSubmitting ? (
+                <span>Saving Frame...</span>
+              ) : (
+                <>
+                  <Check className="w-4 h-4" />
+                  <span>{frame ? 'Update Frame Configuration' : 'Save & Publish Frame'}</span>
+                </>
+              )}
+            </button>
           </div>
         </form>
       </div>
